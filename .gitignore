@@ -1,0 +1,19 @@
+# Operating System & IDE files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Scratch & Temporary scripts
+scratch_*.py
+create_visualizer.py
+list_images.py
+copy_images.ps1
+
+# Archive & Raw Unused Video Files (GitHub 100MB limit)
+*.zip
+*.mov
+*.MOV
+assets/kitchen videos-20260910T104310Z-1-001/**/*.mp4
+assets/photos_extracted/**/*.mp4

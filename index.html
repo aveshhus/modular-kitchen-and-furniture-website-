@@ -1,0 +1,4335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garg Modular Furniture | Premium Modular Furniture &amp; Interiors in Jaipur</title>
+  <meta name="description" content="Premium modular kitchens, wardrobes, TV units, vanity units and customized modular interiors in Jaipur. Designed, manufactured and installed by Garg Modular Furniture.">
+  <meta name="keywords" content="modular furniture Jaipur, modular kitchen Jaipur, modular wardrobe Jaipur, customized modular interiors Jaipur, interior furniture Jaipur">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Garg Modular Furniture | Premium Modular Furniture in Jaipur">
+  <meta property="og:description" content="Premium modular kitchens, wardrobes, TV units and customized interiors in Jaipur.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    /* HOME-SPECIFIC STYLES */
+
+    /* ---- Intro Split ---- */
+    .intro-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .intro-split {
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+      }
+    }
+    .intro-split__img {
+      position: relative;
+      height: 500px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .intro-split__video {
+      display: block;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      pointer-events: none;
+    }
+    @media (min-width: 1024px) {
+      .intro-split__img { height: 600px; }
+    }
+    .intro-split__badge {
+      position: absolute;
+      bottom: 2rem;
+      right: -1rem;
+      background-color: var(--gamboge);
+      color: var(--indigo);
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      z-index: 2;
+    }
+    @media (max-width: 768px) {
+      .intro-split__badge { right: 1rem; }
+    }
+    .intro-split__badge-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+      display: block;
+    }
+    .intro-split__badge-text {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 0.25rem;
+    }
+
+    /* =====================================================
+       ORIGINAL SERVICE CARD STYLING (BACKUP - UNCOMMENT TO REVERT)
+       =====================================================
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    @media (min-width: 640px) {
+      .services-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .service-card {
+      padding: 2.25rem 2rem;
+      border-right: 1px solid var(--gray-100);
+      border-bottom: 1px solid var(--gray-100);
+      background-color: var(--white);
+      transition: background-color var(--duration-base) var(--ease-out);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card:hover { background-color: var(--indigo); }
+    .service-card:hover .service-card__num { color: rgba(255,255,255,0.3); }
+    .service-card:hover .service-card__title { color: var(--white); }
+    .service-card:hover .service-card__desc { color: rgba(255,255,255,0.6); }
+    .service-card:hover .service-card__link { color: var(--iceberg); }
+
+    .service-card__num {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--gray-100);
+      line-height: 1;
+      transition: color var(--duration-base) ease;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-card__icon {
+      width: 48px;
+      height: 48px;
+      background-color: var(--iceberg-10);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      color: var(--indigo);
+      font-size: 1.25rem;
+      transition: background-color var(--duration-base) ease, color var(--duration-base) ease;
+    }
+    .service-card:hover .service-card__icon {
+      background-color: rgba(119,181,211,0.15);
+      color: var(--iceberg);
+    }
+
+    .service-card__title {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--indigo);
+      margin-bottom: 0.875rem;
+      transition: color var(--duration-base) ease;
+    }
+
+    .service-card__desc {
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: var(--gray-500);
+      transition: color var(--duration-base) ease;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-card__link {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gamboge);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      transition: color var(--duration-base) ease, gap var(--duration-fast) ease;
+      text-decoration: none;
+    }
+    .service-card:hover .service-card__link { gap: 0.625rem; }
+    ===================================================== */
+
+    /* ---- FRAMER CARD FOLDER DESIGN (BRAND COLOR SYSTEM & ANCHORED TEXT) ---- */
+    .folder-services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      margin-top: var(--space-lg);
+    }
+    @media (min-width: 640px) {
+      .folder-services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .folder-services-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    }
+
+    .folder-card {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      height: 500px;
+      background-color: var(--black, #0D0D0C);
+      box-shadow: 0 12px 30px rgba(30, 66, 77, 0.08);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+    .folder-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 48px -12px rgba(30, 66, 77, 0.25);
+    }
+
+    .folder-card__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: block;
+      text-decoration: none;
+    }
+
+    /* Background 3D Art Area — extended to 280px to cover SVG tab transparent gap */
+    .folder-card__art {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 280px; /* ~square at standard card widths, covers transparent tab gap */
+      z-index: 1;
+      overflow: hidden;
+    }
+    .folder-card__art-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+      filter: brightness(0.95);
+    }
+    .folder-card:hover .folder-card__art-img {
+      transform: scale(1.08) translateY(-4px);
+      filter: brightness(1.05);
+    }
+    .folder-card__art-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(13,13,12,0.05) 0%, rgba(13,13,12,0.55) 100%);
+    }
+
+    /* Abstract gradient art fallback for cards without image */
+    .folder-card__art-gradient {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .folder-card--vanity .folder-card__art-gradient {
+      background: radial-gradient(circle at 50% 30%, var(--indigo) 0%, rgba(30, 66, 77, 0.95) 80%),
+                  linear-gradient(135deg, var(--indigo) 0%, rgba(30, 66, 77, 0.9) 100%);
+    }
+    .folder-card--furniture .folder-card__art-gradient {
+      background: radial-gradient(circle at 50% 30%, var(--brown) 0%, rgba(102, 62, 31, 0.95) 80%),
+                  linear-gradient(135deg, var(--gamboge) 0%, var(--brown) 100%);
+    }
+    .folder-card__art-glow {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      filter: blur(40px);
+      opacity: 0.55;
+    }
+    .folder-card--vanity .folder-card__art-glow { background: var(--iceberg); }
+    .folder-card--furniture .folder-card__art-glow { background: var(--gamboge); }
+
+    /* Floating 3D Graphic Elements inside gradient fallback */
+    .folder-card__art-3d-icon {
+      position: absolute;
+      top: 32%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .folder-card:hover .folder-card__art-3d-icon {
+      transform: translate(-50%, -45%) scale(1.1);
+    }
+
+    /* Cover Flap (Sliding Folder Front)
+       Default position: top 125px (25% of card height -> 25% of top image visible!)
+       Hover position: translateY(125px) -> moves down to 250px (50% of card height -> 50% of image visible!) */
+    .folder-card__flap {
+      position: absolute;
+      top: 125px;
+      left: 0;
+      width: 100%;
+      height: 375px;
+      z-index: 2;
+      transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .folder-card:hover .folder-card__flap {
+      transform: translateY(125px);
+    }
+
+    .folder-card__flap-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Flap Header — only holds the number now */
+    .folder-card__flap-header {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: flex-start;
+      padding: 0.6rem 1.25rem 0 1.25rem;
+      box-sizing: border-box;
+    }
+
+    .folder-card__num {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    /* Arrow CTA — fixed at top-right of card, always visible */
+    .folder-card__arrow {
+      position: absolute;
+      top: 1.1rem;
+      right: 1.1rem;
+      z-index: 15;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+    }
+    .folder-card:hover .folder-card__arrow {
+      transform: translate(3px, -3px) scale(1.1);
+    }
+
+    /* Card Footer Text — solid background, always on top of the sliding flap */
+    .folder-card__footer {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      padding: 4.5rem 1.5rem 1.25rem;
+      pointer-events: none;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .folder-card:hover .folder-card__footer {
+      transform: translateY(-6px);
+    }
+
+    .folder-card__title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .folder-card__desc {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Feature highlights — fill the blank flap middle area */
+    .folder-card__features {
+      position: relative;
+      z-index: 2;
+      padding: 1rem 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .folder-card__feature {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .folder-card__feature:nth-child(1) { transition-delay: 0s; }
+    .folder-card__feature:nth-child(2) { transition-delay: 0.04s; }
+    .folder-card__feature:nth-child(3) { transition-delay: 0.08s; }
+    .folder-card:hover .folder-card__feature {
+      opacity: 0;
+      transform: translateX(8px);
+    }
+    .folder-card__feature-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* Card Themes (Matching Website Design Tokens) */
+    /* Theme 1: Kitchen (Website Indigo #1E424D) */
+    .folder-card--kitchen .folder-card__flap-svg path {
+      fill: var(--indigo);
+      stroke: var(--iceberg-20);
+      vector-effect: non-scaling-stroke;
+    }
+    .folder-card--kitchen .folder-card__num { color: var(--white); }
+    .folder-card--kitchen .folder-card__arrow { background: rgba(255,255,255,0.12); color: var(--iceberg); }
+    .folder-card--kitchen .folder-card__footer {
+      background: linear-gradient(180deg, transparent 0%, var(--indigo) 30%);
+    }
+    .folder-card--kitchen .folder-card__title { color: var(--white); }
+    .folder-card--kitchen .folder-card__desc { color: rgba(249, 247, 242, 0.75); }
+    .folder-card--kitchen .folder-card__feature { color: rgba(249,247,242,0.85); }
+    .folder-card--kitchen .folder-card__feature-dot { background: rgba(119,181,211,0.2); color: var(--iceberg); }
+
+    /* Theme 2: Wardrobes (Website Offwhite #F2EFE8) */
+    .folder-card--wardrobe .folder-card__flap-svg path {
+      fill: var(--offwhite);
+      stroke: rgba(30, 66, 77, 0.15);
+      vector-effect: non-scaling-stroke;
+    }
+    .folder-card--wardrobe .folder-card__num { color: var(--indigo); }
+    .folder-card--wardrobe .folder-card__arrow { background: rgba(30, 66, 77, 0.08); color: var(--gamboge); }
+    .folder-card--wardrobe .folder-card__footer {
+      background: linear-gradient(180deg, transparent 0%, var(--offwhite) 30%);
+    }
+    .folder-card--wardrobe .folder-card__title { color: var(--indigo); }
+    .folder-card--wardrobe .folder-card__desc { color: rgba(30, 66, 77, 0.75); }
+    .folder-card--wardrobe .folder-card__feature { color: rgba(30,66,77,0.8); }
+    .folder-card--wardrobe .folder-card__feature-dot { background: rgba(30,66,77,0.08); color: var(--gamboge); }
+
+    /* Theme 3: Vanity (Deep Japanese Indigo) */
+    .folder-card--vanity .folder-card__flap-svg path {
+      fill: var(--indigo);
+      stroke: var(--iceberg-20);
+      vector-effect: non-scaling-stroke;
+    }
+    .folder-card--vanity .folder-card__num { color: var(--iceberg); }
+    .folder-card--vanity .folder-card__arrow { background: rgba(119, 181, 211, 0.15); color: var(--iceberg); }
+    .folder-card--vanity .folder-card__footer {
+      background: linear-gradient(180deg, transparent 0%, var(--indigo) 30%);
+    }
+    .folder-card--vanity .folder-card__title { color: var(--white); }
+    .folder-card--vanity .folder-card__desc { color: rgba(249, 247, 242, 0.75); }
+    .folder-card--vanity .folder-card__feature { color: rgba(249,247,242,0.85); }
+    .folder-card--vanity .folder-card__feature-dot { background: rgba(119,181,211,0.15); color: var(--iceberg); }
+
+    /* Theme 4: Furniture (Warm Dark Brown) */
+    .folder-card--furniture .folder-card__flap-svg path {
+      fill: var(--brown);
+      stroke: rgba(225, 158, 17, 0.35);
+      vector-effect: non-scaling-stroke;
+    }
+    .folder-card--furniture .folder-card__num { color: var(--gamboge); }
+    .folder-card--furniture .folder-card__arrow { background: rgba(225, 158, 17, 0.15); color: var(--gamboge); }
+    .folder-card--furniture .folder-card__footer {
+      background: linear-gradient(180deg, transparent 0%, var(--brown) 30%);
+    }
+    .folder-card--furniture .folder-card__title { color: var(--white); }
+    .folder-card--furniture .folder-card__desc { color: rgba(249, 247, 242, 0.75); }
+    .folder-card--furniture .folder-card__feature { color: rgba(249,247,242,0.85); }
+    .folder-card--furniture .folder-card__feature-dot { background: rgba(225,158,17,0.15); color: var(--gamboge); }
+
+
+    /* ---- Why Garg ---- */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background-color: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    @media (min-width: 1024px) {
+      .why-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .why-card {
+      background-color: rgba(255,255,255,0.03);
+      padding: 2.25rem 2rem;
+      border: none;
+      border-radius: 0;
+      border-right: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .why-card__num {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.08);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .why-card:hover .why-card__num { color: var(--gamboge); }
+
+    .why-card__title {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.625rem;
+    }
+
+    .why-card__desc {
+      font-size: 0.875rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.45);
+    }
+
+        /* ---- Selected Work (Architectural Portfolio Preview) ---- */
+    .selected-work-section {
+      position: relative;
+      background: var(--offwhite);
+      overflow: hidden;
+      padding-top: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+    }
+    
+    .selected-work-header {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    @media (min-width: 1024px) {
+      .selected-work-header {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+    }
+
+    /* Asymmetrical Editorial Portfolio Composition */
+    .portfolio-preview-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    @media (min-width: 1024px) {
+      .portfolio-preview-grid {
+        grid-template-columns: 1.15fr 1fr;
+        height: 540px;
+        gap: 1.25rem;
+      }
+    }
+
+    .portfolio-supporting-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    @media (min-width: 640px) and (max-width: 1023px) {
+      .portfolio-supporting-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (min-width: 1024px) {
+      .portfolio-supporting-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 100%;
+        gap: 1.25rem;
+      }
+    }
+
+    /* Portfolio Card Base */
+    .portfolio-card {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #0D0D0C;
+      display: block;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(30, 66, 77, 0.08);
+      border: 1px solid rgba(30, 66, 77, 0.08);
+      cursor: pointer;
+      isolation: isolate;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -10px rgba(30, 66, 77, 0.18);
+      border-color: rgba(225, 158, 17, 0.35);
+    }
+
+    .portfolio-card--featured {
+      min-height: 380px;
+    }
+    @media (min-width: 1024px) {
+      .portfolio-card--featured {
+        height: 100%;
+        min-height: 0;
+      }
+    }
+
+    .portfolio-card--compact {
+      min-height: 240px;
+    }
+    @media (min-width: 1024px) {
+      .portfolio-card--compact {
+        height: 100%;
+        min-height: 0;
+      }
+    }
+
+    /* Background Image */
+    .portfolio-card__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+    .portfolio-card:hover .portfolio-card__img {
+      transform: scale(1.035);
+    }
+
+    /* Gradient Overlay */
+    .portfolio-card__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(13, 13, 12, 0.1) 0%, rgba(13, 13, 12, 0.25) 40%, rgba(13, 13, 12, 0.88) 100%);
+      z-index: 2;
+      transition: background 0.35s ease;
+    }
+    .portfolio-card:hover .portfolio-card__overlay {
+      background: linear-gradient(180deg, rgba(13, 13, 12, 0.05) 0%, rgba(13, 13, 12, 0.2) 35%, rgba(13, 13, 12, 0.92) 100%);
+    }
+
+    /* Top Tags */
+    .portfolio-card__header {
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      right: 1.25rem;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      pointer-events: none;
+    }
+
+    .portfolio-tag {
+      font-family: var(--font-body);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      line-height: 1.3;
+    }
+
+    .portfolio-tag--featured {
+      background: var(--gamboge);
+      color: var(--indigo);
+      font-weight: 800;
+      box-shadow: 0 2px 10px rgba(225, 158, 17, 0.35);
+    }
+
+    .portfolio-tag--pill {
+      background: rgba(13, 13, 12, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--flax);
+    }
+
+    /* Card Bottom Body */
+    .portfolio-card__content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .portfolio-card--compact .portfolio-card__content {
+      padding: 1.15rem 1.25rem;
+    }
+    .portfolio-card:hover .portfolio-card__content {
+      transform: translateY(-3px);
+    }
+
+    .portfolio-card__type {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--iceberg);
+      margin: 0;
+    }
+
+    .portfolio-card__title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #ffffff;
+      margin: 0;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+    .portfolio-card--featured .portfolio-card__title {
+      font-size: 1.55rem;
+    }
+    .portfolio-card--compact .portfolio-card__title {
+      font-size: 1.05rem;
+    }
+
+    .portfolio-card__cta-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--flax);
+      margin-top: 0.25rem;
+      opacity: 0.85;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .portfolio-card:hover .portfolio-card__cta-hint {
+      opacity: 1;
+      transform: translateX(3px);
+    }
+
+    /* Bottom Compact Actions & Info */
+    .portfolio-preview-footer {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(30, 66, 77, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    @media (min-width: 640px) {
+      .portfolio-preview-footer {
+        flex-direction: row;
+      }
+    }
+
+    .portfolio-preview-count {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: rgba(30, 66, 77, 0.75);
+    }
+    .portfolio-count-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gamboge);
+    }
+
+    .portfolio-view-all-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: 9999px;
+      background: var(--indigo);
+      border: 1px solid var(--indigo);
+      color: #ffffff;
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .portfolio-view-all-btn:hover {
+      background: var(--gamboge);
+      border-color: var(--gamboge);
+      color: var(--indigo);
+      box-shadow: 0 6px 18px rgba(225, 158, 17, 0.35);
+      transform: translateY(-2px);
+    }
+
+    /* Mobile Swipeable Carousel Mode */
+    @media (max-width: 639px) {
+      .portfolio-preview-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 0.875rem;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        padding-bottom: 0.75rem;
+        scrollbar-width: none;
+      }
+      .portfolio-preview-grid::-webkit-scrollbar {
+        display: none;
+      }
+      .portfolio-card {
+        flex: 0 0 82vw;
+        max-width: 320px;
+        height: 380px;
+        min-height: 380px;
+        scroll-snap-align: center;
+      }
+      .portfolio-supporting-grid {
+        display: contents;
+      }
+      
+      /* Mobile pagination indicator */
+      .portfolio-mobile-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0.75rem;
+        padding: 0 0.5rem;
+      }
+      .portfolio-mobile-dots {
+        display: flex;
+        gap: 0.35rem;
+        align-items: center;
+      }
+      .portfolio-mobile-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 9999px;
+        background: rgba(30, 66, 77, 0.2);
+        transition: all 0.3s ease;
+      }
+      .portfolio-mobile-dot.is-active {
+        width: 20px;
+        background: var(--indigo);
+      }
+      .portfolio-mobile-counter {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--indigo);
+      }
+    }
+    @media (min-width: 640px) {
+      .portfolio-mobile-nav {
+        display: none;
+      }
+    }
+
+    /* ---- Selected Work Quick View Modal ---- */
+    .project-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 13, 12, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .project-modal-overlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .project-modal-container {
+      background: #ffffff;
+      border-radius: 24px;
+      max-width: 840px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+      transform: translateY(24px) scale(0.96);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .project-modal-overlay.is-open .project-modal-container {
+      transform: translateY(0) scale(1);
+    }
+    .project-modal-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(13, 13, 12, 0.6);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .project-modal-close:hover {
+      background: var(--indigo);
+      transform: rotate(90deg);
+    }
+    .project-modal-media {
+      position: relative;
+      height: 320px;
+      width: 100%;
+      background: var(--indigo);
+      overflow: hidden;
+      border-radius: 24px 24px 0 0;
+    }
+    @media (min-width: 768px) {
+      .project-modal-media {
+        height: 380px;
+      }
+    }
+    .project-modal-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .project-modal-media-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(0deg, rgba(13,13,12,0.85) 0%, rgba(13,13,12,0) 100%);
+      color: #ffffff;
+    }
+    .project-modal-body {
+      padding: 2rem;
+    }
+    @media (min-width: 768px) {
+      .project-modal-body {
+        padding: 2.5rem;
+      }
+    }
+    .project-modal-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .project-modal-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .project-modal-spec-card {
+      background: var(--offwhite);
+      padding: 1.25rem;
+      border-radius: 16px;
+      border: 1px solid rgba(30, 66, 77, 0.08);
+    }
+    .project-modal-spec-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      margin-bottom: 0.35rem;
+    }
+    .project-modal-spec-val {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--indigo);
+    }
+    .project-modal-footer {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--gray-100);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+
+
+    /* =====================================================
+       FRAMER TESTIFY COMPONENT — RESULTS OUR CLIENTS STAND BEHIND
+       ===================================================== */
+    .testify-section {
+      background: #ffffff;
+      position: relative;
+      padding: 96px 0;
+      border-top: 1px solid var(--gray-100);
+      border-bottom: 1px solid var(--gray-100);
+      overflow: hidden;
+    }
+    
+    .testify-header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+    
+    .testify-header-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .testify-badge-pill {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .testify-badge-pill::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gamboge);
+      display: inline-block;
+    }
+    
+    .testify-mono-num {
+      font-family: var(--font-mono, monospace);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-400);
+      letter-spacing: 0.05em;
+    }
+    
+    .testify-title {
+      font-family: var(--font-display, var(--font-heading));
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      color: var(--gray-700);
+      margin: 0;
+    }
+    
+    .testify-title-dark {
+      color: var(--indigo);
+    }
+    
+    .testify-desc {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--gray-600);
+      max-width: 580px;
+      margin: 4px 0 0 0;
+    }
+    
+    /* Bento Grid */
+    .testify-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    @media (min-width: 768px) {
+      .testify-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .testify-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+    }
+    
+    /* Common Testify Card */
+    .testify-card {
+      background: #ffffff;
+      border: 1px solid var(--gray-100);
+      border-radius: 28px;
+      padding: 26px;
+      height: 290px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+      box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .testify-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 35px -10px rgba(30, 66, 77, 0.12);
+      border-color: rgba(225, 158, 17, 0.35);
+    }
+    
+    /* Card Author Header */
+    .testify-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    
+    .testify-author-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .testify-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1.5px solid rgba(30, 66, 77, 0.1);
+    }
+    
+    .testify-author-name {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--indigo);
+      margin: 0;
+      line-height: 1.3;
+    }
+    
+    .testify-author-role {
+      font-size: 12px;
+      color: var(--gray-500);
+      margin: 2px 0 0 0;
+      line-height: 1.3;
+    }
+    
+    .testify-platform-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--offwhite);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--indigo);
+      flex-shrink: 0;
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+    
+    .testify-card:hover .testify-platform-icon {
+      background: var(--gray-100);
+      transform: scale(1.08);
+    }
+    
+    .testify-quote {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--gray-700);
+      margin: 0;
+    }
+    
+    /* Card 2: Full-Bleed Image Card */
+    .testify-card--image {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+    }
+    
+    .testify-card--image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(30, 66, 77, 0.65) 0%, rgba(30, 66, 77, 0.4) 40%, rgba(30, 66, 77, 0.92) 100%);
+      z-index: 1;
+      transition: background 0.35s ease;
+    }
+    
+    .testify-card--image:hover::before {
+      background: linear-gradient(180deg, rgba(30, 66, 77, 0.55) 0%, rgba(30, 66, 77, 0.35) 40%, rgba(30, 66, 77, 0.88) 100%);
+    }
+    
+    .testify-card--image .testify-card-header,
+    .testify-card--image .testify-quote {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .testify-card--image .testify-author-name {
+      color: #ffffff;
+    }
+    
+    .testify-card--image .testify-author-role {
+      color: rgba(255, 255, 255, 0.78);
+    }
+    
+    .testify-card--image .testify-quote {
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 500;
+    }
+    
+    /* Card 4: Geometric Accent Card */
+    .testify-card--accent {
+      background: linear-gradient(135deg, var(--indigo) 0%, rgba(30, 66, 77, 0.95) 100%);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .testify-card--accent .testify-author-name {
+      color: #ffffff;
+    }
+    
+    .testify-card--accent .testify-author-role {
+      color: rgba(225, 158, 17, 0.9);
+    }
+    
+    .testify-card--accent .testify-quote {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .testify-card--accent .testify-quote strong {
+      color: #ffffff;
+      display: block;
+      margin-top: 6px;
+    }
+    
+    .testify-blueprint-bg {
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      width: 190px;
+      height: 190px;
+      opacity: 0.12;
+      pointer-events: none;
+    }
+    
+    /* Card 5: Infinite Vertical Marquee Ticker */
+    .testify-card--ticker {
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .testify-ticker-mask {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      padding: 16px 18px;
+      box-sizing: border-box;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    }
+    
+    .testify-ticker-track {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      animation: testifyScrollUp 22s linear infinite;
+    }
+    
+    .testify-ticker-track:hover {
+      animation-play-state: paused;
+    }
+    
+    @keyframes testifyScrollUp {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+    
+    .testify-mini-pill {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: 14px;
+      padding: 10px 14px;
+      box-sizing: border-box;
+      transition: background 0.2s ease;
+    }
+    
+    .testify-mini-pill:hover {
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    
+    .testify-mini-pill__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3px;
+    }
+    
+    .testify-mini-pill__name {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--indigo);
+    }
+    
+    .testify-mini-pill__stars {
+      color: var(--gamboge);
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+    
+    .testify-mini-pill__text {
+      font-size: 11.5px;
+      line-height: 1.4;
+      color: var(--gray-700);
+      margin: 0;
+    }
+    
+    /* Card 6: Proof Metrics Card */
+    .testify-card--metrics {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .testify-metric-top {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    
+    .testify-metric-number {
+      font-family: var(--font-display, var(--font-heading));
+      font-size: 2.4rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--indigo);
+      letter-spacing: -0.04em;
+    }
+    
+    .testify-metric-label {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--indigo);
+      margin: 4px 0 0 0;
+    }
+    
+    .testify-metric-sub {
+      font-size: 12px;
+      color: var(--gray-500);
+      line-height: 1.45;
+      margin: 2px 0 0 0;
+    }
+    
+    .testify-metric-divider {
+      height: 1px;
+      background: var(--gray-100);
+      margin: 12px 0;
+    }
+    
+    .testify-metric-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    
+    .testify-avatar-stack {
+      display: flex;
+      align-items: center;
+    }
+    
+    .testify-avatar-stack-item {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      object-fit: cover;
+      margin-left: -8px;
+    }
+    
+    .testify-avatar-stack-item:first-child {
+      margin-left: 0;
+    }
+    
+    .testify-metric-rating {
+      text-align: right;
+    }
+    
+    .testify-metric-rating-stars {
+      color: var(--gamboge);
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    
+    .testify-metric-rating-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gray-500);
+      margin-top: 1px;
+    }
+
+    /* =====================================================
+       FRAMER AKFAQ COMPONENT — EXACT IMPLEMENTATION
+       ===================================================== */
+    .faq-editorial-section {
+      position: relative;
+      background: var(--white);
+      border-top: 1px solid var(--gray-100);
+      border-bottom: 1px solid var(--gray-100);
+      padding: 64px 24px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .akfaq-container {
+      max-width: 760px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    /* AKFaq Badge */
+    .akfaq-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      background: rgba(0, 0, 0, 0.04);
+      border: 0.5px solid rgba(0, 0, 0, 0.10);
+      border-radius: 999px;
+      padding: 4px 12px;
+      margin-bottom: 16px;
+      user-select: none;
+    }
+    .akfaq-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gamboge);
+      display: inline-block;
+    }
+
+    /* AKFaq Heading & Subheading */
+    .akfaq-heading {
+      font-family: var(--font-body);
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--indigo);
+      line-height: 1.2;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.015em;
+    }
+    .akfaq-subheading {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--gray-700);
+      margin: 0 0 24px 0;
+      line-height: 1.65;
+    }
+
+    /* AKFaq Search Bar */
+    .akfaq-search-wrap {
+      position: relative;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+    .akfaq-search-icon {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: var(--gray-700);
+    }
+    .akfaq-search-input {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 13.5px;
+      padding: 9px 12px 9px 36px;
+      border-radius: 10px;
+      border: 0.5px solid rgba(0, 0, 0, 0.10);
+      background: #ffffff;
+      color: var(--indigo);
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .akfaq-search-input:focus {
+      border-color: var(--gamboge);
+      box-shadow: 0 0 0 3px rgba(225, 158, 17, 0.12);
+    }
+    .akfaq-search-clear {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.05);
+      border: none;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: var(--gray-700);
+      cursor: pointer;
+      padding: 0;
+    }
+    .akfaq-search-clear:hover {
+      background: var(--indigo);
+      color: #ffffff;
+    }
+
+    /* AKFaq Category Tabs */
+    .akfaq-tabs {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 640px) {
+      .akfaq-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 4px;
+      }
+    }
+    .akfaq-tab-btn {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 14px;
+      border-radius: 999px;
+      border: 0.5px solid rgba(0, 0, 0, 0.10);
+      background: transparent;
+      color: var(--gray-700);
+      cursor: pointer;
+      transition: all 320ms cubic-bezier(0.4, 0, 0.2, 1);
+      white-space: nowrap;
+      user-select: none;
+    }
+    .akfaq-tab-btn:hover {
+      color: var(--indigo);
+      background: rgba(0, 0, 0, 0.03);
+    }
+    .akfaq-tab-btn.active {
+      background: var(--indigo);
+      color: #ffffff;
+      border-color: var(--indigo);
+    }
+
+    /* AKFaq Items List */
+    .akfaq-items-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    /* AKFaq Item */
+    .akfaq-item {
+      border-radius: 10px;
+      border: 0.5px solid rgba(0, 0, 0, 0.08);
+      background: #ffffff;
+      overflow: hidden;
+      transition: border-color 320ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .akfaq-item:hover {
+      border-color: rgba(0, 0, 0, 0.16);
+    }
+    .akfaq-item.is-open {
+      border-color: rgba(225, 158, 17, 0.5);
+    }
+
+    /* AKFaq Trigger */
+    .akfaq-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--indigo);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      line-height: 1.4;
+    }
+    .akfaq-trigger-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      flex: 1;
+    }
+    .akfaq-number {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--gray-500);
+      min-width: 22px;
+      padding-top: 1px;
+      font-family: var(--font-body);
+      transition: color 320ms ease;
+    }
+    .akfaq-item.is-open .akfaq-number {
+      color: var(--gamboge);
+    }
+    .akfaq-question {
+      flex: 1;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--indigo);
+    }
+
+    /* AKFaq 22px Toggle Icon */
+    .akfaq-icon-bubble {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 0.5px solid rgba(0, 0, 0, 0.08);
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transform: rotate(0deg);
+      transition: all 320ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .akfaq-icon-svg {
+      width: 10px;
+      height: 10px;
+    }
+    .akfaq-icon-svg line {
+      stroke: var(--indigo);
+      transition: stroke 320ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .akfaq-item.is-open .akfaq-icon-bubble {
+      transform: rotate(45deg);
+      border-color: var(--gamboge);
+      background: var(--gamboge);
+    }
+    .akfaq-item.is-open .akfaq-icon-svg line {
+      stroke: #ffffff;
+    }
+
+    /* AKFaq Collapse */
+    .akfaq-collapse {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 320ms cubic-bezier(0.4, 0, 0.2, 1), opacity 224ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .akfaq-item.is-open .akfaq-collapse {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .akfaq-answer {
+      padding: 0 16px 16px 48px;
+      font-family: var(--font-body);
+      font-size: 13.5px;
+      line-height: 1.75;
+      color: var(--gray-700);
+    }
+    @media (max-width: 639px) {
+      .akfaq-answer {
+        padding-left: 16px;
+      }
+    }
+    .akfaq-chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .akfaq-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11.5px;
+      font-weight: 500;
+      padding: 3px 8px;
+      background: var(--offwhite);
+      border: 0.5px solid rgba(0, 0, 0, 0.08);
+      border-radius: 6px;
+      color: var(--indigo);
+    }
+
+    /* AKFaq No Results */
+    .akfaq-no-results {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 13px;
+      color: var(--gray-700);
+      font-family: var(--font-body);
+      background: #ffffff;
+      border-radius: 10px;
+      border: 0.5px solid rgba(0, 0, 0, 0.08);
+      display: none;
+    }
+
+    /* AKFaq Footer Card */
+    .akfaq-footer {
+      margin-top: 24px;
+      padding: 16px 20px;
+      border-radius: 10px;
+      border: 0.5px solid rgba(0, 0, 0, 0.08);
+      background: var(--offwhite);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+    }
+    .akfaq-footer-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .akfaq-footer-title {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--indigo);
+      line-height: 1.4;
+    }
+    .akfaq-footer-sub {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: var(--gray-700);
+      line-height: 1.5;
+    }
+    .akfaq-footer-btn {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 7px 16px;
+      border-radius: 10px;
+      border: 0.5px solid rgba(0, 0, 0, 0.08);
+      background: #ffffff;
+      color: var(--indigo);
+      cursor: pointer;
+      white-space: nowrap;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s ease;
+    }
+    .akfaq-footer-btn:hover {
+      background: var(--indigo);
+      color: #ffffff;
+      border-color: var(--indigo);
+    }
+
+/* ---- CTA Section & Contact Form ---- */
+    .cta-section {
+      background: var(--flax);
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      border: 1px solid rgba(102, 62, 31, 0.12);
+      pointer-events: none;
+    }
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      border: 1px solid rgba(102, 62, 31, 0.08);
+      pointer-events: none;
+    }
+
+    .cta-layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (min-width: 992px) {
+      .cta-layout-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+      }
+    }
+
+    /* Left Column Content */
+    .cta-left-content {
+      max-width: 580px;
+    }
+    .cta-perks-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 28px 0;
+    }
+    .cta-perk-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.875rem;
+      color: var(--indigo);
+      line-height: 1.5;
+    }
+    .cta-perk-item strong {
+      display: block;
+      font-weight: 700;
+      color: var(--indigo);
+      font-size: 0.9375rem;
+    }
+    .cta-perk-item span {
+      display: block;
+      color: rgba(30, 66, 77, 0.8);
+      font-size: 0.8125rem;
+    }
+    .cta-perk-badge {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--indigo);
+      color: var(--flax);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .cta-contact-methods {
+      margin-top: 20px;
+    }
+    .cta-phones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .cta-phone-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.75rem 1.25rem;
+      background-color: rgba(30,66,77,0.08);
+      border: 1.5px solid rgba(30,66,77,0.25);
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--indigo);
+      text-decoration: none;
+      transition: all var(--duration-base) var(--ease-out);
+    }
+    .cta-phone-btn:hover {
+      background-color: var(--indigo);
+      border-color: var(--indigo);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .cta-whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.75rem 1.25rem;
+      background-color: #25D366;
+      border: 1.5px solid #25D366;
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all var(--duration-base) var(--ease-out);
+    }
+    .cta-whatsapp-btn:hover {
+      background-color: #25D366;
+      border-color: #25D366;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Right Column: Contact Form Card */
+    .cta-right-form {
+      width: 100%;
+    }
+    .cta-form-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 24px 48px -12px rgba(30, 66, 77, 0.22), 0 0 0 1px rgba(30, 66, 77, 0.08);
+      box-sizing: border-box;
+      position: relative;
+    }
+    @media (max-width: 600px) {
+      .cta-form-card {
+        padding: 24px 18px;
+      }
+    }
+    .cta-form-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brown);
+      background: rgba(225, 158, 17, 0.15);
+      border: 0.5px solid rgba(225, 158, 17, 0.3);
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .cta-form-title {
+      font-family: var(--font-display, var(--font-heading));
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--indigo);
+      margin: 0 0 4px 0;
+      line-height: 1.25;
+    }
+    .cta-form-subtitle {
+      font-size: 0.8125rem;
+      color: var(--gray-600);
+      margin: 0 0 20px 0;
+      line-height: 1.5;
+    }
+    .cta-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 600px) {
+      .cta-form-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+    .cta-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .cta-field-full {
+      grid-column: 1 / -1;
+    }
+    .cta-field-label {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--indigo);
+      letter-spacing: 0.02em;
+    }
+    .cta-field-label .required {
+      color: #e53e3e;
+    }
+    .cta-field-input,
+    .cta-field-select,
+    .cta-field-textarea {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 13px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(30, 66, 77, 0.2);
+      background: var(--offwhite);
+      color: var(--indigo);
+      outline: none;
+      box-sizing: border-box;
+      transition: all 0.2s ease;
+    }
+    .cta-field-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231E424D' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 32px;
+      cursor: pointer;
+    }
+    .cta-field-textarea {
+      min-height: 70px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+    .cta-field-input:focus,
+    .cta-field-select:focus,
+    .cta-field-textarea:focus {
+      border-color: var(--gamboge);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(225, 158, 17, 0.16);
+    }
+    .cta-field-group.has-error .cta-field-input,
+    .cta-field-group.has-error .cta-field-select,
+    .cta-field-group.has-error .cta-field-textarea {
+      border-color: #e53e3e;
+      box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+    }
+    .cta-field-error {
+      font-size: 11px;
+      color: #e53e3e;
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .cta-submit-btn {
+      width: 100%;
+      margin-top: 14px;
+      background: var(--indigo);
+      color: #ffffff;
+      padding: 13px 20px;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(30, 66, 77, 0.2);
+    }
+    .cta-submit-btn:hover:not(:disabled) {
+      background: var(--indigo-80);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(30, 66, 77, 0.32);
+    }
+    .cta-submit-btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+    .cta-form-guarantee {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--gray-600);
+      margin-top: 12px;
+      text-align: center;
+    }
+    .cta-form-guarantee svg {
+      color: var(--gamboge);
+      flex-shrink: 0;
+    }
+
+    /* Success state */
+    .cta-form-success {
+      display: none;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: all 0.4s ease;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px 12px;
+      gap: 12px;
+    }
+    .cta-success-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--iceberg), var(--indigo));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+    .cta-success-title {
+      font-family: var(--font-display, var(--font-heading));
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--indigo);
+      margin: 0;
+    }
+    .cta-success-msg {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      max-width: 36ch;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .cta-success-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Custom Framer Magnetic Cursor -->
+  <div class="custom-cursor">
+    <div class="custom-cursor__dot"></div>
+    <div class="custom-cursor__ring">
+      <span class="custom-cursor__label"></span>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       NAVIGATION
+  ====================================================== -->
+  <nav class="nav nav--transparent" id="main-nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Garg Modular Furniture Home">
+        <span class="nav__logo-primary">GARG</span>
+        <span class="nav__logo-secondary">Modular Furniture</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="projects.html" class="nav__link">Projects</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+
+      <div class="nav__right">
+        <a href="contact.html" class="nav__cta">Book a Consultation</a>
+        <button class="nav__hamburger" id="hamburger-btn" aria-expanded="false" aria-label="Open menu" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul class="mobile-menu__links" role="list">
+      <li><a href="index.html" class="mobile-menu__link">Home</a></li>
+      <li><a href="about.html" class="mobile-menu__link">About</a></li>
+      <li><a href="services.html" class="mobile-menu__link">Services</a></li>
+      <li><a href="projects.html" class="mobile-menu__link">Projects</a></li>
+      <li><a href="contact.html" class="mobile-menu__link">Contact</a></li>
+    </ul>
+    <div class="mobile-menu__bottom">
+      <a href="contact.html" class="mobile-menu__cta">Book a Consultation →</a>
+      <div class="mobile-menu__contact">
+        <a href="tel:+917891432251">+91 7891432251</a>
+        <a href="tel:+917014882040">+91 7014882040</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- =====================================================
+         SECTION 1 — HERO
+    ====================================================== -->
+    <section class="hero" aria-label="Hero section">
+      <div class="ambient-glow" style="top: -100px; left: -100px;"></div>
+      <div class="ambient-glow" style="bottom: 10%; right: -100px; background: radial-gradient(circle, rgba(225, 158, 17, 0.2) 0%, transparent 70%);"></div>
+
+      <div class="hero__bg">
+        <video
+          class="hero__video"
+          src="assets/video/AnsariArchitect_pindown.io_1788861622.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        ></video>
+      </div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <span class="hero__label">Modular Interiors · Jaipur</span>
+        <h1 class="hero__title">
+          Crafting Premium<br>
+          <em>Modular Spaces</em><br>
+          With Style &amp; Precision
+        </h1>
+        <p class="hero__subtitle">
+          From thoughtful design to precision manufacturing and professional installation, Garg Modular Furniture creates elegant, functional interiors tailored to the way you live.
+        </p>
+        <div class="hero__actions">
+          <a href="contact.html" class="btn btn-accent btn-lg btn-arrow">
+            Book a Consultation <span class="arrow-icon" aria-hidden="true">→</span>
+          </a>
+          <button class="btn btn-secondary btn-lg btn-arrow" data-open-estimator>
+            Instant Cost Estimator <span class="arrow-icon" aria-hidden="true">⚡</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="scroll-indicator">
+          <div class="scroll-indicator__line"></div>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         MARQUEE STRIP
+    ====================================================== -->
+    <div class="service-marquee-wrap" aria-hidden="true">
+      <div class="service-marquee-track">
+        <div class="service-marquee-item">Modular Kitchens</div>
+        <div class="service-marquee-item">Wardrobes</div>
+        <div class="service-marquee-item">TV Units</div>
+        <div class="service-marquee-item">Vanity Units</div>
+        <div class="service-marquee-item">Office Furniture</div>
+        <div class="service-marquee-item">Custom Interiors</div>
+        <div class="service-marquee-item">Crockery Units</div>
+        <div class="service-marquee-item">Storage Solutions</div>
+        <!-- Duplicate for seamless loop -->
+        <div class="service-marquee-item">Modular Kitchens</div>
+        <div class="service-marquee-item">Wardrobes</div>
+        <div class="service-marquee-item">TV Units</div>
+        <div class="service-marquee-item">Vanity Units</div>
+        <div class="service-marquee-item">Office Furniture</div>
+        <div class="service-marquee-item">Custom Interiors</div>
+        <div class="service-marquee-item">Crockery Units</div>
+        <div class="service-marquee-item">Storage Solutions</div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         SECTION 2 — INTRODUCTION
+    ====================================================== -->
+    <section class="section bg-white" aria-label="Introduction">
+      <div class="container">
+        <div class="intro-split">
+          <!-- Text Side -->
+          <div>
+            <p class="text-label reveal">Garg Modular Furniture</p>
+            <div class="divider reveal"></div>
+            <h2 class="section-title text-4xl reveal" style="color: var(--indigo);">
+              Designed Around<br>
+              The Way<br>You Live.
+            </h2>
+            <p class="section-body reveal mt-md">
+              At Garg Modular Furniture, we believe great interiors are a balance of beauty, comfort and functionality. We design and manufacture customized modular furniture that makes every space feel intentional, refined and personal.
+            </p>
+            <a href="about.html" class="btn btn-primary btn-arrow reveal mt-lg" style="margin-top: var(--space-lg);">
+              Discover Our Story <span class="arrow-icon" aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <!-- Image Side -->
+          <div class="intro-split__img reveal-right">
+            <video
+              class="intro-split__video"
+              src="assets/video/About.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              aria-hidden="true"
+            ></video>
+            <div class="intro-split__badge">
+              <span class="intro-split__badge-num">5+</span>
+              <span class="intro-split__badge-text">Years of Craft</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 3 — SERVICES
+    ====================================================== -->
+    <section class="section bg-offwhite" aria-label="Our services">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="text-label">What We Create</p>
+          <div class="divider mt-sm"></div>
+          <h2 class="section-title text-4xl" style="color: var(--indigo);">
+            Modular Solutions,<br>
+            Built Around You.
+          </h2>
+        </div>
+
+        <!-- =====================================================
+             ORIGINAL SERVICES GRID HTML (BACKUP - UNCOMMENT TO REVERT)
+             =====================================================
+        <div class="services-grid stagger-group mt-lg">
+          <article class="service-card">
+            <div class="service-card__num" aria-hidden="true">01</div>
+            <h3 class="service-card__title">Modular Kitchens</h3>
+            <p class="service-card__desc">Functional, elegant kitchens designed around your lifestyle, storage needs and space.</p>
+            <a href="services.html#kitchens" class="service-card__link btn-arrow">
+              Learn More <span class="arrow-icon" aria-hidden="true">→</span>
+            </a>
+            <div class="service-card__border" aria-hidden="true"></div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__num" aria-hidden="true">02</div>
+            <h3 class="service-card__title">Modular Wardrobes</h3>
+            <p class="service-card__desc">Custom wardrobes combining intelligent organization, premium finishes and refined design.</p>
+            <a href="services.html#wardrobes" class="service-card__link btn-arrow">
+              Learn More <span class="arrow-icon" aria-hidden="true">→</span>
+            </a>
+            <div class="service-card__border" aria-hidden="true"></div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__num" aria-hidden="true">03</div>
+            <h3 class="service-card__title">Vanity Units</h3>
+            <p class="service-card__desc">Elegant vanity solutions designed to add functionality and character to your everyday spaces.</p>
+            <a href="services.html#vanity" class="service-card__link btn-arrow">
+              Learn More <span class="arrow-icon" aria-hidden="true">→</span>
+            </a>
+            <div class="service-card__border" aria-hidden="true"></div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__num" aria-hidden="true">04</div>
+            <h3 class="service-card__title">Modular Furniture</h3>
+            <p class="service-card__desc">Customized TV units, office furniture, storage and furniture solutions crafted for your space.</p>
+            <a href="services.html#furniture" class="service-card__link btn-arrow">
+              Learn More <span class="arrow-icon" aria-hidden="true">→</span>
+            </a>
+            <div class="service-card__border" aria-hidden="true"></div>
+          </article>
+        </div>
+        ===================================================== -->
+
+        <!-- FRAMER FOLDER CARDS GRID -->
+        <div class="folder-services-grid stagger-group mt-lg">
+          
+          <!-- Card 01: Modular Kitchens -->
+          <article class="folder-card folder-card--kitchen">
+            <a href="services.html#kitchens" class="folder-card__inner" aria-label="Modular Kitchens">
+              <div class="folder-card__art">
+                <img
+                  src="assets/images/gallery/kitchen_02.jpg"
+                  alt="Luxury modular kitchen interior with custom cabinets"
+                  class="folder-card__art-img"
+                  loading="lazy"
+                />
+                <div class="folder-card__art-overlay"></div>
+              </div>
+              <div class="folder-card__arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+              <div class="folder-card__flap">
+                <svg class="folder-card__flap-svg" viewBox="0 0 300 375" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 0,16 A 16,16 0 0,1 16,0 L 105,0 C 122,0 128,26 146,26 L 284,26 A 16,16 0 0,1 300,42 L 300,359 A 16,16 0 0,1 284,375 L 16,375 A 16,16 0 0,1 0,359 Z" />
+                </svg>
+                <div class="folder-card__flap-header">
+                  <span class="folder-card__num">01</span>
+                </div>
+                <div class="folder-card__features">
+                  <div class="folder-card__feature">
+                    <span class="folder-card__feature-dot">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                    </span>
+                    Custom Modular Layouts
+                  </div>
+                  <div class="folder-card__feature">
+                    <span class="folder-card__feature-dot">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                    </span>
+                    Premium Hardware &amp; Finishes
+                  </div>
+                  <div class="folder-card__feature">
+                    <span class="folder-card__feature-dot">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                    </span>
+                    Space-Optimized Storage
+                  </div>
+                </div>
+              </div>
+              <div class="folder-card__footer">
+                <h3 class="folder-card__title">Modular Kitchens</h3>
+                <p class="folder-card__desc">Functional, elegant kitchens designed around your lifestyle, storage needs and space.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 02: Modular Wardrobes -->
+          <article class="folder-card folder-card--wardrobe">
+            <a href="services.html#wardrobes" class="folder-card__inner" aria-label="Modular Wardrobes">
+              <div class="folder-card__art">
+                <img
+                  src="assets/images/gallery/wardrobe_02.jpg"
+                  alt="Modular wardrobe interior with shelves and hanging rails"
+                  class="folder-card__art-img"
+                  loading="lazy"
+                />
+                <div class="folder-card__art-overlay"></div>
+              </div>
+              <div class="folder-card__arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+              <div class="folder-card__flap">
+                <svg class="folder-card__flap-svg" viewBox="0 0 300 375" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 0,16 A 16,16 0 0,1 16,0 L 105,0 C 122,0 128,26 146,26 L 284,26 A 16,16 0 0,1 300,42 L 300,359 A 16,16 0 0,1 284,375 L 16,375 A 16,16 0 0,1 0,359 Z" />
+                </svg>
+                <div class="folder-card__flap-header">
+                  <span class="folder-card__num">02</span>
+                </div>
+                <div class="folder-card__features">
+                  <div class="folder-card__feature">
+                    <span class="folder-card__feature-dot">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                    </span>
+                    Sliding &amp; Swing Door Options
+                  </div>
+                  <div class="folder-card__feature">
+                    <span class="folder-card__feature-dot">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                    </span>
+                    Personalized Interior Layouts
+                  </div>
+                  <div class="folder-card__feature">
+                    <span class="folder-card__feature-dot">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                    </span>
+                    Anti-Warp Engineered Boards
+                  </div>
+                </div>
+              </div>
+              <div class="folder-card__footer">
+                <h3 class="folder-card__title">Modular Wardrobes</h3>
+                <p class="folder-card__desc">Custom wardrobes combining intelligent organization, premium finishes and refined design.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 03: Vanity Units -->
+          <article class="folder-card folder-card--vanity">
+            <a href="services.html#vanity" class="folder-card__inner" aria-label="Vanity Units">
+              <div class="folder-card__art">
+                <img
+                  src="assets/images/gallery/vanity_01.jpg"
+                  alt="Elegant bathroom vanity unit with LED mirror"
+                  class="folder-card__art-img"
+                  loading="lazy"
+                />
+                <div class="folder-card__art-overlay"></div>
+              </div>
+              <div class="folder-card__arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+              <div class="folder-card__flap">
+                <svg class="folder-card__flap-svg" viewBox="0 0 300 375" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 0,16 A 16,16 0 0,1 16,0 L 105,0 C 122,0 128,26 146,26 L 284,26 A 16,16 0 0,1 300,42 L 300,359 A 16,16 0 0,1 284,375 L 16,375 A 16,16 0 0,1 0,359 Z" />
+                </svg>
+                <div class="folder-card__flap-header">
+                  <span class="folder-card__num">03</span>
+                </div>
+                <div class="folder-card__features">
+                  <div class="folder-card__feature">
+                    <span class="folder-card__feature-dot">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                    </span>
+                    Integrated LED Mirror Lighting
+                  </div>
+                  <div class="folder-card__feature">
+                    <span class="folder-card__feature-dot">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                    </span>
+                    Compact Smart Storage
+                  </div>
+                  <div class="folder-card__feature">
+                    <span class="folder-card__feature-dot">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                    </span>
+                    Marble &amp; Quartz Surface Options
+                  </div>
+                </div>
+              </div>
+              <div class="folder-card__footer">
+                <h3 class="folder-card__title">Vanity Units</h3>
+                <p class="folder-card__desc">Elegant vanity solutions designed to add functionality and character to your everyday spaces.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 04: Modular Furniture -->
+          <article class="folder-card folder-card--furniture">
+            <a href="services.html#furniture" class="folder-card__inner" aria-label="Modular Furniture">
+              <div class="folder-card__art">
+                <img
+                  src="assets/images/gallery/living_02.jpg"
+                  alt="Modular wall unit with TV shelving and storage"
+                  class="folder-card__art-img"
+                  loading="lazy"
+                />
+                <div class="folder-card__art-overlay"></div>
+              </div>
+              <div class="folder-card__arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+              <div class="folder-card__flap">
+                <svg class="folder-card__flap-svg" viewBox="0 0 300 375" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 0,16 A 16,16 0 0,1 16,0 L 105,0 C 122,0 128,26 146,26 L 284,26 A 16,16 0 0,1 300,42 L 300,359 A 16,16 0 0,1 284,375 L 16,375 A 16,16 0 0,1 0,359 Z" />
+                </svg>
+                <div class="folder-card__flap-header">
+                  <span class="folder-card__num">04</span>
+                </div>
+                <div class="folder-card__features">
+                  <div class="folder-card__feature">
+                    <span class="folder-card__feature-dot">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                    </span>
+                    Custom TV &amp; Entertainment Units
+                  </div>
+                  <div class="folder-card__feature">
+                    <span class="folder-card__feature-dot">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                    </span>
+                    Ergonomic Home &amp; Commercial Office
+                  </div>
+                  <div class="folder-card__feature">
+                    <span class="folder-card__feature-dot">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                    </span>
+                    Bespoke Built-In Storage Solutions
+                  </div>
+                </div>
+              </div>
+              <div class="folder-card__footer">
+                <h3 class="folder-card__title">Modular Furniture</h3>
+                <p class="folder-card__desc">Customized TV units, office furniture, storage and furniture solutions crafted for your space.</p>
+              </div>
+            </a>
+          </article>
+
+        </div>
+
+        <div class="text-center reveal" style="margin-top: var(--space-xl);">
+          <a href="services.html" class="btn btn-outline-dark btn-arrow">
+            Explore All Services <span class="arrow-icon" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         INTERACTIVE BEFORE / AFTER TRANSFORMATION
+    ====================================================== -->
+    <section class="section bg-indigo text-white relative overflow-hidden" aria-label="Interior Transformation Showcase">
+      <div class="ambient-glow" style="top: -100px; right: -100px;"></div>
+      <div class="container">
+        <div class="text-center mb-lg reveal">
+          <span class="text-label text-gamboge">Interactive Showcase</span>
+          <h2 class="text-heading text-4xl text-white mt-sm">Raw Space vs. Modular Luxury</h2>
+          <p class="text-body text-white mt-sm" style="max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.8;">
+            Slide to experience how Garg Modular Furniture transforms raw architectural shells into high-end, functional interior masterworks in Jaipur.
+          </p>
+        </div>
+
+        <div class="transformation-slider reveal-scale" data-cursor-label="DRAG">
+          <div class="transformation-slider__after">
+            <img src="assets/images/living_room_after.jpg" alt="Transformed Luxury Living Room by Garg Modular Furniture" loading="lazy">
+            <span class="transformation-slider__badge transformation-slider__badge--after">After: Luxury Transformation</span>
+          </div>
+
+          <div class="transformation-slider__before">
+            <img src="assets/images/living_room_before.jpg" alt="Raw Unfinished Living Room Structure Before Transformation" loading="lazy">
+            <span class="transformation-slider__badge transformation-slider__badge--before">Before: Raw Structure</span>
+          </div>
+
+          <div class="transformation-slider__handle">
+            <div class="transformation-slider__handle-btn" aria-label="Drag to compare before and after">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         INTERACTIVE MATERIAL & TEXTURE CUSTOMIZER
+    ===================================================== -->
+    <section class="section bg-white" aria-label="Luxury Material Customizer">
+      <div class="container">
+        <div class="material-customizer">
+          <div class="reveal-left">
+            <span class="text-label text-indigo">Precision Craftsmanship</span>
+            <h2 class="text-heading text-4xl text-indigo mt-sm">Tactile Luxury Finishes</h2>
+            <p class="text-body text-muted mt-sm">
+              We pair HDMR, BWP Marine Plywood, and aluminum structural frames with European laminates, acrylics, and natural veneers. Click any swatch below to sample our flagship textures.
+            </p>
+
+            <div class="swatch-grid mt-md">
+              <div class="swatch-item active" data-index="0" data-img="assets/images/craftsmanship_indigo.jpg" data-title="Japanese Indigo Finish" data-desc="Deep Japanese Indigo (#1E424D) cabinetry & architectural fluted panels balanced with soft Flax and Iceberg accents." data-tags="Japanese Indigo · Matte Acrylic · Smoked Core" data-cursor-label="SELECT">
+                <div class="swatch-item__inner" style="background: linear-gradient(135deg, #1E424D, #1E424D);"></div>
+              </div>
+              <div class="swatch-item" data-index="1" data-img="assets/images/craftsmanship_iceberg.jpg" data-title="Iceberg Horizon Finish" data-desc="Luminous Iceberg (#77B5D3) tones harmonized with deep Japanese Indigo cabinetry and ambient Flax illumination." data-tags="Iceberg Blue · High-Gloss Marble · Soft-Close Tandem" data-cursor-label="SELECT">
+                <div class="swatch-item__inner" style="background: linear-gradient(135deg, #77B5D3, #77B5D3);"></div>
+              </div>
+              <div class="swatch-item" data-index="2" data-img="assets/images/craftsmanship_flax.jpg" data-title="Warm Flax Oak Finish" data-desc="Warm Flax (#E5D595) champagne veneer and velvet upholstery anchored with Dark Brown and Japanese Indigo accents." data-tags="Warm Flax · Natural Grain Veneer · Champagne Gola" data-cursor-label="SELECT">
+                <div class="swatch-item__inner" style="background: linear-gradient(135deg, #E5D595, #E5D595);"></div>
+              </div>
+              <div class="swatch-item" data-index="3" data-img="assets/images/craftsmanship_gamboge.jpg" data-title="Royal Gamboge Amber Finish" data-desc="Vibrant Gamboge (#E19E11) architectural accents and warm golden lighting balanced with Dark Brown and Indigo depths." data-tags="Gamboge Gold · Fluted Glass · Blum Motion" data-cursor-label="SELECT">
+                <div class="swatch-item__inner" style="background: linear-gradient(135deg, #E19E11, #E19E11);"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal-right">
+            <div class="material-preview-card framer-glass-card" data-cursor-label="EXPLORE" id="craftsmanship-card">
+              <!-- Crossfading image stack for the 4 brand states of the same room -->
+              <div class="material-preview-stage">
+                <img class="material-state-img active" src="assets/images/craftsmanship_indigo.jpg" alt="Japanese Indigo Luxury Finish" data-index="0">
+                <img class="material-state-img" src="assets/images/craftsmanship_iceberg.jpg" alt="Iceberg Horizon Luxury Finish" data-index="1">
+                <img class="material-state-img" src="assets/images/craftsmanship_flax.jpg" alt="Warm Flax Oak Luxury Finish" data-index="2">
+                <img class="material-state-img" src="assets/images/craftsmanship_gamboge.jpg" alt="Royal Gamboge Amber Luxury Finish" data-index="3">
+              </div>
+
+              <!-- Subtle Indicator -->
+              <div class="material-preview-nav">
+                <div class="material-counter">
+                  <span id="material-current-num">01</span> / <span>04</span>
+                </div>
+                <div class="material-dots">
+                  <span class="material-dot active" data-index="0" aria-label="State 1: Japanese Indigo"></span>
+                  <span class="material-dot" data-index="1" aria-label="State 2: Iceberg"></span>
+                  <span class="material-dot" data-index="2" aria-label="State 3: Flax"></span>
+                  <span class="material-dot" data-index="3" aria-label="State 4: Gamboge"></span>
+                </div>
+              </div>
+
+              <div class="material-preview-info">
+                <span class="text-label text-gamboge" id="material-preview-tags">Japanese Indigo · Matte Acrylic · Smoked Core</span>
+                <h3 class="text-heading text-2xl text-white mt-xs" id="material-preview-title">Japanese Indigo Finish</h3>
+                <p class="text-body text-white mt-xs" style="font-size:0.875rem; opacity:0.8;" id="material-preview-desc">Deep Japanese Indigo (#1E424D) cabinetry & architectural fluted panels balanced with soft Flax and Iceberg accents.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- =====================================================
+         SECTION 4 — WHY GARG (PROJECT-HOVER TAB SHOWCASE)
+    ====================================================== -->
+    <section class="section bg-indigo text-white relative overflow-hidden" aria-label="Why choose Garg Modular Furniture" id="why-choose-us">
+      <div class="ambient-glow" style="top: -100px; right: -100px;"></div>
+      <div class="container">
+        <div class="section-header reveal mb-lg">
+          <p class="text-label" style="color: var(--iceberg);">Why Choose Us</p>
+          <div class="divider mt-sm"></div>
+          <h2 class="section-title text-4xl" style="color: var(--white);">
+            Precision in<br>Every Detail.
+          </h2>
+        </div>
+
+        <!-- The Framer Project-Hover Showcase Frame -->
+        <div class="framer-project-showcase reveal-scale" data-cursor-label="EXPLORE">
+          <!-- 1. Full Background Image Stack -->
+          <div class="framer-project-bg-stack">
+            <img class="framer-project-bg active" src="assets/images/why_custom_designs.jpg" alt="Customized Designs" data-index="0">
+            <img class="framer-project-bg" src="assets/images/why_premium_materials.jpg" alt="Premium Materials" data-index="1">
+            <img class="framer-project-bg" src="assets/images/why_modern_manufacturing.jpg" alt="Modern Manufacturing" data-index="2">
+            <img class="framer-project-bg" src="assets/images/why_space_saving.jpg" alt="Space-Saving Solutions" data-index="3">
+            <img class="framer-project-bg" src="assets/images/why_installation.jpg" alt="Professional Installation" data-index="4">
+            <img class="framer-project-bg" src="assets/images/why_on_time_delivery.jpg" alt="On-Time Delivery" data-index="5">
+          </div>
+
+          <!-- 2. Noise / Grain Texture Overlay (exact Framer effect) -->
+          <div class="framer-project-grain-overlay"></div>
+
+          <!-- 3. Left Column: Stack of Cards with Sliding Background Curtains -->
+          <div class="framer-project-cards-column" role="tablist">
+            
+            <!-- Card 01 -->
+            <div class="framer-project-card active" data-index="0" role="tab" aria-selected="true">
+              <div class="framer-card-curtain"></div>
+              <div class="framer-card-content">
+                <span class="framer-card-num">01</span>
+                <div class="framer-card-text">
+                  <h3 class="framer-card-title">Customized Designs</h3>
+                  <p class="framer-card-desc">Bespoke layouts engineered for your space & ergonomics.</p>
+                </div>
+              </div>
+              <div class="framer-card-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+
+            <!-- Card 02 -->
+            <div class="framer-project-card" data-index="1" role="tab" aria-selected="false">
+              <div class="framer-card-curtain"></div>
+              <div class="framer-card-content">
+                <span class="framer-card-num">02</span>
+                <div class="framer-card-text">
+                  <h3 class="framer-card-title">Premium Materials</h3>
+                  <p class="framer-card-desc">HDMR, BWP marine plywood & European acrylic finishes.</p>
+                </div>
+              </div>
+              <div class="framer-card-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+
+            <!-- Card 03 -->
+            <div class="framer-project-card" data-index="2" role="tab" aria-selected="false">
+              <div class="framer-card-curtain"></div>
+              <div class="framer-card-content">
+                <span class="framer-card-num">03</span>
+                <div class="framer-card-text">
+                  <h3 class="framer-card-title">Modern Manufacturing</h3>
+                  <p class="framer-card-desc">Micron-accurate CNC joinery & automated edge-banding.</p>
+                </div>
+              </div>
+              <div class="framer-card-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+
+            <!-- Card 04 -->
+            <div class="framer-project-card" data-index="3" role="tab" aria-selected="false">
+              <div class="framer-card-curtain"></div>
+              <div class="framer-card-content">
+                <span class="framer-card-num">04</span>
+                <div class="framer-card-text">
+                  <h3 class="framer-card-title">Space-Saving Solutions</h3>
+                  <p class="framer-card-desc">Intelligent sensory pantries & floor-to-ceiling storage.</p>
+                </div>
+              </div>
+              <div class="framer-card-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+
+            <!-- Card 05 -->
+            <div class="framer-project-card" data-index="4" role="tab" aria-selected="false">
+              <div class="framer-card-curtain"></div>
+              <div class="framer-card-content">
+                <span class="framer-card-num">05</span>
+                <div class="framer-card-text">
+                  <h3 class="framer-card-title">Professional Installation</h3>
+                  <p class="framer-card-desc">Laser-level alignment & white-glove assembly in Jaipur.</p>
+                </div>
+              </div>
+              <div class="framer-card-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+
+            <!-- Card 06 -->
+            <div class="framer-project-card" data-index="5" role="tab" aria-selected="false">
+              <div class="framer-card-curtain"></div>
+              <div class="framer-card-content">
+                <span class="framer-card-num">06</span>
+                <div class="framer-card-text">
+                  <h3 class="framer-card-title">On-Time Delivery</h3>
+                  <p class="framer-card-desc">Structured 45-day turnkey workflow with milestone tracking.</p>
+                </div>
+              </div>
+              <div class="framer-card-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 4. Right Floating Detail / Counter Badge -->
+          <div class="framer-project-floating-badge">
+            <div class="framer-project-floating-tag" id="framer-why-tag">Bespoke Spatial Architecture</div>
+            <div class="framer-project-floating-num">
+              <span id="framer-why-num">01</span> / 06
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 5 — PROCESS
+    ====================================================== -->
+    <section class="section bg-white" aria-label="Our process">
+      <div class="container">
+        <div class="section-header section-header--center text-center reveal">
+          <p class="text-label text-label--dark">Our Process</p>
+          <div class="divider divider--center mt-sm"></div>
+          <h2 class="section-title text-4xl" style="color: var(--indigo);">
+            From Idea<br>To Installation.
+          </h2>
+        </div>
+
+        <!-- Framer-Style Steps Flow -->
+        <div class="steps-flow">
+          <!-- Dynamic SVG Track overlay for snake curve -->
+          <svg class="steps-flow__svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="stepsFlowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#E19E11" />
+                <stop offset="50%" stop-color="#E5D595" />
+                <stop offset="100%" stop-color="#1E424D" />
+              </linearGradient>
+            </defs>
+            <path class="steps-flow__svg-track" d="" />
+            <path class="steps-flow__svg-fill" d="" />
+          </svg>
+
+          <!-- Mobile Vertical Flow Line -->
+          <div class="steps-flow__mobile-line">
+            <div class="steps-flow__mobile-fill"></div>
+          </div>
+
+          <!-- Glowing Start & End Dots -->
+          <div class="steps-flow__dot steps-flow__dot--start" aria-hidden="true"></div>
+          <div class="steps-flow__dot steps-flow__dot--end" aria-hidden="true"></div>
+
+          <!-- STEP 01 -->
+          <div class="steps-flow__row" data-step="1">
+            <div class="steps-flow__node-point hide-mobile" aria-hidden="true"></div>
+            <div class="steps-flow__text-col">
+              <div class="steps-flow__num-header">
+                <div class="steps-flow__num-box">
+                  <span class="steps-flow__num-static">0</span>
+                  <span class="steps-flow__num-roller">
+                    <span class="steps-flow__num-track" data-target="1">
+                      <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </span>
+                  </span>
+                </div>
+                <span class="steps-flow__badge">Phase 01 • Discovery</span>
+              </div>
+              <h3 class="steps-flow__title">Consultation</h3>
+              <p class="steps-flow__desc">We begin with an in-depth on-site survey and lifestyle discovery session. Our principal designers analyze your spatial dimensions, natural lighting, daily routines, storage requirements, and aesthetic preferences to lay a strategic foundation for your bespoke modular space.</p>
+            </div>
+            <div class="steps-flow__media-col">
+              <div class="steps-flow__card">
+                <img src="assets/images/living_room_before.jpg" alt="Initial site assessment and spatial survey before renovation" loading="lazy">
+                <div class="steps-flow__card-tag">Site Survey &amp; Needs Assessment</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 02 (Reversed) -->
+          <div class="steps-flow__row steps-flow__row--reversed" data-step="2">
+            <div class="steps-flow__node-point hide-mobile" aria-hidden="true"></div>
+            <div class="steps-flow__text-col">
+              <div class="steps-flow__num-header">
+                <div class="steps-flow__num-box">
+                  <span class="steps-flow__num-static">0</span>
+                  <span class="steps-flow__num-roller">
+                    <span class="steps-flow__num-track" data-target="2">
+                      <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </span>
+                  </span>
+                </div>
+                <span class="steps-flow__badge">Phase 02 • Spatial Concept</span>
+              </div>
+              <h3 class="steps-flow__title">Design</h3>
+              <p class="steps-flow__desc">Our design team translates initial insights into ergonomic architectural layouts. We develop detailed 2D floor plans, optimized modular cabinetry configurations, and curated material palettes—harmonizing premium laminates, Venetian PU, acrylics, and European hardware.</p>
+            </div>
+            <div class="steps-flow__media-col">
+              <div class="steps-flow__card">
+                <img src="assets/images/process_design.jpg" alt="Architect drafting detailed blueprints and modular layout plans" loading="lazy">
+                <div class="steps-flow__card-tag">Architectural Blueprint &amp; Layout Design</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 03 -->
+          <div class="steps-flow__row" data-step="3">
+            <div class="steps-flow__node-point hide-mobile" aria-hidden="true"></div>
+            <div class="steps-flow__text-col">
+              <div class="steps-flow__num-header">
+                <div class="steps-flow__num-box">
+                  <span class="steps-flow__num-static">0</span>
+                  <span class="steps-flow__num-roller">
+                    <span class="steps-flow__num-track" data-target="3">
+                      <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </span>
+                  </span>
+                </div>
+                <span class="steps-flow__badge">Phase 03 • Photorealistic Render</span>
+              </div>
+              <h3 class="steps-flow__title">3D Visualization</h3>
+              <p class="steps-flow__desc">Experience your transformed space before a single board is cut. We create ultra-high-definition 3D photorealistic renderings and ambient lighting simulations, enabling you to inspect textures, colors, and spatial balance from every angle with total confidence.</p>
+            </div>
+            <div class="steps-flow__media-col">
+              <div class="steps-flow__card">
+                <img src="assets/images/card_kitchen.jpg" alt="Photorealistic 3D architectural render and lighting simulation model" loading="lazy">
+                <div class="steps-flow__card-tag">3D Photorealistic Virtual Model</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 04 (Reversed) -->
+          <div class="steps-flow__row steps-flow__row--reversed" data-step="4">
+            <div class="steps-flow__node-point hide-mobile" aria-hidden="true"></div>
+            <div class="steps-flow__text-col">
+              <div class="steps-flow__num-header">
+                <div class="steps-flow__num-box">
+                  <span class="steps-flow__num-static">0</span>
+                  <span class="steps-flow__num-roller">
+                    <span class="steps-flow__num-track" data-target="4">
+                      <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </span>
+                  </span>
+                </div>
+                <span class="steps-flow__badge">Phase 04 • Precision CNC</span>
+              </div>
+              <h3 class="steps-flow__title">Manufacturing</h3>
+              <p class="steps-flow__desc">Your modular components are crafted in our advanced factory using computer-controlled German CNC machinery. With automated precision cutting, PUR edge-banding, and high-density waterproof boards, every joint achieves sub-millimeter accuracy and lasting durability.</p>
+            </div>
+            <div class="steps-flow__media-col">
+              <div class="steps-flow__card">
+                <img src="assets/images/why_modern_manufacturing.jpg" alt="Computer controlled German CNC modular manufacturing and precision joinery" loading="lazy">
+                <div class="steps-flow__card-tag">Automated German CNC Fabrication</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 05 -->
+          <div class="steps-flow__row" data-step="5">
+            <div class="steps-flow__node-point hide-mobile" aria-hidden="true"></div>
+            <div class="steps-flow__text-col">
+              <div class="steps-flow__num-header">
+                <div class="steps-flow__num-box">
+                  <span class="steps-flow__num-static">0</span>
+                  <span class="steps-flow__num-roller">
+                    <span class="steps-flow__num-track" data-target="5">
+                      <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </span>
+                  </span>
+                </div>
+                <span class="steps-flow__badge">Phase 05 • Master Assembly</span>
+              </div>
+              <h3 class="steps-flow__title">Installation</h3>
+              <p class="steps-flow__desc">Our certified factory-trained technicians execute seamless, dust-free on-site installation. Using digital laser leveling, secure anchoring systems, soft-close hardware calibration, and continuous alignment checks, we ensure flawless fitment and structural perfection.</p>
+            </div>
+            <div class="steps-flow__media-col">
+              <div class="steps-flow__card">
+                <img src="assets/images/d2.jpg" alt="Master craftsman assembling and calibrating modular hardware components" loading="lazy">
+                <div class="steps-flow__card-tag">Master Fitment &amp; Hardware Assembly</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 06 (Reversed) -->
+          <div class="steps-flow__row steps-flow__row--reversed" data-step="6">
+            <div class="steps-flow__node-point hide-mobile" aria-hidden="true"></div>
+            <div class="steps-flow__text-col">
+              <div class="steps-flow__num-header">
+                <div class="steps-flow__num-box">
+                  <span class="steps-flow__num-static">0</span>
+                  <span class="steps-flow__num-roller">
+                    <span class="steps-flow__num-track" data-target="6">
+                      <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </span>
+                  </span>
+                </div>
+                <span class="steps-flow__badge">Phase 06 • Final Delivery</span>
+              </div>
+              <h3 class="steps-flow__title">Handover</h3>
+              <p class="steps-flow__desc">Following rigorous multi-point quality audits and post-installation deep cleaning, we conduct a personalized handover walkthrough with you. We deliver your warranty certificates, care guides, and an immaculate, turnkey space ready to be lived in and cherished.</p>
+            </div>
+            <div class="steps-flow__media-col">
+              <div class="steps-flow__card">
+                <img src="assets/images/living_room_after.jpg" alt="Completed luxury living space delivered and ready" loading="lazy">
+                <div class="steps-flow__card-tag">Immaculate Turnkey Handover</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION — EDITORIAL TEAM CAROUSEL (FRAMER STYLE)
+    ====================================================== -->
+    <section class="team-editorial-section" aria-label="Our Master Craftsmen and Design Leadership">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="team-editorial-header reveal">
+          <div class="team-editorial-header__left">
+            <span class="team-editorial-pill">Design &amp; Execution Leadership</span>
+            <h2 class="team-editorial-title">
+              Crafted by Masters Who Care About the Millimeter.
+            </h2>
+            <p class="team-editorial-desc">
+              Behind every bespoke modular kitchen, wardrobe, and custom interior is a multidisciplinary team of spatial architects, master woodworkers, and German-certified hardware technicians.
+            </p>
+          </div>
+          <div class="team-editorial-controls">
+            <button class="team-nav-btn" id="team-prev" aria-label="Previous team member" title="Previous member">←</button>
+            <button class="team-nav-btn" id="team-next" aria-label="Next team member" title="Next member">→</button>
+          </div>
+        </div>
+
+        <!-- Carousel Wrapper -->
+        <div class="team-carousel-wrapper">
+          <div class="team-carousel-track" role="region" aria-label="Team members carousel">
+            
+            <!-- Member 1: Ramesh Garg -->
+            <article class="team-framer-card is-expanded" data-member="1" tabindex="0">
+              <div class="team-framer-card__visual">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Ramesh Garg - Founder & Master Craftsman" class="team-framer-card__img" loading="lazy">
+                <div class="team-framer-card__collapsed-overlay">
+                  <span class="team-framer-card__collapsed-badge">30+ Yrs Experience</span>
+                  <h3 class="team-framer-card__collapsed-name">Ramesh Garg</h3>
+                  <p class="team-framer-card__collapsed-role">Founder &amp; Master Artisan</p>
+                  <span class="team-framer-card__expand-hint">Expand Profile +</span>
+                </div>
+              </div>
+              <div class="team-framer-card__editorial">
+                <div>
+                  <div class="team-framer-card__header-row">
+                    <span class="team-framer-card__exp-badge">30+ Yrs Master Woodworker</span>
+                    <button class="team-framer-card__close-btn" aria-label="Collapse profile" title="Close">✕</button>
+                  </div>
+                  <h3 class="team-framer-card__name">Ramesh Garg</h3>
+                  <p class="team-framer-card__role">Founder &amp; Principal Craftsman</p>
+                  <p class="team-framer-card__bio">
+                    "True luxury in modular furniture is hidden where marine-grade structural timber meets zero-tolerance calibration. We don't just build cabinetry; we craft lifetime heirlooms."
+                  </p>
+                  <div class="team-framer-card__tags">
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> 100% Marine Grade Plywood Specialist</div>
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> 1,200+ Residential Projects in Jaipur</div>
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> Traditional Joinery &amp; Modern Precision</div>
+                  </div>
+                </div>
+                <div class="team-framer-card__footer">
+                  <a href="contact.html" class="team-framer-card__action-btn">Consult With Team →</a>
+                  <div class="team-framer-card__socials">
+                    <a href="contact.html" class="team-framer-card__social-link" title="Contact Ramesh Garg" aria-label="Contact">✉</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Member 2: Ananya Sharma -->
+            <article class="team-framer-card" data-member="2" tabindex="0">
+              <div class="team-framer-card__visual">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Ananya Sharma - Head of 3D Spatial Architecture" class="team-framer-card__img" loading="lazy">
+                <div class="team-framer-card__collapsed-overlay">
+                  <span class="team-framer-card__collapsed-badge">Spatial Architecture</span>
+                  <h3 class="team-framer-card__collapsed-name">Ananya Sharma</h3>
+                  <p class="team-framer-card__collapsed-role">Head of 3D Architecture</p>
+                  <span class="team-framer-card__expand-hint">Expand Profile +</span>
+                </div>
+              </div>
+              <div class="team-framer-card__editorial">
+                <div>
+                  <div class="team-framer-card__header-row">
+                    <span class="team-framer-card__exp-badge">10+ Yrs Spatial Design</span>
+                    <button class="team-framer-card__close-btn" aria-label="Collapse profile" title="Close">✕</button>
+                  </div>
+                  <h3 class="team-framer-card__name">Ananya Sharma</h3>
+                  <p class="team-framer-card__role">Head of 3D Modular Architecture</p>
+                  <p class="team-framer-card__bio">
+                    "Every layout should feel intuitive and weightless. By blending ergonomic work triangles with handleless Italian profiles, we transform everyday kitchens into culinary sanctuaries."
+                  </p>
+                  <div class="team-framer-card__tags">
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> Italian Acrylic &amp; Gola Profile Expert</div>
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> Photorealistic 3D VR Previews</div>
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> Hidden Pantry &amp; Sensory Lighting</div>
+                  </div>
+                </div>
+                <div class="team-framer-card__footer">
+                  <a href="contact.html" class="team-framer-card__action-btn">Consult With Team →</a>
+                  <div class="team-framer-card__socials">
+                    <a href="contact.html" class="team-framer-card__social-link" title="Contact Ananya Sharma" aria-label="Contact">✉</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Member 3: Vikram Garg -->
+            <article class="team-framer-card" data-member="3" tabindex="0">
+              <div class="team-framer-card__visual">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80" alt="Vikram Garg - Lead Project Director" class="team-framer-card__img" loading="lazy">
+                <div class="team-framer-card__collapsed-overlay">
+                  <span class="team-framer-card__collapsed-badge">Project Director</span>
+                  <h3 class="team-framer-card__collapsed-name">Vikram Garg</h3>
+                  <p class="team-framer-card__collapsed-role">Lead Project Director</p>
+                  <span class="team-framer-card__expand-hint">Expand Profile +</span>
+                </div>
+              </div>
+              <div class="team-framer-card__editorial">
+                <div>
+                  <div class="team-framer-card__header-row">
+                    <span class="team-framer-card__exp-badge">12+ Yrs Turnkey Lead</span>
+                    <button class="team-framer-card__close-btn" aria-label="Collapse profile" title="Close">✕</button>
+                  </div>
+                  <h3 class="team-framer-card__name">Vikram Garg</h3>
+                  <p class="team-framer-card__role">Lead Project Director</p>
+                  <p class="team-framer-card__bio">
+                    "Precision begins at the laser survey. Our synchrony between digital site scans and CNC manufacturing ensures that what you approve on screen installs flawlessly on site."
+                  </p>
+                  <div class="team-framer-card__tags">
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> End-to-End Turnkey Execution</div>
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> Guaranteed On-Time Handover</div>
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> Zero-Error Site Measurement Protocol</div>
+                  </div>
+                </div>
+                <div class="team-framer-card__footer">
+                  <a href="contact.html" class="team-framer-card__action-btn">Consult With Team →</a>
+                  <div class="team-framer-card__socials">
+                    <a href="contact.html" class="team-framer-card__social-link" title="Contact Vikram Garg" aria-label="Contact">✉</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Member 4: Pooja Mehra -->
+            <article class="team-framer-card" data-member="4" tabindex="0">
+              <div class="team-framer-card__visual">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80" alt="Pooja Mehra - Senior Interior Stylist" class="team-framer-card__img" loading="lazy">
+                <div class="team-framer-card__collapsed-overlay">
+                  <span class="team-framer-card__collapsed-badge">Finishes &amp; Styling</span>
+                  <h3 class="team-framer-card__collapsed-name">Pooja Mehra</h3>
+                  <p class="team-framer-card__collapsed-role">Senior Interior Stylist</p>
+                  <span class="team-framer-card__expand-hint">Expand Profile +</span>
+                </div>
+              </div>
+              <div class="team-framer-card__editorial">
+                <div>
+                  <div class="team-framer-card__header-row">
+                    <span class="team-framer-card__exp-badge">8+ Yrs Material Specialist</span>
+                    <button class="team-framer-card__close-btn" aria-label="Collapse profile" title="Close">✕</button>
+                  </div>
+                  <h3 class="team-framer-card__name">Pooja Mehra</h3>
+                  <p class="team-framer-card__role">Senior Interior Stylist &amp; Finishes Lead</p>
+                  <p class="team-framer-card__bio">
+                    "Textures evoke emotion. From anti-fingerprint super-matte finishes to warm fluted oak veneers, I curate palettes that radiate warmth, sophistication, and timeless luxury."
+                  </p>
+                  <div class="team-framer-card__tags">
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> European Veneers &amp; Acrylic Finishes</div>
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> Fluted Panels &amp; Accent Detailing</div>
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> Bespoke Residential Color Theory</div>
+                  </div>
+                </div>
+                <div class="team-framer-card__footer">
+                  <a href="contact.html" class="team-framer-card__action-btn">Consult With Team →</a>
+                  <div class="team-framer-card__socials">
+                    <a href="contact.html" class="team-framer-card__social-link" title="Contact Pooja Mehra" aria-label="Contact">✉</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Member 5: Rajesh Kumawat -->
+            <article class="team-framer-card" data-member="5" tabindex="0">
+              <div class="team-framer-card__visual">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Rajesh Kumawat - Senior Hardware & Mechanism Lead" class="team-framer-card__img" loading="lazy">
+                <div class="team-framer-card__collapsed-overlay">
+                  <span class="team-framer-card__collapsed-badge">Hardware Engineering</span>
+                  <h3 class="team-framer-card__collapsed-name">Rajesh Kumawat</h3>
+                  <p class="team-framer-card__collapsed-role">Senior Hardware Lead</p>
+                  <span class="team-framer-card__expand-hint">Expand Profile +</span>
+                </div>
+              </div>
+              <div class="team-framer-card__editorial">
+                <div>
+                  <div class="team-framer-card__header-row">
+                    <span class="team-framer-card__exp-badge">15+ Yrs Hardware Lead</span>
+                    <button class="team-framer-card__close-btn" aria-label="Collapse profile" title="Close">✕</button>
+                  </div>
+                  <h3 class="team-framer-card__name">Rajesh Kumawat</h3>
+                  <p class="team-framer-card__role">Senior Hardware &amp; Fitting Lead</p>
+                  <p class="team-framer-card__bio">
+                    "A kitchen is used thousands of times each year. Every German Blum lift-up system and Hettich soft-close drawer we calibrate glides with utter silence and lifelong durability."
+                  </p>
+                  <div class="team-framer-card__tags">
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> German Blum &amp; Hettich Certified</div>
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> 200,000-Cycle Soft-Close Endurance</div>
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> Multi-Axis Concealed Hinge Calibration</div>
+                  </div>
+                </div>
+                <div class="team-framer-card__footer">
+                  <a href="contact.html" class="team-framer-card__action-btn">Consult With Team →</a>
+                  <div class="team-framer-card__socials">
+                    <a href="contact.html" class="team-framer-card__social-link" title="Contact Rajesh Kumawat" aria-label="Contact">✉</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Member 6: Amit Verma -->
+            <article class="team-framer-card" data-member="6" tabindex="0">
+              <div class="team-framer-card__visual">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" alt="Amit Verma - Chief QA & CNC Lead" class="team-framer-card__img" loading="lazy">
+                <div class="team-framer-card__collapsed-overlay">
+                  <span class="team-framer-card__collapsed-badge">CNC &amp; QA Lead</span>
+                  <h3 class="team-framer-card__collapsed-name">Amit Verma</h3>
+                  <p class="team-framer-card__collapsed-role">Chief QA &amp; CNC Lead</p>
+                  <span class="team-framer-card__expand-hint">Expand Profile +</span>
+                </div>
+              </div>
+              <div class="team-framer-card__editorial">
+                <div>
+                  <div class="team-framer-card__header-row">
+                    <span class="team-framer-card__exp-badge">9+ Yrs Precision Joinery</span>
+                    <button class="team-framer-card__close-btn" aria-label="Collapse profile" title="Close">✕</button>
+                  </div>
+                  <h3 class="team-framer-card__name">Amit Verma</h3>
+                  <p class="team-framer-card__role">Chief Quality Assurance &amp; CNC Lead</p>
+                  <p class="team-framer-card__bio">
+                    "At our automated facility, we maintain a strict 0.1mm manufacturing tolerance. Moisture-proof PUR edge-banding ensures modular cabinets remain impervious to humidity."
+                  </p>
+                  <div class="team-framer-card__tags">
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> 0.1mm Automated CNC Sizing</div>
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> Waterproof PUR Edge-Banding</div>
+                    <div class="team-framer-card__tag-item"><span class="team-framer-card__tag-dot"></span> Multi-Tier Quality Audit System</div>
+                  </div>
+                </div>
+                <div class="team-framer-card__footer">
+                  <a href="contact.html" class="team-framer-card__action-btn">Consult With Team →</a>
+                  <div class="team-framer-card__socials">
+                    <a href="contact.html" class="team-framer-card__social-link" title="Contact Amit Verma" aria-label="Contact">✉</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- =====================================================
+         SECTION 6 — ARCHITECTURAL PORTFOLIO PREVIEW
+    ====================================================== -->
+    <section class="section selected-work-section" id="selected-work" aria-label="Selected architectural projects">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="selected-work-header reveal">
+          <div>
+            <div style="display:inline-flex; align-items:center; gap:0.5rem; margin-bottom:0.4rem;">
+              <span style="width:8px; height:8px; border-radius:50%; background:var(--gamboge); box-shadow:0 0 10px var(--gamboge); display:inline-block;"></span>
+              <p class="text-label text-label--dark" style="margin:0; letter-spacing:0.14em;">ARCHITECTURAL PORTFOLIO • JAIPUR</p>
+            </div>
+            <h2 class="section-title text-4xl" style="color: var(--indigo); margin-top:0.25rem;">
+              Spaces We've<br>Helped Shape.
+            </h2>
+            <p style="font-size:0.95rem; line-height:1.55; color:rgba(30,66,77,0.7); max-width:540px; margin-top:0.5rem; margin-bottom:0;">
+              A curated preview of bespoke modular kitchens, walk-in dressing suites, media lounges, and custom cabinetry crafted in Jaipur.
+            </p>
+          </div>
+        </div>
+
+        <!-- Asymmetrical Editorial Portfolio Composition (5 Curated Projects) -->
+        <div class="portfolio-preview-grid reveal" id="portfolio-preview-grid">
+
+          <!-- 01 FEATURED PROJECT (Modular Kitchen) -->
+          <a href="projects.html" class="portfolio-card portfolio-card--featured" data-project-idx="0" aria-label="View Featured Project: The Calacatta Quartz & Vitrine Island Kitchen">
+            <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/3d/5/1.jpg" alt="The Calacatta Quartz & Vitrine Island Kitchen" class="portfolio-card__img" loading="lazy">
+            <div class="portfolio-card__overlay"></div>
+            
+            <div class="portfolio-card__header">
+              <span class="portfolio-tag portfolio-tag--featured">FEATURED PROJECT</span>
+              <span class="portfolio-tag portfolio-tag--pill">MODULAR KITCHEN</span>
+            </div>
+
+            <div class="portfolio-card__content">
+              <p class="portfolio-card__type">Modular Kitchen Architecture</p>
+              <h3 class="portfolio-card__title">The Calacatta Quartz &amp; Vitrine Island Kitchen</h3>
+              <span class="portfolio-card__cta-hint">View Project Details <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <!-- SUPPORTING PROJECTS (4 Compact Cards) -->
+          <div class="portfolio-supporting-grid">
+
+            <!-- 02 MODULAR WARDROBE -->
+            <a href="projects.html" class="portfolio-card portfolio-card--compact" data-project-idx="1" aria-label="View Modular Wardrobe: Bronze Glass Walk-In Dressing Suite">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/wardrobes/1edfe2f2-1c28-4c15-ba7b-d8ac5755b6ed.jpeg" alt="Bronze Glass Walk-In Dressing Suite" class="portfolio-card__img" loading="lazy">
+              <div class="portfolio-card__overlay"></div>
+
+              <div class="portfolio-card__header">
+                <span class="portfolio-tag portfolio-tag--pill">MODULAR WARDROBE</span>
+              </div>
+
+              <div class="portfolio-card__content">
+                <p class="portfolio-card__type">Modular Wardrobe</p>
+                <h3 class="portfolio-card__title">Bronze Glass Walk-In Dressing Suite</h3>
+                <span class="portfolio-card__cta-hint">View Project <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+
+            <!-- 03 TV & LIVING UNIT -->
+            <a href="projects.html" class="portfolio-card portfolio-card--compact" data-project-idx="2" aria-label="View TV & Living Unit: Acoustic Slat & Floating Media Wall">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/3d/13/1.jpg" alt="Acoustic Slat & Floating Media Wall" class="portfolio-card__img" loading="lazy">
+              <div class="portfolio-card__overlay"></div>
+
+              <div class="portfolio-card__header">
+                <span class="portfolio-tag portfolio-tag--pill">TV &amp; LIVING UNIT</span>
+              </div>
+
+              <div class="portfolio-card__content">
+                <p class="portfolio-card__type">Living &amp; TV Lounge</p>
+                <h3 class="portfolio-card__title">Acoustic Slat &amp; Floating Media Wall</h3>
+                <span class="portfolio-card__cta-hint">View Project <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+
+            <!-- 04 EXECUTIVE WORKSPACE -->
+            <a href="projects.html" class="portfolio-card portfolio-card--compact" data-project-idx="3" aria-label="View Executive Workspace: Architectural Study & Library Wall">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/3d/9/1.jpg" alt="Architectural Study & Library Wall" class="portfolio-card__img" loading="lazy">
+              <div class="portfolio-card__overlay"></div>
+
+              <div class="portfolio-card__header">
+                <span class="portfolio-tag portfolio-tag--pill">EXECUTIVE WORKSPACE</span>
+              </div>
+
+              <div class="portfolio-card__content">
+                <p class="portfolio-card__type">Workspace &amp; Library</p>
+                <h3 class="portfolio-card__title">Architectural Study &amp; Library Wall</h3>
+                <span class="portfolio-card__cta-hint">View Project <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+
+            <!-- 05 LUXURY VANITY -->
+            <a href="projects.html" class="portfolio-card portfolio-card--compact" data-project-idx="4" aria-label="View Luxury Vanity: Fluted Ceramic Suspended Vanity">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.21.51 PM.jpeg" alt="Fluted Ceramic Suspended Vanity" class="portfolio-card__img" loading="lazy">
+              <div class="portfolio-card__overlay"></div>
+
+              <div class="portfolio-card__header">
+                <span class="portfolio-tag portfolio-tag--pill">LUXURY VANITY</span>
+              </div>
+
+              <div class="portfolio-card__content">
+                <p class="portfolio-card__type">Vanity &amp; Bathroom</p>
+                <h3 class="portfolio-card__title">Fluted Ceramic Suspended Vanity</h3>
+                <span class="portfolio-card__cta-hint">View Project <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+
+          </div><!-- .portfolio-supporting-grid -->
+
+        </div><!-- .portfolio-preview-grid -->
+
+        <!-- Mobile Carousel Navigation Bar -->
+        <div class="portfolio-mobile-nav" aria-hidden="true">
+          <div class="portfolio-mobile-dots">
+            <span class="portfolio-mobile-dot is-active"></span>
+            <span class="portfolio-mobile-dot"></span>
+            <span class="portfolio-mobile-dot"></span>
+            <span class="portfolio-mobile-dot"></span>
+            <span class="portfolio-mobile-dot"></span>
+          </div>
+          <span class="portfolio-mobile-counter" id="portfolio-mobile-counter">01 / 05</span>
+        </div>
+
+        <!-- Space-Efficient Bottom Footer & CTA -->
+        <div class="portfolio-preview-footer reveal">
+          <div class="portfolio-preview-count">
+            <span class="portfolio-count-dot"></span>
+            <span>36+ Curated Modular Spaces Across Jaipur</span>
+          </div>
+          <a href="projects.html" class="portfolio-view-all-btn btn-arrow">
+            VIEW ALL PROJECTS <span class="arrow-icon" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 6.2 — RESULTS OUR CLIENTS STAND BEHIND (FRAMER TESTIFY COMPONENT)
+    ====================================================== -->
+    <section class="section testify-section" id="testimonials" aria-label="Client Testimonials and Reviews">
+      <div class="container">
+        
+        <!-- Header -->
+        <div class="testify-header reveal">
+          <div class="testify-header-badge-row">
+            <span class="testify-badge-pill">TESTIMONIALS</span>
+            <span class="testify-mono-num">01</span>
+          </div>
+          <h2 class="testify-title">
+            Results <span class="testify-title-dark">Our Clients Stand</span> Behind
+          </h2>
+          <p class="testify-desc">
+            Trusted by luxury homeowners, architects, and interior designers across Jaipur who value 0.1mm factory precision, 100% calibrated BWP plywood, and guaranteed 45-day handovers.
+          </p>
+        </div>
+
+        <!-- Bento Grid -->
+        <div class="testify-grid reveal">
+          
+          <!-- Card 1: Standard Card (Architect Testimonial) -->
+          <div class="testify-card">
+            <div class="testify-card-header">
+              <div class="testify-author-info">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Ar. Rajesh Sharma" class="testify-avatar" loading="lazy">
+                <div>
+                  <h3 class="testify-author-name">Ar. Rajesh Sharma</h3>
+                  <p class="testify-author-role">Principal Architect, Studio Vistara</p>
+                </div>
+              </div>
+              <div class="testify-platform-icon" title="Verified Review">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+            </div>
+            <p class="testify-quote">
+              "Working with Garg felt like adding an elite joinery engineering team to our projects. They executed our German Gola handleless kitchen and fluted TV credenzas with zero carpenter mess. That precision is rare."
+            </p>
+          </div>
+
+          <!-- Card 2: Full-Bleed Image Card (Villa Owner with Render Background) -->
+          <div class="testify-card testify-card--image" style="background-image: url('assets/images/render_kitchen.jpg');">
+            <div class="testify-card-header">
+              <div class="testify-author-info">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Priya Nair" class="testify-avatar" loading="lazy">
+                <div>
+                  <h3 class="testify-author-name">Priya Nair</h3>
+                  <p class="testify-author-role">Villa Owner, Vaishali Nagar</p>
+                </div>
+              </div>
+              <div class="testify-platform-icon" style="background: rgba(255,255,255,0.2); color: #ffffff;" title="Verified Homeowner">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+            <p class="testify-quote">
+              "We came in wanting a German-spec acrylic kitchen. They engineered full-height cabinets with Blum tandembox drawers and PUR waterproofing. Our cooking space is now the star of our home."
+            </p>
+          </div>
+
+          <!-- Card 3: Standard Card (Penthouse Client) -->
+          <div class="testify-card">
+            <div class="testify-card-header">
+              <div class="testify-author-info">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Vikram Singhal" class="testify-avatar" loading="lazy">
+                <div>
+                  <h3 class="testify-author-name">Vikram Singhal</h3>
+                  <p class="testify-author-role">Penthouse Owner, C-Scheme</p>
+                </div>
+              </div>
+              <div class="testify-platform-icon" title="Verified Review">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+            </div>
+            <p class="testify-quote">
+              "They didn't just fabricate our walk-in wardrobes — they completely reimagined our storage with bronze glass shutters, integrated sensor LED illumination, and velvet jewelry organizers. Truly 7-star craftsmanship."
+            </p>
+          </div>
+
+          <!-- Card 4: Geometric Accent Card (Civil Lines Villa) -->
+          <div class="testify-card testify-card--accent">
+            <!-- Architectural Blueprint SVG watermark background -->
+            <svg class="testify-blueprint-bg" viewBox="0 0 200 200" fill="none">
+              <circle cx="100" cy="100" r="90" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <rect x="30" y="30" width="140" height="140" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="30" y1="30" x2="170" y2="170" stroke="currentColor" stroke-width="1"/>
+              <line x1="170" y1="30" x2="30" y2="170" stroke="currentColor" stroke-width="1"/>
+              <polygon points="100,20 180,100 100,180 20,100" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+
+            <div class="testify-card-header">
+              <div class="testify-author-info">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Col. Devendra Rathore" class="testify-avatar" loading="lazy">
+                <div>
+                  <h3 class="testify-author-name">Col. Devendra Rathore</h3>
+                  <p class="testify-author-role">Heritage Estate, Civil Lines</p>
+                </div>
+              </div>
+              <div class="testify-platform-icon" style="background: rgba(225,158,17,0.2); color: var(--gamboge);" title="Verified Client">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+            </div>
+            <p class="testify-quote">
+              "What stood out was the factory transparency. We toured their Jaipur plant, saw our BWP plywood cut on automated German beam saws, and received handover in exactly 34 days.
+              <strong>I would recommend Garg Modular to anyone without hesitation.</strong>"
+            </p>
+          </div>
+
+          <!-- Card 5: Auto-Scrolling Ticker (Live Verified Mini-Reviews) -->
+          <div class="testify-card testify-card--ticker">
+            <div class="testify-ticker-mask">
+              <div class="testify-ticker-track">
+                
+                <!-- Review Pill 1 -->
+                <div class="testify-mini-pill">
+                  <div class="testify-mini-pill__header">
+                    <span class="testify-mini-pill__name">Sanjay K. • Malviya Nagar</span>
+                    <span class="testify-mini-pill__stars">★★★★★</span>
+                  </div>
+                  <p class="testify-mini-pill__text">"The zero-dust top-hung sliding wardrobe in our master bed is pure luxury!"</p>
+                </div>
+
+                <!-- Review Pill 2 -->
+                <div class="testify-mini-pill">
+                  <div class="testify-mini-pill__header">
+                    <span class="testify-mini-pill__name">Megha B. • Mansarovar</span>
+                    <span class="testify-mini-pill__stars">★★★★★</span>
+                  </div>
+                  <p class="testify-mini-pill__text">"Delivered 100% on schedule before Diwali. Unbelievable factory finish."</p>
+                </div>
+
+                <!-- Review Pill 3 -->
+                <div class="testify-mini-pill">
+                  <div class="testify-mini-pill__header">
+                    <span class="testify-mini-pill__name">Kunal Jain • Jagatpura</span>
+                    <span class="testify-mini-pill__stars">★★★★★</span>
+                  </div>
+                  <p class="testify-mini-pill__text">"10-Year warranty on Blum Austria hardware made our decision effortless."</p>
+                </div>
+
+                <!-- Review Pill 4 -->
+                <div class="testify-mini-pill">
+                  <div class="testify-mini-pill__header">
+                    <span class="testify-mini-pill__name">Dr. Alok Verma • Tonk Rd</span>
+                    <span class="testify-mini-pill__stars">★★★★★</span>
+                  </div>
+                  <p class="testify-mini-pill__text">"Direct Jaipur factory pricing saved us over ₹3.8 Lakhs vs retail dealers."</p>
+                </div>
+
+                <!-- Review Pill 5 -->
+                <div class="testify-mini-pill">
+                  <div class="testify-mini-pill__header">
+                    <span class="testify-mini-pill__name">Ritika S. • Raja Park</span>
+                    <span class="testify-mini-pill__stars">★★★★★</span>
+                  </div>
+                  <p class="testify-mini-pill__text">"The motorized appliance garage in our pantry works like absolute magic."</p>
+                </div>
+
+                <!-- Review Pill 6 -->
+                <div class="testify-mini-pill">
+                  <div class="testify-mini-pill__header">
+                    <span class="testify-mini-pill__name">Harish Chandel • Ajmer Rd</span>
+                    <span class="testify-mini-pill__stars">★★★★★</span>
+                  </div>
+                  <p class="testify-mini-pill__text">"100% Calibrated BWP marine ply with PUR edge-banding. Utterly waterproof."</p>
+                </div>
+
+                <!-- Duplicate Loop for Seamless Infinite Scroll -->
+                <div class="testify-mini-pill" aria-hidden="true">
+                  <div class="testify-mini-pill__header">
+                    <span class="testify-mini-pill__name">Sanjay K. • Malviya Nagar</span>
+                    <span class="testify-mini-pill__stars">★★★★★</span>
+                  </div>
+                  <p class="testify-mini-pill__text">"The zero-dust top-hung sliding wardrobe in our master bed is pure luxury!"</p>
+                </div>
+
+                <div class="testify-mini-pill" aria-hidden="true">
+                  <div class="testify-mini-pill__header">
+                    <span class="testify-mini-pill__name">Megha B. • Mansarovar</span>
+                    <span class="testify-mini-pill__stars">★★★★★</span>
+                  </div>
+                  <p class="testify-mini-pill__text">"Delivered 100% on schedule before Diwali. Unbelievable factory finish."</p>
+                </div>
+
+                <div class="testify-mini-pill" aria-hidden="true">
+                  <div class="testify-mini-pill__header">
+                    <span class="testify-mini-pill__name">Kunal Jain • Jagatpura</span>
+                    <span class="testify-mini-pill__stars">★★★★★</span>
+                  </div>
+                  <p class="testify-mini-pill__text">"10-Year warranty on Blum Austria hardware made our decision effortless."</p>
+                </div>
+
+                <div class="testify-mini-pill" aria-hidden="true">
+                  <div class="testify-mini-pill__header">
+                    <span class="testify-mini-pill__name">Dr. Alok Verma • Tonk Rd</span>
+                    <span class="testify-mini-pill__stars">★★★★★</span>
+                  </div>
+                  <p class="testify-mini-pill__text">"Direct Jaipur factory pricing saved us over ₹3.8 Lakhs vs retail dealers."</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Proof Metrics & Rating Card -->
+          <div class="testify-card testify-card--metrics">
+            <div class="testify-metric-top">
+              <div class="testify-metric-number">500+</div>
+              <h3 class="testify-metric-label">Bespoke Homes Crafted</h3>
+              <p class="testify-metric-sub">
+                Join 500+ families and architects who made us their modular joinery partner of choice.
+              </p>
+            </div>
+            
+            <div>
+              <div class="testify-metric-divider"></div>
+              <div class="testify-metric-bottom">
+                <div class="testify-avatar-stack">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Client 1" class="testify-avatar-stack-item">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Client 2" class="testify-avatar-stack-item">
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Client 3" class="testify-avatar-stack-item">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Client 4" class="testify-avatar-stack-item">
+                </div>
+                <div class="testify-metric-rating">
+                  <div class="testify-metric-rating-stars">★★★★★</div>
+                  <div class="testify-metric-rating-label">4.9/5 • 200+ Reviews</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- .testify-grid -->
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 6.5 — ARCHITECTURAL FAQ & KNOWLEDGE BASE (FRAMER AKFAQ)
+    ====================================================== -->
+    <section class="section faq-editorial-section" id="faq" aria-label="Frequently Asked Questions">
+      <div class="akfaq-container">
+        
+        <!-- AKFaq Header Badge & Title -->
+        <div class="akfaq-badge reveal">
+          <span class="akfaq-badge-dot"></span>
+          <span>KNOWLEDGE BASE • JAIPUR MANUFACTURING</span>
+        </div>
+        <h2 class="akfaq-heading reveal">Frequently Asked Questions</h2>
+        <p class="akfaq-subheading reveal">
+          Everything you need to know about our calibrated IS 710 marine plywood construction, German Blum hardware warranties, bespoke wardrobes, and dust-free site handover across Jaipur.
+        </p>
+
+        <!-- AKFaq Live Search Bar -->
+        <div class="akfaq-search-wrap reveal">
+          <svg class="akfaq-search-icon" width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.3"></circle>
+            <line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"></line>
+          </svg>
+          <input type="text" class="akfaq-search-input" id="akfaq-search-input" placeholder="Search questions or materials…" autocomplete="off">
+          <button type="button" class="akfaq-search-clear" id="akfaq-search-clear" style="display:none;" aria-label="Clear search">✕</button>
+        </div>
+
+        <!-- AKFaq Category Filter Tabs -->
+        <div class="akfaq-tabs reveal" role="tablist" aria-label="Filter FAQ topics">
+          <button class="akfaq-tab-btn active" data-faq-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="akfaq-tab-btn" data-faq-filter="kitchens" role="tab" aria-selected="false">Kitchens</button>
+          <button class="akfaq-tab-btn" data-faq-filter="wardrobes" role="tab" aria-selected="false">Wardrobes</button>
+          <button class="akfaq-tab-btn" data-faq-filter="living" role="tab" aria-selected="false">Living &amp; TV</button>
+          <button class="akfaq-tab-btn" data-faq-filter="materials" role="tab" aria-selected="false">Materials &amp; Tech</button>
+          <button class="akfaq-tab-btn" data-faq-filter="process" role="tab" aria-selected="false">Pricing &amp; Timeline</button>
+        </div>
+
+        <!-- AKFaq Accordion List -->
+        <div class="akfaq-items-list reveal" role="region" aria-label="FAQ Accordion">
+
+          <!-- 01: Modular Kitchen Layouts & Ergonomics -->
+          <div class="akfaq-item is-open" data-faq-category="kitchens" data-faq-id="faq-1">
+            <button class="akfaq-trigger" aria-expanded="true" aria-controls="faq-collapse-1" id="faq-trigger-1">
+              <div class="akfaq-trigger-left">
+                <span class="akfaq-number">01</span>
+                <span class="akfaq-question">What modular kitchen layouts (Island, Parallel, L-Shape, U-Shape) do you design, and how is ergonomics planned?</span>
+              </div>
+              <div class="akfaq-icon-bubble" aria-hidden="true">
+                <svg class="akfaq-icon-svg" viewBox="0 0 10 10" fill="none">
+                  <line x1="5" y1="1" x2="5" y2="9" stroke-width="1.4" stroke-linecap="round"/>
+                  <line x1="1" y1="5" x2="9" y2="5" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="akfaq-collapse" id="faq-collapse-1" role="region" aria-labelledby="faq-trigger-1">
+              <div class="akfaq-answer">
+                We design and manufacture all configurations including <strong>open-concept Island suites, high-efficiency Parallel kitchens, luxury U-Shaped layouts, and space-optimized L-Shaped kitchens</strong>. We engineer the classic golden work triangle (Hob, Sink, Refrigerator) with millimeter-accurate clearances, integrated German Gola handleless profiles, pantry pull-outs, corner carousels, and dedicated appliance garages with motorized or rolling shutters.
+                <div class="akfaq-chips-row">
+                  <span class="akfaq-chip">✦ Island &amp; Parallel Suites</span>
+                  <span class="akfaq-chip">✦ German Gola Handleless</span>
+                  <span class="akfaq-chip">✦ Golden Triangle Ergonomics</span>
+                  <span class="akfaq-chip">✦ Appliance Garages</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02: Core Materials: IS 710 BWP Marine Plywood -->
+          <div class="akfaq-item" data-faq-category="materials" data-faq-id="faq-2">
+            <button class="akfaq-trigger" aria-expanded="false" aria-controls="faq-collapse-2" id="faq-trigger-2">
+              <div class="akfaq-trigger-left">
+                <span class="akfaq-number">02</span>
+                <span class="akfaq-question">Why do you strictly use 100% Calibrated IS 710 BWP Marine Plywood instead of MDF, HDF, or Particle Board?</span>
+              </div>
+              <div class="akfaq-icon-bubble" aria-hidden="true">
+                <svg class="akfaq-icon-svg" viewBox="0 0 10 10" fill="none">
+                  <line x1="5" y1="1" x2="5" y2="9" stroke-width="1.4" stroke-linecap="round"/>
+                  <line x1="1" y1="5" x2="9" y2="5" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="akfaq-collapse" id="faq-collapse-2" role="region" aria-labelledby="faq-trigger-2">
+              <div class="akfaq-answer">
+                Modular kitchens and wardrobes in Indian households face high moisture, water spillage, and heavy countertop loads (such as granite or quartz). <strong>100% Calibrated IS 710 Boiling Water Proof (BWP) Marine Plywood</strong> uses hardwood veneers bonded with fortified phenolic resins under extreme pressure. It is 100% borer and termite proof, never sags under heavy utensil weight, and will not swell or delaminate over decades.
+                <div class="akfaq-chips-row">
+                  <span class="akfaq-chip">✦ 100% Calibrated IS 710</span>
+                  <span class="akfaq-chip">✦ Zero Swelling / Delamination</span>
+                  <span class="akfaq-chip">✦ Borer &amp; Termite Immune</span>
+                  <span class="akfaq-chip">✦ Zero Particle Board</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03: Modular Wardrobes: Sliding vs Hinged vs Bronze Glass -->
+          <div class="akfaq-item" data-faq-category="wardrobes" data-faq-id="faq-3">
+            <button class="akfaq-trigger" aria-expanded="false" aria-controls="faq-collapse-3" id="faq-trigger-3">
+              <div class="akfaq-trigger-left">
+                <span class="akfaq-number">03</span>
+                <span class="akfaq-question">What are the advantages of sliding vs hinged vs bronze glass profile walk-in wardrobes?</span>
+              </div>
+              <div class="akfaq-icon-bubble" aria-hidden="true">
+                <svg class="akfaq-icon-svg" viewBox="0 0 10 10" fill="none">
+                  <line x1="5" y1="1" x2="5" y2="9" stroke-width="1.4" stroke-linecap="round"/>
+                  <line x1="1" y1="5" x2="9" y2="5" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="akfaq-collapse" id="faq-collapse-3" role="region" aria-labelledby="faq-trigger-3">
+              <div class="akfaq-answer">
+                <strong>Hinged wardrobes</strong> provide 100% unobstructed panoramic access with 180° wide-opening hinges. <strong>Top-hung sliding wardrobes</strong> save precious floor space in compact bedrooms without bottom floor channel dust accumulation. <strong>Bronze or fluted aluminum profile glass shutters</strong> deliver luxury showroom elegance with vertical concealed LED illumination, velvet jewelry organizers, and pull-down hydraulic wardrobe lifters.
+                <div class="akfaq-chips-row">
+                  <span class="akfaq-chip">✦ Bronze Glass Profile Doors</span>
+                  <span class="akfaq-chip">✦ Top-Hung Floor-Free Sliding</span>
+                  <span class="akfaq-chip">✦ Hydraulic Wardrobe Lifters</span>
+                  <span class="akfaq-chip">✦ Velvet Accessory Trays</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04: Living & TV Entertainment Media Walls -->
+          <div class="akfaq-item" data-faq-category="living" data-faq-id="faq-4">
+            <button class="akfaq-trigger" aria-expanded="false" aria-controls="faq-collapse-4" id="faq-trigger-4">
+              <div class="akfaq-trigger-left">
+                <span class="akfaq-number">04</span>
+                <span class="akfaq-question">How do you manage concealed wiring, soundbars, and heavy TV mounting on media walls?</span>
+              </div>
+              <div class="akfaq-icon-bubble" aria-hidden="true">
+                <svg class="akfaq-icon-svg" viewBox="0 0 10 10" fill="none">
+                  <line x1="5" y1="1" x2="5" y2="9" stroke-width="1.4" stroke-linecap="round"/>
+                  <line x1="1" y1="5" x2="9" y2="5" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="akfaq-collapse" id="faq-collapse-4" role="region" aria-labelledby="faq-trigger-4">
+              <div class="akfaq-answer">
+                We fabricate architectural entertainment walls with <strong>concealed zero-wire chase conduits</strong> behind seamless Italian porcelain slabs, fluted teak acoustic slats, or micro-cement paneling. Floating media credenzas are mounted on heavy-duty cantilever steel anchors (tested for 150kg+ loads), featuring acoustic fabric front grilles to conceal gaming consoles, AV receivers, and subwoofers with seamless remote pass-through.
+                <div class="akfaq-chips-row">
+                  <span class="akfaq-chip">✦ Zero-Wire Conduits</span>
+                  <span class="akfaq-chip">✦ Italian Porcelain Backdrops</span>
+                  <span class="akfaq-chip">✦ Teak Acoustic Slats</span>
+                  <span class="akfaq-chip">✦ 150kg Cantilever Mounts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 05: Hardware Partnerships & 10-Year Warranty -->
+          <div class="akfaq-item" data-faq-category="materials" data-faq-id="faq-5">
+            <button class="akfaq-trigger" aria-expanded="false" aria-controls="faq-collapse-5" id="faq-trigger-5">
+              <div class="akfaq-trigger-left">
+                <span class="akfaq-number">05</span>
+                <span class="akfaq-question">Which hardware brands do you use for runners, hinges, and lift-up systems, and what warranty is included?</span>
+              </div>
+              <div class="akfaq-icon-bubble" aria-hidden="true">
+                <svg class="akfaq-icon-svg" viewBox="0 0 10 10" fill="none">
+                  <line x1="5" y1="1" x2="5" y2="9" stroke-width="1.4" stroke-linecap="round"/>
+                  <line x1="1" y1="5" x2="9" y2="5" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="akfaq-collapse" id="faq-collapse-5" role="region" aria-labelledby="faq-trigger-5">
+              <div class="akfaq-answer">
+                We partner exclusively with <strong>Blum (Austria)</strong> and <strong>Häfele (Germany)</strong>. Every drawer uses Blum Tandembox or Legrabox soft-close runners rated for 200,000 motion cycles, and overhead units feature Aventos HK-S lift-ups. All mechanisms come with our comprehensive <strong>10-Year In-House Warranty</strong> backed by our local Jaipur technician support team.
+                <div class="akfaq-chips-row">
+                  <span class="akfaq-chip">✦ Blum Austria Certified</span>
+                  <span class="akfaq-chip">✦ Häfele Germany</span>
+                  <span class="akfaq-chip">✦ 200,000 Motion Cycles</span>
+                  <span class="akfaq-chip">✦ 10-Year In-House Warranty</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 06: Bathroom Vanities & Moisture Proofing -->
+          <div class="akfaq-item" data-faq-category="materials" data-faq-id="faq-6">
+            <button class="akfaq-trigger" aria-expanded="false" aria-controls="faq-collapse-6" id="faq-trigger-6">
+              <div class="akfaq-trigger-left">
+                <span class="akfaq-number">06</span>
+                <span class="akfaq-question">How do you ensure floating bathroom vanities remain 100% moisture-proof and long-lasting?</span>
+              </div>
+              <div class="akfaq-icon-bubble" aria-hidden="true">
+                <svg class="akfaq-icon-svg" viewBox="0 0 10 10" fill="none">
+                  <line x1="5" y1="1" x2="5" y2="9" stroke-width="1.4" stroke-linecap="round"/>
+                  <line x1="1" y1="5" x2="9" y2="5" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="akfaq-collapse" id="faq-collapse-6" role="region" aria-labelledby="faq-trigger-6">
+              <div class="akfaq-answer">
+                Bathroom cabinetry is fabricated exclusively from 100% IS 710 marine substrate sealed with <strong>high-grade PUR (Polyurethane Reactive) hot-melt edge-banding</strong>, creating a completely waterproof joint. We integrate engineered quartz tops, fluted ceramic basins, stainless-steel Blum runners, and anti-fog LED backlit smart touch mirrors.
+                <div class="akfaq-chips-row">
+                  <span class="akfaq-chip">✦ PUR Waterproof Hot-Melt</span>
+                  <span class="akfaq-chip">✦ Quartz Basin Tops</span>
+                  <span class="akfaq-chip">✦ Smart Anti-Fog Mirrors</span>
+                  <span class="akfaq-chip">✦ Stainless Steel Hardware</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 07: Home Office & Executive Study Libraries -->
+          <div class="akfaq-item" data-faq-category="living" data-faq-id="faq-7">
+            <button class="akfaq-trigger" aria-expanded="false" aria-controls="faq-collapse-7" id="faq-trigger-7">
+              <div class="akfaq-trigger-left">
+                <span class="akfaq-number">07</span>
+                <span class="akfaq-question">Can you design custom executive desks, bookshelves, and home office library walls?</span>
+              </div>
+              <div class="akfaq-icon-bubble" aria-hidden="true">
+                <svg class="akfaq-icon-svg" viewBox="0 0 10 10" fill="none">
+                  <line x1="5" y1="1" x2="5" y2="9" stroke-width="1.4" stroke-linecap="round"/>
+                  <line x1="1" y1="5" x2="9" y2="5" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="akfaq-collapse" id="faq-collapse-7" role="region" aria-labelledby="faq-trigger-7">
+              <div class="akfaq-answer">
+                Yes. We design high-productivity home studios featuring <strong>cantilevered executive desks, anti-scratch European melamine tops, built-in cable pass-through channels, lockable lateral filing drawers, and reinforced library shelving</strong> engineered to hold heavy book volumes without deflection or shelf bowing.
+                <div class="akfaq-chips-row">
+                  <span class="akfaq-chip">✦ Anti-Deflection Shelves</span>
+                  <span class="akfaq-chip">✦ Concealed Cable Trunking</span>
+                  <span class="akfaq-chip">✦ Lockable File Units</span>
+                  <span class="akfaq-chip">✦ Ergonomic Joinery</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 08: Custom Interiors, Crockery Vitrines & Home Bars -->
+          <div class="akfaq-item" data-faq-category="kitchens" data-faq-id="faq-8">
+            <button class="akfaq-trigger" aria-expanded="false" aria-controls="faq-collapse-8" id="faq-trigger-8">
+              <div class="akfaq-trigger-left">
+                <span class="akfaq-number">08</span>
+                <span class="akfaq-question">Do you craft custom dining crockery vitrines, home bar counters, and prayer units?</span>
+              </div>
+              <div class="akfaq-icon-bubble" aria-hidden="true">
+                <svg class="akfaq-icon-svg" viewBox="0 0 10 10" fill="none">
+                  <line x1="5" y1="1" x2="5" y2="9" stroke-width="1.4" stroke-linecap="round"/>
+                  <line x1="1" y1="5" x2="9" y2="5" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="akfaq-collapse" id="faq-collapse-8" role="region" aria-labelledby="faq-trigger-8">
+              <div class="akfaq-answer">
+                Yes. Our Jaipur facility specializes in bespoke architectural joinery including <strong>illuminated champagne gold glass crockery vitrines, customized home bar counters with stemware racks &amp; wine niches, metallic rolling shutter pantry garages, and customized mandir units with CNC jali screens</strong>.
+                <div class="akfaq-chips-row">
+                  <span class="akfaq-chip">✦ Champagne Glass Vitrines</span>
+                  <span class="akfaq-chip">✦ Wine &amp; Bar Cabinets</span>
+                  <span class="akfaq-chip">✦ Pantry Rolling Shutters</span>
+                  <span class="akfaq-chip">✦ CNC Mandir Units</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 09: Turnkey Timeline & On-Site Installation -->
+          <div class="akfaq-item" data-faq-category="process" data-faq-id="faq-9">
+            <button class="akfaq-trigger" aria-expanded="false" aria-controls="faq-collapse-9" id="faq-trigger-9">
+              <div class="akfaq-trigger-left">
+                <span class="akfaq-number">09</span>
+                <span class="akfaq-question">What is the turnkey timeline from 3D sign-off to site installation in Jaipur?</span>
+              </div>
+              <div class="akfaq-icon-bubble" aria-hidden="true">
+                <svg class="akfaq-icon-svg" viewBox="0 0 10 10" fill="none">
+                  <line x1="5" y1="1" x2="5" y2="9" stroke-width="1.4" stroke-linecap="round"/>
+                  <line x1="1" y1="5" x2="9" y2="5" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="akfaq-collapse" id="faq-collapse-9" role="region" aria-labelledby="faq-trigger-9">
+              <div class="akfaq-answer">
+                Turnkey production and site handover takes <strong>25 to 35 working days</strong> from 3D design freeze and finish approval. All modular modules are pre-assembled and quality-audited at our Manyawas factory, which means on-site installation is completed cleanly in just <strong>2 to 4 days</strong> with zero cutting or dust on your premises.
+                <div class="akfaq-chips-row">
+                  <span class="akfaq-chip">✦ 25–35 Working Days Delivery</span>
+                  <span class="akfaq-chip">✦ Pre-Assembled Modules</span>
+                  <span class="akfaq-chip">✦ 2–4 Day Dust-Free Fitting</span>
+                  <span class="akfaq-chip">✦ Dedicated Site Supervisor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10: Consultation, 3D Visualization & Direct Factory Pricing -->
+          <div class="akfaq-item" data-faq-category="process" data-faq-id="faq-10">
+            <button class="akfaq-trigger" aria-expanded="false" aria-controls="faq-collapse-10" id="faq-trigger-10">
+              <div class="akfaq-trigger-left">
+                <span class="akfaq-number">10</span>
+                <span class="akfaq-question">How do I book a site survey in Jaipur, and what is included in the complimentary design session?</span>
+              </div>
+              <div class="akfaq-icon-bubble" aria-hidden="true">
+                <svg class="akfaq-icon-svg" viewBox="0 0 10 10" fill="none">
+                  <line x1="5" y1="1" x2="5" y2="9" stroke-width="1.4" stroke-linecap="round"/>
+                  <line x1="1" y1="5" x2="9" y2="5" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </button>
+            <div class="akfaq-collapse" id="faq-collapse-10" role="region" aria-labelledby="faq-trigger-10">
+              <div class="akfaq-answer">
+                You can schedule a consultation online via our <a href="contact.html" style="color:var(--gamboge); font-weight:700;">Contact Form</a> or call us at +91 7891432251. Our engineers visit your home across Jaipur for precise laser measurements, provide photorealistic 3D visualization, material palette samples, and a completely itemized factory-direct quote with zero hidden middleman markups.
+                <div class="akfaq-chips-row">
+                  <span class="akfaq-chip">✦ Complimentary Site Survey</span>
+                  <span class="akfaq-chip">✦ Photorealistic 3D Renders</span>
+                  <span class="akfaq-chip">✦ Itemized Factory Estimate</span>
+                  <span class="akfaq-chip">✦ Direct Jaipur Manufacturing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AKFaq No Results Message -->
+          <div class="akfaq-no-results" id="akfaq-no-results">
+            <p>No questions match your search.</p>
+          </div>
+
+        </div><!-- .akfaq-items-list -->
+
+        <!-- AKFaq Footer Card -->
+        <div class="akfaq-footer reveal">
+          <div class="akfaq-footer-text">
+            <span class="akfaq-footer-title">Still have questions?</span>
+            <span class="akfaq-footer-sub">Our senior interior design engineers in Jaipur are ready to assist.</span>
+          </div>
+          <a href="contact.html" class="akfaq-footer-btn">
+            Contact Support →
+          </a>
+        </div>
+
+      </div><!-- .akfaq-container -->
+    </section>
+
+
+
+    <!-- =====================================================
+         PROJECT QUICK SPECS LIGHTBOX MODAL
+    ====================================================== -->
+    <div class="project-modal-overlay" id="project-specs-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+      <div class="project-modal-container">
+        <button class="project-modal-close" id="project-modal-close" aria-label="Close project specifications modal">✕</button>
+        
+        <div class="project-modal-media">
+          <img id="project-modal-img" src="assets/images/card_kitchen.jpg" alt="Project Preview">
+          <div class="project-modal-media-overlay">
+            <span id="project-modal-category" class="text-label text-gamboge">Modular Kitchen</span>
+            <h3 id="project-modal-title" class="text-2xl font-bold mt-xs" style="color:#ffffff; margin-bottom:0;">The Obsidian Island Kitchen</h3>
+            <span id="project-modal-loc" style="font-size:0.8125rem; opacity:0.8; display:block; margin-top:0.25rem;">📍 C-Scheme, Jaipur</span>
+          </div>
+        </div>
+
+        <div class="project-modal-body">
+          <p id="project-modal-summary" style="font-size:0.9375rem; line-height:1.65; color:var(--gray-600); margin-bottom:1.5rem;">
+            A bespoke interior solution engineered to millimeter precision in our Jaipur production facility.
+          </p>
+
+          <h4 style="font-family:var(--font-heading); font-size:1.05rem; font-weight:700; color:var(--indigo); margin-bottom:1rem;">
+            Architectural Specifications &amp; Material Breakdown
+          </h4>
+
+          <div class="project-modal-grid">
+            <div class="project-modal-spec-card">
+              <div class="project-modal-spec-label">Core Substrate</div>
+              <div class="project-modal-spec-val" id="project-modal-core">100% Calibrated Marine-Grade BWP Plywood</div>
+            </div>
+            <div class="project-modal-spec-card">
+              <div class="project-modal-spec-label">Surface Finish</div>
+              <div class="project-modal-spec-val" id="project-modal-finish">Anti-Fingerprint Matt PU &amp; Natural Fluted Oak</div>
+            </div>
+            <div class="project-modal-spec-card">
+              <div class="project-modal-spec-label">Hardware &amp; Runners</div>
+              <div class="project-modal-spec-val" id="project-modal-hardware">Blum Austria Tandembox Soft-Close Runners</div>
+            </div>
+            <div class="project-modal-spec-card">
+              <div class="project-modal-spec-label">Execution Timeline</div>
+              <div class="project-modal-spec-val" id="project-modal-duration">35 Working Days (Turnkey Delivery)</div>
+            </div>
+          </div>
+
+          <div class="project-modal-footer">
+            <div>
+              <span style="font-size:0.75rem; color:var(--gray-500); display:block;">Interested in a similar space for your home?</span>
+              <strong style="color:var(--indigo); font-size:0.9rem;">Complimentary 3D Visualization Included</strong>
+            </div>
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+              <a href="contact.html" class="btn btn-primary btn-arrow" id="project-modal-enquire-btn">
+                Request Similar Design <span class="arrow-icon">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         SECTION 7 — FINAL CTA & CONSULTATION CONTACT FORM
+    ====================================================== -->
+    <section class="section cta-section" aria-label="Call to action and Consultation Form">
+      <div class="container" style="position:relative; z-index:1;">
+        <div class="cta-layout-grid">
+          
+          <!-- Left Column: Copy, Value Props & Phone Support -->
+          <div class="cta-left-content">
+            <p class="text-label reveal" style="color: var(--indigo);">Let's Get Started</p>
+            <div class="divider reveal mt-sm"></div>
+            <h2 class="section-title text-4xl reveal" style="color: var(--indigo); margin-top: 0.75rem;">
+              Ready to Transform<br>Your Space?
+            </h2>
+            <p class="section-body reveal" style="color: rgba(30,66,77,0.8); margin-top: var(--space-sm); font-size: 1.05rem; line-height: 1.7;">
+              Tell us what you're imagining. Our senior design engineers in Jaipur will craft photorealistic 3D concepts, layout options, and an itemized factory estimate.
+            </p>
+
+            <!-- Value Props List -->
+            <div class="cta-perks-list reveal">
+              <div class="cta-perk-item">
+                <span class="cta-perk-badge">✓</span>
+                <div>
+                  <strong>Complimentary Laser Survey</strong>
+                  <span>Millimeter-precise on-site laser measurements across Jaipur.</span>
+                </div>
+              </div>
+              <div class="cta-perk-item">
+                <span class="cta-perk-badge">✓</span>
+                <div>
+                  <strong>Photorealistic 3D VR Previews</strong>
+                  <span>Walk through your modular kitchen or wardrobe before fabrication.</span>
+                </div>
+              </div>
+              <div class="cta-perk-item">
+                <span class="cta-perk-badge">✓</span>
+                <div>
+                  <strong>10-Year Blum Hardware Warranty</strong>
+                  <span>100% IS 710 calibrated marine ply + Austrian soft-close fittings.</span>
+                </div>
+              </div>
+              <div class="cta-perk-item">
+                <span class="cta-perk-badge">✓</span>
+                <div>
+                  <strong>25–35 Days Turnkey Handover</strong>
+                  <span>Factory pre-assembled joinery with 2–4 days dust-free site fitting.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Phone & WhatsApp Actions -->
+            <div class="cta-contact-methods reveal">
+              <div class="cta-phones">
+                <a href="tel:+917891432251" class="cta-phone-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.55a16 16 0 0 0 6.29 6.29l1.32-1.35a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  +91 7891432251
+                </a>
+                <a href="https://wa.me/917891432251" target="_blank" rel="noopener noreferrer" class="cta-whatsapp-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                  WhatsApp Studio
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Consultation Contact Form Card -->
+          <div class="cta-right-form reveal-right">
+            <div class="cta-form-card">
+              <div class="cta-form-header">
+                <span class="cta-form-badge">FACTORY DIRECT CONSULTATION</span>
+                <h3 class="cta-form-title">Book a Design Consultation</h3>
+                <p class="cta-form-subtitle">Share your space details and our engineers will connect with you.</p>
+              </div>
+
+              <form id="cta-contact-form" class="cta-form-body" novalidate>
+                <div class="cta-form-grid">
+                  
+                  <div class="cta-field-group">
+                    <label class="cta-field-label" for="cta-name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="cta-name" name="name" class="cta-field-input" placeholder="e.g. Rahul Sharma" required autocomplete="name">
+                  </div>
+
+                  <div class="cta-field-group">
+                    <label class="cta-field-label" for="cta-phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="cta-phone" name="phone" class="cta-field-input" placeholder="+91 XXXXX XXXXX" required autocomplete="tel">
+                  </div>
+
+                  <div class="cta-field-group">
+                    <label class="cta-field-label" for="cta-project-type">Project Requirement <span class="required">*</span></label>
+                    <select id="cta-project-type" name="project_type" class="cta-field-select" required>
+                      <option value="" disabled selected>Select space requirement</option>
+                      <option value="modular-kitchen">Modular Kitchen Suite</option>
+                      <option value="wardrobe">Bespoke Walk-in / Sliding Wardrobe</option>
+                      <option value="tv-unit">Living &amp; TV Entertainment Wall</option>
+                      <option value="vanity">Floating Bathroom Vanity</option>
+                      <option value="crockery-bar">Crockery Vitrine / Home Bar</option>
+                      <option value="complete-interior">Complete Turnkey Modular Interior</option>
+                      <option value="other">Other Bespoke Requirement</option>
+                    </select>
+                  </div>
+
+                  <div class="cta-field-group">
+                    <label class="cta-field-label" for="cta-location">Location in Jaipur</label>
+                    <input type="text" id="cta-location" name="location" class="cta-field-input" placeholder="e.g. Mansarovar, C-Scheme">
+                  </div>
+
+                  <div class="cta-field-group cta-field-full">
+                    <label class="cta-field-label" for="cta-message">Project Notes / Dimensions (Optional)</label>
+                    <textarea id="cta-message" name="message" class="cta-field-textarea" placeholder="Tell us about room size, preferred finishes (Acrylic/PU/Laminate), or timeline..."></textarea>
+                  </div>
+
+                </div>
+
+                <button type="submit" id="cta-submit-btn" class="cta-submit-btn">
+                  <span>Request Free 3D Design Session</span>
+                  <span class="cta-arrow" aria-hidden="true">→</span>
+                </button>
+
+                <div class="cta-form-guarantee">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span>100% Privacy. Zero Spam. Direct Jaipur Factory Consultation.</span>
+                </div>
+              </form>
+
+              <!-- Success Feedback View -->
+              <div id="cta-form-success" class="cta-form-success" aria-live="polite">
+                <div class="cta-success-icon">✓</div>
+                <h4 class="cta-success-title">Consultation Request Received!</h4>
+                <p class="cta-success-msg">
+                  Thank you! Our senior interior engineer will contact you shortly with preliminary concepts and arrange your complimentary laser survey.
+                </p>
+                <div class="cta-success-actions">
+                  <a href="projects.html" class="btn btn-sm btn-primary">Browse Projects →</a>
+                  <a href="tel:+917891432251" class="btn btn-sm btn-outline-dark">Direct Call: +91 7891432251</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div><!-- .cta-layout-grid -->
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="footer" aria-label="Site footer">
+      <div class="container">
+        <div class="footer__grid">
+          <!-- Brand -->
+          <div>
+            <div class="footer__logo">
+              <span>GARG MODULAR</span>
+              <span>FURNITURE</span>
+            </div>
+            <p class="footer__desc">Premium modular furniture and customized interiors crafted with style, precision and purpose.</p>
+            <div class="footer__social" aria-label="Social media links">
+              <a href="#" aria-label="Follow us on Instagram" title="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="#" aria-label="Follow us on Facebook" title="Facebook">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div>
+            <p class="footer__heading">Navigation</p>
+            <ul class="footer__links" role="list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <p class="footer__heading">Services</p>
+            <ul class="footer__links" role="list">
+              <li><a href="services.html#kitchens">Modular Kitchens</a></li>
+              <li><a href="services.html#wardrobes">Modular Wardrobes</a></li>
+              <li><a href="services.html#tv">TV Units</a></li>
+              <li><a href="services.html#vanity">Vanity Units</a></li>
+              <li><a href="services.html#office">Office Furniture</a></li>
+              <li><a href="services.html#custom">Custom Interiors</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <p class="footer__heading">Get in Touch</p>
+            <div class="footer__contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.55a16 16 0 0 0 6.29 6.29l1.32-1.35a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div><a href="tel:+917891432251">+91 7891432251</a><br><a href="tel:+917014882040">+91 7014882040</a></div>
+            </div>
+            <div class="footer__contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:gargmodularfurniture@gmail.com">gargmodularfurniture@gmail.com</a>
+            </div>
+            <div class="footer__contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Manyawas, Jaipur, Rajasthan 302020</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© 2026 Garg Modular Furniture. All rights reserved.</span>
+          <span>Premium Modular Furniture · Jaipur, India</span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- .page-wrapper -->
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/917891432251" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.413A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.182a8.182 8.182 0 0 1-4.163-1.136l-.298-.177-3.087.876.894-3.003-.194-.31A8.182 8.182 0 1 1 12 20.182z"/>
+    </svg>
+  </a>
+
+  <!-- =====================================================
+       MODULAR COST ESTIMATOR MODAL
+  ====================================================== -->
+  <div class="estimate-modal-overlay" id="estimate-modal-overlay" aria-hidden="true">
+    <div class="estimate-modal framer-glass-card framer-glass-card--dark">
+      <button class="estimate-modal__close" id="estimate-modal-close" aria-label="Close estimator">✕</button>
+      <span class="text-label text-gamboge">Interactive Estimator</span>
+      <h3 class="text-heading text-3xl text-white mt-xs">Modular Interior Estimate</h3>
+      <p class="text-body text-white mt-xs" style="opacity:0.7; font-size:0.9rem;">Select your requirements to preview an estimated cost range for your customized modular project in Jaipur.</p>
+
+      <div class="mt-md">
+        <label class="text-label text-white" style="display:block;">1. Select Space Type</label>
+        <div class="estimate-options-group">
+          <div class="estimate-chip chip-room active" data-group="room" data-base="140000">Modular Kitchen</div>
+          <div class="estimate-chip chip-room" data-group="room" data-base="95000">Master Wardrobe</div>
+          <div class="estimate-chip chip-room" data-group="room" data-base="65000">TV Unit & Lounge</div>
+          <div class="estimate-chip chip-room" data-group="room" data-base="380000">Full Apartment</div>
+        </div>
+      </div>
+
+      <div class="mt-md">
+        <label class="text-label text-white" style="display:block;">2. Premium Finish</label>
+        <div class="estimate-options-group">
+          <div class="estimate-chip chip-finish active" data-group="finish" data-mult="1.0">Premium Laminate</div>
+          <div class="estimate-chip chip-finish" data-group="finish" data-mult="1.3">High-Gloss Acrylic</div>
+          <div class="estimate-chip chip-finish" data-group="finish" data-mult="1.6">Venetian PU Finish</div>
+        </div>
+      </div>
+
+      <div class="mt-md">
+        <label class="text-label text-white" style="display:block;">3. Room Size / Scope</label>
+        <div class="estimate-options-group">
+          <div class="estimate-chip chip-size active" data-group="size" data-mult="1.0">Compact / 100 sq.ft</div>
+          <div class="estimate-chip chip-size" data-group="size" data-mult="1.45">Standard / 180 sq.ft</div>
+          <div class="estimate-chip chip-size" data-group="size" data-mult="2.1">Grand Villa / 300+ sq.ft</div>
+        </div>
+      </div>
+
+      <div class="estimate-result-box">
+        <div>
+          <span class="text-label text-iceberg" style="display:block;">Estimated Investment</span>
+          <span style="font-size:0.75rem; color:rgba(255,255,255,0.5);">Includes design, hardware & installation</span>
+        </div>
+        <div class="estimate-price" id="estimate-price-display">₹1,40,000</div>
+      </div>
+
+      <div class="mt-md flex justify-between items-center flex-wrap gap-sm">
+        <a href="contact.html" class="btn btn-accent btn-arrow">
+          Book Design Meeting <span class="arrow-icon">→</span>
+        </a>
+        <span style="font-size:0.75rem; color:rgba(255,255,255,0.4);">*Final quote verified upon 3D site survey</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+
+</body>
+</html>

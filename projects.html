@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Garg Modular Furniture — Modular Interior Portfolio, Jaipur</title>
+  <meta name="description" content="Explore 36+ completed modular kitchen, wardrobe, TV unit, office and custom interior projects by Garg Modular Furniture in Jaipur. Premium craftsmanship, 100% marine-grade plywood.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    /* =====================================================
+       PROJECTS PAGE SPECIFIC STYLES
+    ====================================================== */
+
+    /* Filter Bar */
+    .filter-tabs-wrapper {
+      margin-top: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(30, 66, 77, 0.04);
+      padding: 0.35rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(30, 66, 77, 0.08);
+      width: fit-content;
+    }
+
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.25rem;
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      border: none;
+      background: transparent;
+      color: var(--indigo);
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      user-select: none;
+    }
+
+    .filter-btn:hover {
+      background: rgba(30, 66, 77, 0.08);
+      color: var(--indigo);
+    }
+
+    .filter-btn.active {
+      background-color: var(--indigo);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(30, 66, 77, 0.25);
+    }
+
+    .filter-count {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.15rem 0.45rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.2);
+      color: inherit;
+      line-height: 1;
+    }
+
+    .filter-btn:not(.active) .filter-count {
+      background: rgba(30, 66, 77, 0.08);
+      color: var(--indigo);
+    }
+
+    /* 3-Column Luxury Architectural Grid */
+    .projects-editorial {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .projects-editorial {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .projects-editorial {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    /* Project Card — Pure Unobstructed Media on Top, Content Below */
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(30, 66, 77, 0.08);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(30, 66, 77, 0.12);
+      border-color: rgba(30, 66, 77, 0.15);
+    }
+
+    /* Pure Image Container — Zero text overlays */
+    .project-card__media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: var(--offwhite);
+      overflow: hidden;
+    }
+
+    .project-card__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .project-card:hover .project-card__img {
+      transform: scale(1.05);
+    }
+
+    /* Card Details Body */
+    .project-card__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+      padding: 1.5rem;
+      background: #ffffff;
+    }
+
+    .project-card__meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .project-card__category-tag {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gamboge);
+      background: rgba(225, 158, 17, 0.12);
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+    }
+
+    .project-card__location-pill {
+      font-size: 0.725rem;
+      font-weight: 500;
+      color: rgba(30, 66, 77, 0.65);
+    }
+
+    .project-card__title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--indigo);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .project-card__desc {
+      font-size: 0.84rem;
+      line-height: 1.55;
+      color: rgba(30, 66, 77, 0.75);
+      margin-bottom: 1rem;
+    }
+
+    .project-card__specs-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-spec-chip {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      color: var(--indigo);
+      background: var(--white);
+      border: 1px solid rgba(30, 66, 77, 0.06);
+      padding: 0.18rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .project-card__actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(30, 66, 77, 0.08);
+      margin-top: auto;
+    }
+
+    .project-btn-specs {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(30, 66, 77, 0.06);
+      color: var(--indigo);
+      border: none;
+      padding: 0.45rem 0.875rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .project-btn-specs:hover {
+      background: var(--indigo);
+      color: #ffffff;
+    }
+
+    .project-btn-enquire {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--gamboge);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.25s ease;
+    }
+
+    .project-btn-enquire:hover {
+      transform: translateX(3px);
+    }
+
+    /* Video Section */
+    .video-section {
+      background-color: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-placeholder {
+      width: 100%;
+      aspect-ratio: 16/9;
+      max-height: 550px;
+      background: linear-gradient(135deg, #0D0D0C 0%, #1E424D 50%, #0D0D0C 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+    }
+
+    .video-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(119,181,211,0.12) 0%, transparent 70%);
+    }
+
+    .video-play-btn {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+      border: 2px solid rgba(255,255,255,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--duration-base) var(--ease-out);
+      backdrop-filter: blur(8px);
+      position: relative;
+      z-index: 1;
+    }
+
+    .video-placeholder:hover .video-play-btn {
+      background: var(--gamboge);
+      border-color: var(--gamboge);
+      transform: scale(1.08);
+    }
+
+    .video-play-btn svg {
+      width: 26px;
+      height: 26px;
+      fill: white;
+      margin-left: 4px;
+    }
+
+    .video-text {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      z-index: 1;
+    }
+
+    /* Project CTA */
+    .projects-cta {
+      background: linear-gradient(145deg, var(--indigo) 0%, rgba(30, 66, 77, 0.92) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .projects-cta::before {
+      content: 'CRAFT';
+      position: absolute;
+      right: -2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-display);
+      font-size: 8rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.03);
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    /* =====================================================
+       QUICK SPECS MODAL
+    ====================================================== */
+    .project-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 13, 12, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    .project-modal-backdrop.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .project-modal-container {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      max-width: 900px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+      transform: scale(0.94) translateY(20px);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .project-modal-backdrop.is-open .project-modal-container {
+      transform: scale(1) translateY(0);
+    }
+
+    .project-modal-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(30, 66, 77, 0.1);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--indigo);
+      z-index: 10;
+      transition: all 0.2s ease;
+    }
+
+    .project-modal-close:hover {
+      background: var(--indigo);
+      color: #ffffff;
+      transform: rotate(90deg);
+    }
+
+    .project-modal-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .project-modal-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .project-modal-visual {
+      background: #0D0D0C;
+      position: relative;
+      min-height: 320px;
+    }
+
+    .project-modal-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-modal-content {
+      padding: 2.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-modal-specs-table {
+      margin-top: 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      background: var(--offwhite);
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(30,66,77,0.06);
+    }
+
+    .project-modal-spec-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .project-modal-spec-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(30,66,77,0.6);
+    }
+
+    .project-modal-spec-val {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--indigo);
+    }
+  </style>
+</head>
+<body>
+  <!-- Custom Framer Magnetic Cursor -->
+  <div class="custom-cursor">
+    <div class="custom-cursor__dot"></div>
+    <div class="custom-cursor__ring">
+      <span class="custom-cursor__label"></span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav nav--solid" id="main-nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Garg Modular Furniture Home">
+        <span class="nav__logo-primary">GARG</span>
+        <span class="nav__logo-secondary">Modular Furniture</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="projects.html" class="nav__link active">Projects</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="contact.html" class="nav__cta">Book a Consultation</a>
+        <button class="nav__hamburger" id="hamburger-btn" aria-expanded="false" aria-label="Open menu" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul class="mobile-menu__links" role="list">
+      <li><a href="index.html" class="mobile-menu__link">Home</a></li>
+      <li><a href="about.html" class="mobile-menu__link">About</a></li>
+      <li><a href="services.html" class="mobile-menu__link">Services</a></li>
+      <li><a href="projects.html" class="mobile-menu__link active">Projects</a></li>
+      <li><a href="contact.html" class="mobile-menu__link">Contact</a></li>
+    </ul>
+    <div class="mobile-menu__bottom">
+      <a href="contact.html" class="mobile-menu__cta">Book a Consultation →</a>
+      <div class="mobile-menu__contact">
+        <a href="tel:+917891432251">+91 7891432251</a>
+        <a href="tel:+917014882040">+91 7014882040</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Projects page hero">
+      <div class="page-hero__deco" aria-hidden="true"></div>
+      <div class="container">
+        <div style="display:inline-flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
+          <span style="width:8px; height:8px; border-radius:50%; background:var(--gamboge); box-shadow:0 0 10px var(--gamboge); display:inline-block;"></span>
+          <p class="text-label" style="color:var(--iceberg); margin:0;">CRAFTED IN JAIPUR • 36+ FEATURED PROJECTS</p>
+        </div>
+        <h1 class="page-hero__title">
+          Selected<br>
+          <em style="font-style:italic; color:var(--flax);">Architectural Works.</em>
+        </h1>
+        <p class="page-hero__subtitle">
+          Explore precision-crafted modular kitchens, designer wardrobes, luxury living suites, executive offices, vanities, and custom interior cabinetry engineered for timeless durability.
+        </p>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="section bg-white" aria-label="Project portfolio">
+      <div class="container">
+
+        <!-- Category Filter Tabs -->
+        <div class="filter-tabs-wrapper reveal">
+          <div class="filter-bar" role="tablist" aria-label="Filter project categories">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+              <span>All Works</span>
+              <span class="filter-count">36</span>
+            </button>
+            <button class="filter-btn" data-filter="kitchens" role="tab" aria-selected="false">
+              <span>Kitchens</span>
+              <span class="filter-count">06</span>
+            </button>
+            <button class="filter-btn" data-filter="wardrobes" role="tab" aria-selected="false">
+              <span>Wardrobes</span>
+              <span class="filter-count">06</span>
+            </button>
+            <button class="filter-btn" data-filter="living" role="tab" aria-selected="false">
+              <span>Living Spaces</span>
+              <span class="filter-count">06</span>
+            </button>
+            <button class="filter-btn" data-filter="office" role="tab" aria-selected="false">
+              <span>Workspaces</span>
+              <span class="filter-count">06</span>
+            </button>
+            <button class="filter-btn" data-filter="vanity" role="tab" aria-selected="false">
+              <span>Vanity Units</span>
+              <span class="filter-count">06</span>
+            </button>
+            <button class="filter-btn" data-filter="custom" role="tab" aria-selected="false">
+              <span>Custom Interiors</span>
+              <span class="filter-count">06</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Grid (36 Curated Cards, 6 Per Category) -->
+        <div class="projects-editorial">
+
+
+          <!-- ==========================================
+               CATEGORY 1: MODULAR KITCHENS (6 ITEMS)
+          =========================================== -->
+
+          <!-- Kitchen-01 -->
+          <article class="project-card" data-category="kitchens" data-project-id="kitchen-01">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/3d/5/1.jpg" alt="The Sage Green & Calacatta Island Kitchen" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Modular Kitchen</span>
+                  <span class="project-card__location-pill">📍 C-Scheme, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Sage Green & Calacatta Island Kitchen</h3>
+                <p class="project-card__desc">4K Calacatta quartz waterfall island with Sage Green matte cabinetry and integrated breakfast bar.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Calacatta Quartz</span>
+                  <span class="project-spec-chip">Blum Tandembox</span>
+                  <span class="project-spec-chip">Anti-Fingerprint PU</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="kitchen-01">Quick Specs</button>
+                <a href="contact.html?subject=The+Sage+Green+Kitchen" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kitchen-02 -->
+          <article class="project-card" data-category="kitchens" data-project-id="kitchen-02">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/3d/2/1.jpg" alt="The Smoked Oak & Vitrine Appliance Wall" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Modular Kitchen</span>
+                  <span class="project-card__location-pill">📍 Vaishali Nagar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Smoked Oak & Vitrine Appliance Wall</h3>
+                <p class="project-card__desc">Built-in appliance tower with smoked glass vitrines, dark oak cabinetry, and integrated oven housing.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Smoked Oak Veneer</span>
+                  <span class="project-spec-chip">Hafele Gola Profiles</span>
+                  <span class="project-spec-chip">Vitrine Glass</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="kitchen-02">Quick Specs</button>
+                <a href="contact.html?subject=Smoked+Oak+Appliance+Wall" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kitchen-03 -->
+          <article class="project-card" data-category="kitchens" data-project-id="kitchen-03">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/3d/views/01.jpg" alt="The Olive Shaker & Marble Breakfast Kitchen" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Modular Kitchen</span>
+                  <span class="project-card__location-pill">📍 Malviya Nagar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Olive Shaker & Marble Breakfast Kitchen</h3>
+                <p class="project-card__desc">Olive green matte kitchen with breakfast counter, marble backsplash, and fluted glass upper units.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Matte Acrylic</span>
+                  <span class="project-spec-chip">Blum Aventos</span>
+                  <span class="project-spec-chip">Magic Corner</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="kitchen-03">Quick Specs</button>
+                <a href="contact.html?subject=Olive+Shaker+Kitchen" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kitchen-04 -->
+          <article class="project-card" data-category="kitchens" data-project-id="kitchen-04">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.21.14 PM.jpeg" alt="The Walnut & Sage Ergonomic Kitchen" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Modular Kitchen</span>
+                  <span class="project-card__location-pill">📍 Mansarovar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Walnut & Sage Ergonomic Kitchen</h3>
+                <p class="project-card__desc">Warm natural walnut base cabinetry paired with sage green wall units and spacious work island.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">High-Gloss Acrylic</span>
+                  <span class="project-spec-chip">Natural Walnut</span>
+                  <span class="project-spec-chip">Soft-Close Tandem</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="kitchen-04">Quick Specs</button>
+                <a href="contact.html?subject=Walnut+Sage+Kitchen" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kitchen-05 -->
+          <article class="project-card" data-category="kitchens" data-project-id="kitchen-05">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.21.16 PM.jpeg" alt="The Luxury Cream Acrylic U-Shaped Suite" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Modular Kitchen</span>
+                  <span class="project-card__location-pill">📍 Tonk Road, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Luxury Cream Acrylic U-Shaped Suite</h3>
+                <p class="project-card__desc">High-gloss cream acrylic U-shaped layout with seamless quartz countertops and soft-close pull-outs.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">BWP Marine Ply</span>
+                  <span class="project-spec-chip">Quartz Countertop</span>
+                  <span class="project-spec-chip">Smart Sensor LEDs</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="kitchen-05">Quick Specs</button>
+                <a href="contact.html?subject=Cream+Acrylic+Kitchen" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kitchen-06 -->
+          <article class="project-card" data-category="kitchens" data-project-id="kitchen-06">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/2da929ff-bd43-4e01-82f4-fc47e3fcba52.jpeg" alt="The Neoclassical Statuario Marble Suite" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Modular Kitchen</span>
+                  <span class="project-card__location-pill">📍 Raja Park, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Neoclassical Statuario Marble Suite</h3>
+                <p class="project-card__desc">Neoclassical island kitchen with Statuario marble waterfall island and integrated dual ovens.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Venetian PU Finish</span>
+                  <span class="project-spec-chip">Fluted Glass</span>
+                  <span class="project-spec-chip">German Lift-Ups</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="kitchen-06">Quick Specs</button>
+                <a href="contact.html?subject=Neoclassical+Marble+Kitchen" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               CATEGORY 2: MODULAR WARDROBES (6 ITEMS)
+          =========================================== -->
+
+          <!-- Wardrobe-01 -->
+          <article class="project-card" data-category="wardrobes" data-project-id="wardrobe-01">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/wardrobes/0d0ae31d-0a58-401f-8fbd-ccc2a59622e1.jpeg" alt="The Bronze Glass Walk-In Dressing Suite" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Modular Wardrobe</span>
+                  <span class="project-card__location-pill">📍 Vaishali Nagar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Bronze Glass Walk-In Dressing Suite</h3>
+                <p class="project-card__desc">Walk-in dressing atelier crafted with bronze aluminum profile glass shutters and internal LED lighting.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Bronze Glass</span>
+                  <span class="project-spec-chip">Push-to-Open</span>
+                  <span class="project-spec-chip">Velvet Jewelry Drawers</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="wardrobe-01">Quick Specs</button>
+                <a href="contact.html?subject=Bronze+Glass+Wardrobe" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Wardrobe-02 -->
+          <article class="project-card" data-category="wardrobes" data-project-id="wardrobe-02">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/wardrobes/1edfe2f2-1c28-4c15-ba7b-d8ac5755b6ed.jpeg" alt="The 4-Door Beige & Oak Display Wardrobe" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Modular Wardrobe</span>
+                  <span class="project-card__location-pill">📍 C-Scheme, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The 4-Door Beige & Oak Display Wardrobe</h3>
+                <p class="project-card__desc">Floor-to-ceiling 4-door beige profile wardrobe featuring a central open oak display tower and upper lofts.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Beige Profile</span>
+                  <span class="project-spec-chip">Oak Display Tower</span>
+                  <span class="project-spec-chip">Loft Storage</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="wardrobe-02">Quick Specs</button>
+                <a href="contact.html?subject=Beige+Oak+Wardrobe" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Wardrobe-03 -->
+          <article class="project-card" data-category="wardrobes" data-project-id="wardrobe-03">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/wardrobes/446e46cb-9a23-4c0d-ab07-88577c1ec841.jpeg" alt="The Glass Profile Walk-In with Hydraulic Lifter" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Modular Wardrobe</span>
+                  <span class="project-card__location-pill">📍 Malviya Nagar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Glass Profile Walk-In with Hydraulic Lifter</h3>
+                <p class="project-card__desc">Walk-in closet system featuring pull-down hydraulic hanger rails, smoked glass doors, and jewelry drawers.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Hydraulic Lifter</span>
+                  <span class="project-spec-chip">Smoked Glass</span>
+                  <span class="project-spec-chip">Calibrated Ply</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="wardrobe-03">Quick Specs</button>
+                <a href="contact.html?subject=Hydraulic+Lifter+Wardrobe" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Wardrobe-04 -->
+          <article class="project-card" data-category="wardrobes" data-project-id="wardrobe-04">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/wardrobes/4a609f84-e1e3-4f5d-8b63-e88d7dc7d219.jpeg" alt="The Master Bedroom Hinged Wardrobe Suite" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Modular Wardrobe</span>
+                  <span class="project-card__location-pill">📍 Mansarovar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Master Bedroom Hinged Wardrobe Suite</h3>
+                <p class="project-card__desc">Full-height master bedroom wardrobe with lower glass display drawers, internal organizing racks, and warm lighting.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Glass Drawers</span>
+                  <span class="project-spec-chip">Champagne Handles</span>
+                  <span class="project-spec-chip">180° Hinges</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="wardrobe-04">Quick Specs</button>
+                <a href="contact.html?subject=Master+Hinged+Wardrobe" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Wardrobe-05 -->
+          <article class="project-card" data-category="wardrobes" data-project-id="wardrobe-05">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/wardrobes/55d1b694-86b5-40d1-938e-6952c68ed007.jpeg" alt="The Fluted Glass Profile LED Wardrobe" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Modular Wardrobe</span>
+                  <span class="project-card__location-pill">📍 Tonk Road, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Fluted Glass Profile LED Wardrobe</h3>
+                <p class="project-card__desc">Contemporary wardrobe featuring fluted glass profile doors, vertical concealed LED channels, and soft-close hinges.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Fluted Glass</span>
+                  <span class="project-spec-chip">Vertical LED Strip</span>
+                  <span class="project-spec-chip">Soft-Close Runners</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="wardrobe-05">Quick Specs</button>
+                <a href="contact.html?subject=Fluted+Glass+Wardrobe" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Wardrobe-06 -->
+          <article class="project-card" data-category="wardrobes" data-project-id="wardrobe-06">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/wardrobes/fc18e24e-d688-4edc-9023-af5758003e4b.jpeg" alt="The Full-Height Master Wardrobe with Oak Cubbies" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Modular Wardrobe</span>
+                  <span class="project-card__location-pill">📍 Raja Park, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Full-Height Master Wardrobe with Oak Cubbies</h3>
+                <p class="project-card__desc">Multi-functional bedroom wardrobe with extensive internal shelving, open oak cubbies, and integrated top lofts.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Internal Shelving</span>
+                  <span class="project-spec-chip">Oak Cubbies</span>
+                  <span class="project-spec-chip">LED Rails</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="wardrobe-06">Quick Specs</button>
+                <a href="contact.html?subject=Master+Wardrobe+Oak+Cubbies" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               CATEGORY 3: LIVING & TV UNITS (6 ITEMS)
+          =========================================== -->
+
+          <!-- Living-01 -->
+          <article class="project-card" data-category="living" data-project-id="living-01">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/3d/13/1.jpg" alt="The Emerald Marble & Fluted Oak Media Wall" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Living & TV</span>
+                  <span class="project-card__location-pill">📍 Malviya Nagar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Emerald Marble & Fluted Oak Media Wall</h3>
+                <p class="project-card__desc">Floor-to-ceiling entertainment wall with emerald marble slab, fluted oak paneling, and floating media credenza.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Emerald Marble</span>
+                  <span class="project-spec-chip">Fluted Oak</span>
+                  <span class="project-spec-chip">Concealed Conduits</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="living-01">Quick Specs</button>
+                <a href="contact.html?subject=Emerald+Marble+Media+Wall" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Living-02 -->
+          <article class="project-card" data-category="living" data-project-id="living-02">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/3d/10/1.jpg" alt="The Midnight Calacatta & Brass TV Suite" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Living & TV</span>
+                  <span class="project-card__location-pill">📍 C-Scheme, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Midnight Calacatta & Brass TV Suite</h3>
+                <p class="project-card__desc">Sophisticated midnight Calacatta marble wall with floating storage credenza, brass trims, and LED cove lighting.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Calacatta Marble</span>
+                  <span class="project-spec-chip">Brushed Brass</span>
+                  <span class="project-spec-chip">Push-to-Open</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="living-02">Quick Specs</button>
+                <a href="contact.html?subject=Midnight+Calacatta+TV+Suite" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Living-03 -->
+          <article class="project-card" data-category="living" data-project-id="living-03">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/3d/views/03.jpg" alt="The Italian Porcelain & Teak Slat Media Wall" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Living & TV</span>
+                  <span class="project-card__location-pill">📍 Vaishali Nagar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Italian Porcelain & Teak Slat Media Wall</h3>
+                <p class="project-card__desc">Architectural entertainment media wall featuring seamless Italian porcelain slab backing and natural teak slats.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Italian Porcelain</span>
+                  <span class="project-spec-chip">Teak Acoustic Slats</span>
+                  <span class="project-spec-chip">Zero-Wire System</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="living-03">Quick Specs</button>
+                <a href="contact.html?subject=Italian+Porcelain+Media+Wall" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Living-04 -->
+          <article class="project-card" data-category="living" data-project-id="living-04">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.21.48 PM.jpeg" alt="The Slate Grey Floating Media Console Wall" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Living & TV</span>
+                  <span class="project-card__location-pill">📍 Mansarovar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Slate Grey Floating Media Console Wall</h3>
+                <p class="project-card__desc">Monochromatic slate grey wall-hung TV console with geometric wall paneling and concealed cable conduits.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Slate Grey Finish</span>
+                  <span class="project-spec-chip">Geometric Paneling</span>
+                  <span class="project-spec-chip">Cable Ducts</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="living-04">Quick Specs</button>
+                <a href="contact.html?subject=Slate+Grey+Media+Wall" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Living-05 -->
+          <article class="project-card" data-category="living" data-project-id="living-05">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.21.50 PM.jpeg" alt="The Contemporary Living Lounge Credenza" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Living & TV</span>
+                  <span class="project-card__location-pill">📍 Tonk Road, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Contemporary Living Lounge Credenza</h3>
+                <p class="project-card__desc">Modern minimalist living room wall storage with low-profile credenza and architectural gallery backdrop.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Matte Acrylic</span>
+                  <span class="project-spec-chip">Floating Anchors</span>
+                  <span class="project-spec-chip">Warm LED Grooves</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="living-05">Quick Specs</button>
+                <a href="contact.html?subject=Living+Lounge+Credenza" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Living-06 -->
+          <article class="project-card" data-category="living" data-project-id="living-06">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/65f9c0d6-3113-4f65-b416-ffca545dac5c.jpeg" alt="The Panoramic Designer Living Lounge" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Living & TV</span>
+                  <span class="project-card__location-pill">📍 Raja Park, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Panoramic Designer Living Lounge</h3>
+                <p class="project-card__desc">Clean architectural living suite with horizontal floating media unit and textured wall paneling.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">BWP Marine Ply</span>
+                  <span class="project-spec-chip">Textured Finish</span>
+                  <span class="project-spec-chip">Heavy-Load Brackets</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="living-06">Quick Specs</button>
+                <a href="contact.html?subject=Panoramic+Living+Lounge" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               CATEGORY 4: OFFICE & WORKSPACES (6 ITEMS)
+          =========================================== -->
+
+          <!-- Office-01 -->
+          <article class="project-card" data-category="office" data-project-id="office-01">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/3d/9/1.jpg" alt="The Collaborative Executive Workspace" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Office & Workspace</span>
+                  <span class="project-card__location-pill">📍 C-Scheme, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Collaborative Executive Workspace</h3>
+                <p class="project-card__desc">Ergonomic executive workstation system with acoustic dividers, modesty panels, and integrated wire conduits.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Anti-Scratch Melamine</span>
+                  <span class="project-spec-chip">Concealed Trunking</span>
+                  <span class="project-spec-chip">Steel Structure</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="office-01">Quick Specs</button>
+                <a href="contact.html?subject=Collaborative+Executive+Workspace" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Office-02 -->
+          <article class="project-card" data-category="office" data-project-id="office-02">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/3d/9/3.jpg" alt="The Corporate Director Conference Suite" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Office & Workspace</span>
+                  <span class="project-card__location-pill">📍 Vaishali Nagar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Corporate Director Conference Suite</h3>
+                <p class="project-card__desc">Executive conference and director suite with bespoke meeting joinery and architectural lighting.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Synchronized Woodgrain</span>
+                  <span class="project-spec-chip">Acoustic Felt</span>
+                  <span class="project-spec-chip">Soft-Close Drawers</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="office-02">Quick Specs</button>
+                <a href="contact.html?subject=Corporate+Conference+Suite" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Office-03 -->
+          <article class="project-card" data-category="office" data-project-id="office-03">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.21.44 PM.jpeg" alt="The Contemporary Open Studio Lounge" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Office & Workspace</span>
+                  <span class="project-card__location-pill">📍 Malviya Nagar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Contemporary Open Studio Lounge</h3>
+                <p class="project-card__desc">Spacious open studio workspace featuring modular desking, display shelving, and breakout seating.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Commercial Melamine</span>
+                  <span class="project-spec-chip">Fabric Pinboards</span>
+                  <span class="project-spec-chip">Modular Hubs</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="office-03">Quick Specs</button>
+                <a href="contact.html?subject=Open+Studio+Lounge" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Office-04 -->
+          <article class="project-card" data-category="office" data-project-id="office-04">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.21.45 PM.jpeg" alt="The Architectural Joinery Library & Study Wall" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Office & Workspace</span>
+                  <span class="project-card__location-pill">📍 Mansarovar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Architectural Joinery Library & Study Wall</h3>
+                <p class="project-card__desc">Custom floor-to-ceiling library wall with integrated study desk, closed lower cabinetry, and task lighting.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">BWP Hardwood Ply</span>
+                  <span class="project-spec-chip">LED Task Strip</span>
+                  <span class="project-spec-chip">Cable Pass-Throughs</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="office-04">Quick Specs</button>
+                <a href="contact.html?subject=Architectural+Library+Study" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Office-05 -->
+          <article class="project-card" data-category="office" data-project-id="office-05">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/164b0085-4161-41c6-87d1-2308091e4050.jpeg" alt="The Executive Wood Veneer Dining & Work Suite" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Office & Workspace</span>
+                  <span class="project-card__location-pill">📍 Tonk Road, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Executive Wood Veneer Dining & Work Suite</h3>
+                <p class="project-card__desc">Bespoke executive joinery suite in natural wood veneer suitable for multipurpose conference and dining.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Natural Veneer</span>
+                  <span class="project-spec-chip">Cantilever Steel Frame</span>
+                  <span class="project-spec-chip">Heavy-Duty Slides</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="office-05">Quick Specs</button>
+                <a href="contact.html?subject=Executive+Veneer+Suite" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Office-06 -->
+          <article class="project-card" data-category="office" data-project-id="office-06">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/d10b9493-59ba-4974-a595-47b261134e31.jpeg" alt="The Arched Study Alcove & Writing Nook" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Office & Workspace</span>
+                  <span class="project-card__location-pill">📍 Raja Park, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Arched Study Alcove & Writing Nook</h3>
+                <p class="project-card__desc">Minimalist arched study nook with floating writing desk, task lighting, and overhead display shelving.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Compact Folding</span>
+                  <span class="project-spec-chip">BWP Marine Core</span>
+                  <span class="project-spec-chip">Magnetic Latches</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="office-06">Quick Specs</button>
+                <a href="contact.html?subject=Arched+Study+Alcove" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               CATEGORY 5: VANITY UNITS (6 ITEMS)
+          =========================================== -->
+
+          <!-- Vanity-01 -->
+          <article class="project-card" data-category="vanity" data-project-id="vanity-01">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.21.51 PM.jpeg" alt="The Terracotta Ceramic Fluted Powder Vanity" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Vanity Unit</span>
+                  <span class="project-card__location-pill">📍 Vaishali Nagar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Terracotta Ceramic Fluted Powder Vanity</h3>
+                <p class="project-card__desc">Moisture-proof floating powder room vanity with fluted terracotta ceramic basin, quartz counter, and mirror.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">100% Marine Ply (IS 710)</span>
+                  <span class="project-spec-chip">Fluted Terracotta</span>
+                  <span class="project-spec-chip">Waterproof Seal</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="vanity-01">Quick Specs</button>
+                <a href="contact.html?subject=Terracotta+Fluted+Vanity" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vanity-02 -->
+          <article class="project-card" data-category="vanity" data-project-id="vanity-02">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.21.52 PM.jpeg" alt="The Fluted Ceramic Basin & Open Joinery Vanity" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Vanity Unit</span>
+                  <span class="project-card__location-pill">📍 C-Scheme, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Fluted Ceramic Basin & Open Joinery Vanity</h3>
+                <p class="project-card__desc">Contemporary bathroom vanity unit with fluted ceramic vessel sink, lower open joinery storage, and backlit mirror.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Anti-Fingerprint PU</span>
+                  <span class="project-spec-chip">Smart Touch Mirror</span>
+                  <span class="project-spec-chip">Open Joinery Shelf</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="vanity-02">Quick Specs</button>
+                <a href="contact.html?subject=Fluted+Ceramic+Vanity" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vanity-03 -->
+          <article class="project-card" data-category="vanity" data-project-id="vanity-03">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.21.53 PM (1).jpeg" alt="The Rose Gold Oval Vessel Basin Vanity" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Vanity Unit</span>
+                  <span class="project-card__location-pill">📍 Malviya Nagar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Rose Gold Oval Vessel Basin Vanity</h3>
+                <p class="project-card__desc">Luxury powder room console featuring an oval vessel basin, rose gold hardware accents, and marble wall panel.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Oval Vessel Basin</span>
+                  <span class="project-spec-chip">Rose Gold Trims</span>
+                  <span class="project-spec-chip">Marine Substrate</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="vanity-03">Quick Specs</button>
+                <a href="contact.html?subject=Rose+Gold+Oval+Vanity" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vanity-04 -->
+          <article class="project-card" data-category="vanity" data-project-id="vanity-04">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.23.37 PM.jpeg" alt="The Master Suite Fluted Oak Double Vanity" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Vanity Unit</span>
+                  <span class="project-card__location-pill">📍 Mansarovar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Master Suite Fluted Oak Double Vanity</h3>
+                <p class="project-card__desc">Grand floating double-sink vanity in moisture-proof fluted oak with dual LED backlit mirrors and quartz top.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Dual Basin Quartz</span>
+                  <span class="project-spec-chip">Fluted Oak Timber</span>
+                  <span class="project-spec-chip">Twin LED Mirrors</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="vanity-04">Quick Specs</button>
+                <a href="contact.html?subject=Fluted+Oak+Double+Vanity" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vanity-05 -->
+          <article class="project-card" data-category="vanity" data-project-id="vanity-05">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.23.41 PM.jpeg" alt="The Emerald & Black Marquina Marble Vanity" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Vanity Unit</span>
+                  <span class="project-card__location-pill">📍 Tonk Road, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Emerald & Black Marquina Marble Vanity</h3>
+                <p class="project-card__desc">Opulent dark emerald vanity with black Marquina marble top, brushed brass hardware, and smart anti-fog mirror.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Black Marquina Top</span>
+                  <span class="project-spec-chip">Emerald Fluting</span>
+                  <span class="project-spec-chip">Brushed Brass</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="vanity-05">Quick Specs</button>
+                <a href="contact.html?subject=Emerald+Marquina+Vanity" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vanity-06 -->
+          <article class="project-card" data-category="vanity" data-project-id="vanity-06">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/62f5a47e-8079-431a-9a3e-8084f3cc005c.jpeg" alt="The Monolithic Terrazzo & Walnut Suspended Basin" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Vanity Unit</span>
+                  <span class="project-card__location-pill">📍 Raja Park, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Monolithic Terrazzo & Walnut Suspended Basin</h3>
+                <p class="project-card__desc">Minimalist suspended grey terrazzo washbasin paired with a lower fluted natural walnut storage drawer.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Grey Terrazzo Basin</span>
+                  <span class="project-spec-chip">Fluted Walnut Drawer</span>
+                  <span class="project-spec-chip">Moisture Barrier</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="vanity-06">Quick Specs</button>
+                <a href="contact.html?subject=Terrazzo+Walnut+Basin" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               CATEGORY 6: CUSTOM INTERIORS (6 ITEMS)
+          =========================================== -->
+
+          <!-- Custom-01 -->
+          <article class="project-card" data-category="custom" data-project-id="custom-01">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/3d/views/02.jpg" alt="The Illuminated Gold Glass Crockery Vitrine" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Custom Interior</span>
+                  <span class="project-card__location-pill">📍 C-Scheme, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Illuminated Gold Glass Crockery Vitrine</h3>
+                <p class="project-card__desc">Bespoke dining room tall crockery vitrine with champagne gold glass doors and warm LED shelf illumination.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Fluted Glass</span>
+                  <span class="project-spec-chip">Champagne Frame</span>
+                  <span class="project-spec-chip">Backlit Wine Racks</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="custom-01">Quick Specs</button>
+                <a href="contact.html?subject=Gold+Glass+Crockery+Vitrine" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Custom-02 -->
+          <article class="project-card" data-category="custom" data-project-id="custom-02">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/3d/views/04.jpg" alt="The Luxury Walnut Bar Counter & Wine Storage" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Custom Interior</span>
+                  <span class="project-card__location-pill">📍 Vaishali Nagar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Luxury Walnut Bar Counter & Wine Storage</h3>
+                <p class="project-card__desc">Custom home bar unit featuring natural walnut shelving, stemware racks, wine storage niches, and prep counter.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Natural Walnut</span>
+                  <span class="project-spec-chip">Stemware Racks</span>
+                  <span class="project-spec-chip">Wine Niches</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="custom-02">Quick Specs</button>
+                <a href="contact.html?subject=Walnut+Bar+Counter" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Custom-03 -->
+          <article class="project-card" data-category="custom" data-project-id="custom-03">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.21.53 PM.jpeg" alt="The Rolling Shutter Appliance Garage & Pantry" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Custom Interior</span>
+                  <span class="project-card__location-pill">📍 Malviya Nagar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Rolling Shutter Appliance Garage & Pantry</h3>
+                <p class="project-card__desc">Specialized pantry unit with metallic rolling shutter appliance garage, wicker vegetable baskets, and quartz counter.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Rolling Shutter</span>
+                  <span class="project-spec-chip">Wicker Baskets</span>
+                  <span class="project-spec-chip">Quartz Counter</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="custom-03">Quick Specs</button>
+                <a href="contact.html?subject=Rolling+Shutter+Pantry" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Custom-04 -->
+          <article class="project-card" data-category="custom" data-project-id="custom-04">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.21.54 PM.jpeg" alt="The Smoked Glass Architectural Vitrine Tower" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Custom Interior</span>
+                  <span class="project-card__location-pill">📍 Mansarovar, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Smoked Glass Architectural Vitrine Tower</h3>
+                <p class="project-card__desc">Floor-to-ceiling smoked glass display cabinet with vertical LED edge lighting for luxury dinnerware.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Smoked Glass Tower</span>
+                  <span class="project-spec-chip">BWP Marine Ply</span>
+                  <span class="project-spec-chip">LED Edge Channels</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="custom-04">Quick Specs</button>
+                <a href="contact.html?subject=Smoked+Glass+Vitrine+Tower" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Custom-05 -->
+          <article class="project-card" data-category="custom" data-project-id="custom-05">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.23.38 PM.jpeg" alt="The Sleek Vertical Vitrine Display Showcase" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Custom Interior</span>
+                  <span class="project-card__location-pill">📍 Tonk Road, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Sleek Vertical Vitrine Display Showcase</h3>
+                <p class="project-card__desc">Slimline glass display vitrine with integrated LED illumination, lower storage drawers, and champagne frame.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Slim Vitrine</span>
+                  <span class="project-spec-chip">LED Illumination</span>
+                  <span class="project-spec-chip">Lower Drawers</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="custom-05">Quick Specs</button>
+                <a href="contact.html?subject=Vertical+Vitrine+Showcase" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Custom-06 -->
+          <article class="project-card" data-category="custom" data-project-id="custom-06">
+            <div class="project-card__media">
+              <img src="assets/kitchen videos-20260910T104310Z-1-001/kitchen videos/opulux/WhatsApp Image 2026-05-07 at 2.23.39 PM.jpeg" alt="The Teal Mosaic Breakfast Bar & Wine Rack" class="project-card__img" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div>
+                <div class="project-card__meta-row">
+                  <span class="project-card__category-tag">Custom Interior</span>
+                  <span class="project-card__location-pill">📍 Raja Park, Jaipur</span>
+                </div>
+                <h3 class="project-card__title">The Teal Mosaic Breakfast Bar & Wine Rack</h3>
+                <p class="project-card__desc">Custom breakfast bar counter featuring teal mosaic detailing, suspended overhead wine glass rack, and fluted joinery.</p>
+                <div class="project-card__specs-row">
+                  <span class="project-spec-chip">Teal Mosaic Tile</span>
+                  <span class="project-spec-chip">Suspended Wine Rack</span>
+                  <span class="project-spec-chip">Fluted Joinery</span>
+                </div>
+              </div>
+              <div class="project-card__actions">
+                <button type="button" class="project-btn-specs open-quick-specs" data-target-project="custom-06">Quick Specs</button>
+                <a href="contact.html?subject=Teal+Mosaic+Breakfast+Bar" class="project-btn-enquire">Enquire <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- .projects-editorial -->
+      </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="video-section section--sm" aria-label="Craftsmanship video">
+      <div class="container">
+        <div class="reveal" style="margin-bottom: 2rem;">
+          <p class="text-label" style="color:var(--iceberg);">Behind the Craft</p>
+          <div class="divider mt-sm" style="background:var(--gamboge);"></div>
+          <h2 class="section-title text-4xl" style="color:var(--white); margin-top:0.75rem;">
+            See the Craft<br>Behind the Space.
+          </h2>
+        </div>
+
+        <div class="video-placeholder reveal-scale" role="button" tabindex="0" aria-label="Play project video" title="Click to play">
+          <div class="video-play-btn" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <div class="video-text">
+            <p style="font-family:var(--font-body); font-size:0.65rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:0.25rem;">Factory & Site Showcase</p>
+            <p style="font-family:var(--font-display); font-size:1.25rem; color:rgba(255,255,255,0.7);">Modular Joinery & Installation in Jaipur</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section projects-cta" aria-label="Start your project">
+      <div class="container" style="position:relative;z-index:1;">
+        <div style="max-width:640px;">
+          <p class="text-label reveal" style="color:var(--iceberg);">Your Turn</p>
+          <div class="divider reveal mt-sm" style="background:var(--gamboge);"></div>
+          <h2 class="section-title text-4xl reveal" style="color:var(--white);">
+            Your Space<br>Could Be Next.
+          </h2>
+          <p class="reveal mt-md" style="font-size:1.0625rem; line-height:1.75; color:rgba(255,255,255,0.6);">
+            Have a space in mind? Let's talk about how we can design, manufacture and install the perfect modular interior for you in Jaipur.
+          </p>
+          <div class="reveal" style="margin-top:var(--space-lg); display:flex; flex-wrap:wrap; gap:1rem;">
+            <a href="contact.html" class="btn btn-accent btn-lg btn-arrow">
+              Start a Project <span class="arrow-icon" aria-hidden="true">→</span>
+            </a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">
+              Book a Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" aria-label="Site footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <div class="footer__logo"><span>GARG MODULAR</span><span>FURNITURE</span></div>
+            <p class="footer__desc">Premium modular furniture and customized interiors crafted with style, precision and purpose.</p>
+            <div class="footer__social" aria-label="Social media">
+              <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            </div>
+          </div>
+          <div>
+            <p class="footer__heading">Navigation</p>
+            <ul class="footer__links" role="list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer__heading">Services</p>
+            <ul class="footer__links" role="list">
+              <li><a href="services.html#kitchens">Modular Kitchens</a></li>
+              <li><a href="services.html#wardrobes">Modular Wardrobes</a></li>
+              <li><a href="services.html#tv">TV Units</a></li>
+              <li><a href="services.html#vanity">Vanity Units</a></li>
+              <li><a href="services.html#office">Office Furniture</a></li>
+              <li><a href="services.html#custom">Custom Interiors</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer__heading">Get in Touch</p>
+            <div class="footer__contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.55a16 16 0 0 0 6.29 6.29l1.32-1.35a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div><a href="tel:+917891432251">+91 7891432251</a><br><a href="tel:+917014882040">+91 7014882040</a></div>
+            </div>
+            <div class="footer__contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:gargmodularfurniture@gmail.com">gargmodularfurniture@gmail.com</a>
+            </div>
+            <div class="footer__contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Manyawas, Jaipur, Rajasthan 302020</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Garg Modular Furniture. All rights reserved.</span>
+          <span>Premium Modular Furniture · Jaipur, India</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- =====================================================
+       PROJECT QUICK SPECS LIGHTBOX MODAL
+  ====================================================== -->
+  <div class="project-modal-backdrop" id="project-specs-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+    <div class="project-modal-container">
+      <button class="project-modal-close" id="project-modal-close" aria-label="Close specifications modal">✕</button>
+      
+      <div class="project-modal-grid">
+        <div class="project-modal-visual">
+          <img id="project-modal-img" src="" alt="Project specification view" class="project-modal-img">
+        </div>
+
+        <div class="project-modal-content">
+          <div>
+            <span class="project-card__category-tag" id="project-modal-category">Modular Kitchen</span>
+            <span class="project-card__location-pill" id="project-modal-loc" style="display:block; margin-top:0.35rem;">📍 Jaipur</span>
+            <h2 class="project-card__title" id="project-modal-title" style="font-size:1.4rem; margin-top:0.5rem; margin-bottom:0.5rem;">Project Title</h2>
+            <p class="project-card__desc" id="project-modal-summary" style="margin-bottom:0.75rem;">Detailed summary of the architectural scope.</p>
+
+            <div class="project-modal-specs-table">
+              <div class="project-modal-spec-item">
+                <span class="project-modal-spec-label">Core Structural Substrate</span>
+                <span class="project-modal-spec-val" id="project-modal-core">100% Calibrated Marine-Grade BWP Plywood</span>
+              </div>
+              <div class="project-modal-spec-item">
+                <span class="project-modal-spec-label">Surface &amp; Exterior Finish</span>
+                <span class="project-modal-spec-val" id="project-modal-finish">Anti-Fingerprint Matt PU &amp; Natural Veneer</span>
+              </div>
+              <div class="project-modal-spec-item">
+                <span class="project-modal-spec-label">Hardware &amp; Mechanism</span>
+                <span class="project-modal-spec-val" id="project-modal-hardware">Blum Austria Soft-Close Runners</span>
+              </div>
+              <div class="project-modal-spec-item">
+                <span class="project-modal-spec-label">Turnkey Delivery Timeline</span>
+                <span class="project-modal-spec-val" id="project-modal-duration">30 Working Days</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-top:1rem;">
+            <a href="contact.html" id="project-modal-enquire-btn" class="btn btn-accent btn-sm btn-arrow" style="flex-grow:1; text-align:center;">
+              Enquire About This Project <span class="arrow-icon" aria-hidden="true">→</span>
+            </a>
+            <a href="tel:+917891432251" class="btn btn-secondary btn-sm" style="flex-shrink:0;">
+              Call Factory
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/917891432251" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.413A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.182a8.182 8.182 0 0 1-4.163-1.136l-.298-.177-3.087.876.894-3.003-.194-.31A8.182 8.182 0 1 1 12 20.182z"/></svg>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+</html>

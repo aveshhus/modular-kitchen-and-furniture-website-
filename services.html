@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services &amp; Products | Garg Modular Furniture — Jaipur</title>
+  <meta name="description" content="Explore Garg Modular Furniture's bespoke modular services: German CNC-crafted modular kitchens, wardrobes, TV entertainment units, vanity suites, executive office furniture, and custom interiors in Jaipur.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.css">
+  
+  <!-- Project Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <style>
+    /* =====================================================
+       SERVICES PAGE — ARCHITECTURAL EDITORIAL STYLES
+       ===================================================== */
+
+    :root {
+      --srv-bg-subtle: var(--offwhite);
+      --srv-border-subtle: rgba(30, 66, 77, 0.08);
+      --srv-border-card: var(--gray-100);
+    }
+
+    /* Ambient Glow Background */
+    .services-ambient-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(119, 181, 211, 0.12) 0%, rgba(225, 158, 17, 0.05) 50%, transparent 70%);
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* -----------------------------------------------------
+       1. HERO SECTION (PANORAMIC ARCHITECTURAL CANVAS)
+       ----------------------------------------------------- */
+    .services-hero {
+      position: relative;
+      padding: 130px 0 60px 0;
+      background: linear-gradient(180deg, var(--white) 0%, #ffffff 100%);
+      overflow: hidden;
+      border-bottom: 1px solid var(--srv-border-subtle);
+    }
+    @media (max-width: 768px) {
+      .services-hero { padding: 105px 0 40px 0; }
+    }
+
+    .services-hero-header {
+      max-width: 960px;
+      margin-bottom: 32px;
+    }
+
+    .services-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--indigo);
+      background: rgba(30, 66, 77, 0.06);
+      border: 1px solid rgba(30, 66, 77, 0.14);
+      border-radius: 999px;
+      padding: 5px 14px;
+      width: fit-content;
+      margin-bottom: 16px;
+    }
+    .services-eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gamboge);
+      box-shadow: 0 0 6px var(--gamboge);
+    }
+
+    .services-hero-title {
+      font-family: var(--font-display, 'Playfair Display', serif);
+      font-size: clamp(2.3rem, 4.5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--indigo);
+      text-transform: uppercase;
+      margin: 0 0 16px 0;
+    }
+
+    .services-hero-subtitle {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--gray-700);
+      max-width: 740px;
+      margin: 0 0 28px 0;
+    }
+
+    /* Live Metric HUD Pills */
+    .services-hud-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    @media (min-width: 768px) {
+      .services-hud-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+    }
+    .services-hud-pill {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: 14px;
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 10px rgba(30, 66, 77, 0.03);
+    }
+    .services-hud-pill:hover {
+      border-color: rgba(225, 158, 17, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -6px rgba(30, 66, 77, 0.08);
+    }
+    .hud-pill-val {
+      font-family: 'Geist Mono', var(--font-mono, monospace);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--indigo);
+      line-height: 1;
+    }
+    .hud-pill-lbl {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+    }
+
+    /* Sticky Category Jump Navigation Bar */
+    .services-nav-bar {
+      position: sticky;
+      top: 72px;
+      z-index: 100;
+      background: rgba(249, 247, 242, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid var(--gray-100);
+      border-bottom: 1px solid var(--gray-100);
+      padding: 12px 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+    .services-nav-scroll {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 0 4px;
+    }
+    .services-nav-scroll::-webkit-scrollbar { display: none; }
+    .srv-jump-btn {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--indigo);
+      background: #ffffff;
+      border: 1px solid var(--gray-100);
+      border-radius: 999px;
+      padding: 7px 16px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .srv-jump-btn:hover {
+      background: var(--indigo);
+      color: var(--white);
+      border-color: var(--indigo);
+      transform: translateY(-1px);
+    }
+    .srv-jump-btn.active {
+      background: var(--indigo);
+      color: var(--white);
+      border-color: var(--indigo);
+    }
+
+    /* -----------------------------------------------------
+       2. SERVICE SUITES SHOWCASE (HIGH-FIDELITY SHOWCASE)
+       ----------------------------------------------------- */
+    .service-suite-row {
+      padding: 90px 0;
+      border-bottom: 1px solid var(--gray-100);
+      position: relative;
+    }
+    .service-suite-row:nth-child(even) {
+      background: var(--white);
+    }
+    .service-suite-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .service-suite-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .service-suite-grid {
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 60px;
+      }
+      .service-suite-grid.reversed {
+        grid-template-columns: 0.92fr 1.08fr;
+      }
+      .service-suite-grid.reversed .service-suite-media-col {
+        order: -1;
+      }
+    }
+
+    /* Left Content Column */
+    .service-suite-text-col {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .service-index-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Geist Mono', var(--font-mono), monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brown);
+      background: rgba(225, 158, 17, 0.14);
+      border: 1px solid rgba(225, 158, 17, 0.3);
+      padding: 4px 12px;
+      border-radius: 999px;
+      width: fit-content;
+    }
+    .service-suite-title {
+      font-family: var(--font-display, 'Playfair Display', serif);
+      font-size: clamp(2rem, 3.4vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--indigo);
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .service-suite-desc {
+      font-size: 1.02rem;
+      line-height: 1.7;
+      color: var(--gray-700);
+      margin: 0;
+    }
+
+    /* Typology & Layout Chips */
+    .service-typology-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .typology-chip {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--indigo);
+      background: rgba(30, 66, 77, 0.06);
+      border: 1px solid rgba(30, 66, 77, 0.12);
+      border-radius: 6px;
+      padding: 4px 10px;
+    }
+
+    /* Key Architecture Feature List */
+    .service-feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 16px;
+      margin-top: 6px;
+    }
+    @media (max-width: 540px) {
+      .service-feature-grid { grid-template-columns: 1fr; }
+    }
+    .srv-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--indigo);
+      line-height: 1.4;
+    }
+    .srv-feature-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(225, 158, 17, 0.15);
+      color: var(--gamboge);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Tech Specification Bar */
+    .service-spec-bar {
+      background: var(--offwhite);
+      border: 1px solid var(--gray-100);
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .service-spec-col {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .spec-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+    }
+    .spec-value {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--indigo);
+    }
+
+    /* Service Action Buttons */
+    .service-action-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    /* Right Media & Interactive Angle Gallery */
+    .service-suite-media-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .service-main-image-wrap {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 48px -12px rgba(30, 66, 77, 0.2), 0 0 0 1px rgba(30, 66, 77, 0.08);
+      background: var(--indigo);
+    }
+    @media (max-width: 768px) {
+      .service-main-image-wrap { height: 290px; }
+    }
+    .service-main-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+    }
+    .service-main-image-wrap:hover .service-main-image {
+      transform: scale(1.04);
+    }
+    .service-image-hud-tag {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      background: rgba(30, 66, 77, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 8px;
+      padding: 6px 12px;
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    /* Interactive Angle Thumbnail Previews */
+    .service-thumbs-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .service-thumb-card {
+      position: relative;
+      height: 90px;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.25s ease;
+      background: var(--indigo);
+    }
+    .service-thumb-card:hover {
+      border-color: var(--gamboge);
+      transform: translateY(-2px);
+    }
+    .service-thumb-card.active {
+      border-color: var(--gamboge);
+      box-shadow: 0 4px 14px rgba(225, 158, 17, 0.35);
+    }
+    .service-thumb-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* -----------------------------------------------------
+       3. INTERACTIVE MATERIAL & HARDWARE MATRIX
+       ----------------------------------------------------- */
+    .matrix-section {
+      padding: 100px 0;
+      background: var(--indigo);
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+    .matrix-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 48px auto;
+    }
+    .matrix-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .matrix-tab-btn {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      padding: 9px 22px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .matrix-tab-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .matrix-tab-btn.active {
+      color: var(--indigo);
+      background: var(--flax);
+      border-color: var(--flax);
+      font-weight: 800;
+    }
+
+    .matrix-pane {
+      display: none;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .matrix-pane.active {
+      display: grid;
+    }
+    @media (min-width: 768px) {
+      .matrix-pane { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .matrix-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      transition: all 0.3s ease;
+    }
+    .matrix-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--gamboge);
+      transform: translateY(-4px);
+    }
+    .matrix-card-tag {
+      font-family: 'Geist Mono', var(--font-mono), monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--gamboge);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .matrix-card-title {
+      font-family: var(--font-display, 'Playfair Display', serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 4px 0 8px 0;
+    }
+    .matrix-card-desc {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.75);
+    }
+    .matrix-spec-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .matrix-spec-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+    }
+    .matrix-spec-row span:first-child { color: rgba(255, 255, 255, 0.5); }
+    .matrix-spec-row span:last-child { color: var(--flax); font-weight: 700; }
+
+
+    /* -----------------------------------------------------
+       5. INDUSTRIAL QUALITY & CRAFTSMANSHIP STANDARDS
+       ----------------------------------------------------- */
+    .standards-section {
+      padding: 100px 0;
+      background: linear-gradient(160deg, var(--indigo) 0%, rgba(30, 66, 77, 0.95) 100%);
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+    .standards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 48px;
+    }
+    @media (min-width: 768px) {
+      .standards-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .standards-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .standard-pillar-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: all 0.3s ease;
+    }
+    .standard-pillar-card:hover {
+      background: rgba(255, 255, 255, 0.09);
+      border-color: var(--gamboge);
+      transform: translateY(-4px);
+    }
+    .pillar-icon-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(225, 158, 17, 0.15);
+      border: 1px solid rgba(225, 158, 17, 0.3);
+      color: var(--gamboge);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pillar-title {
+      font-family: var(--font-display, 'Playfair Display', serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+      line-height: 1.3;
+    }
+    .pillar-desc {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0;
+    }
+
+    /* -----------------------------------------------------
+       6. FINAL CTA & BOOKING FORM
+       ----------------------------------------------------- */
+    .services-final-cta {
+      padding: 100px 0;
+      background: var(--flax);
+      position: relative;
+      overflow: hidden;
+    }
+    .services-final-box {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 48px 36px;
+      box-shadow: 0 24px 48px -12px rgba(30, 66, 77, 0.2);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .services-final-box {
+        grid-template-columns: 1.05fr 0.95fr;
+        padding: 60px 48px;
+        gap: 52px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Framer Magnetic Cursor -->
+  <div class="custom-cursor">
+    <div class="custom-cursor__dot"></div>
+    <div class="custom-cursor__ring">
+      <span class="custom-cursor__label"></span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav nav--solid" id="main-nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Garg Modular Furniture Home">
+        <span class="nav__logo-primary">GARG</span>
+        <span class="nav__logo-secondary">Modular Furniture</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link active">Services</a></li>
+        <li><a href="projects.html" class="nav__link">Projects</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="contact.html" class="nav__cta">Book a Consultation</a>
+        <button class="nav__hamburger" id="hamburger-btn" aria-expanded="false" aria-label="Open menu" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul class="mobile-menu__links" role="list">
+      <li><a href="index.html" class="mobile-menu__link">Home</a></li>
+      <li><a href="about.html" class="mobile-menu__link">About</a></li>
+      <li><a href="services.html" class="mobile-menu__link active">Services</a></li>
+      <li><a href="projects.html" class="mobile-menu__link">Projects</a></li>
+      <li><a href="contact.html" class="mobile-menu__link">Contact</a></li>
+    </ul>
+    <div class="mobile-menu__bottom">
+      <a href="contact.html" class="mobile-menu__cta">Book a Consultation →</a>
+      <div class="mobile-menu__contact">
+        <a href="tel:+917891432251">+91 7891432251</a>
+        <a href="tel:+917014882040">+91 7014882040</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- 1. PANORAMIC ARCHITECTURAL HERO -->
+    <section class="services-hero" aria-label="Services hero">
+      <div class="services-ambient-glow" style="top:-100px; left:-100px;"></div>
+      <div class="services-ambient-glow" style="bottom:-100px; right:-100px;"></div>
+
+      <div class="container">
+        <div class="services-hero-header">
+          <div class="services-eyebrow reveal">Bespoke Architectural Engineering</div>
+          <h1 class="services-hero-title reveal">
+            Modular Suites &amp;<br>
+            <em style="font-style:italic; color:var(--gamboge); font-family:var(--font-display);">Tailored Interiors.</em>
+          </h1>
+          <p class="services-hero-subtitle reveal">
+            From luxury German-machined kitchens to seamless wardrobe systems and executive offices — every unit is manufactured in our automated Jaipur factory with sub-millimeter precision and 10-year durability.
+          </p>
+
+          <!-- Live Metric HUD -->
+          <div class="services-hud-grid reveal">
+            <div class="services-hud-pill">
+              <span class="hud-pill-val">8</span>
+              <span class="hud-pill-lbl">Bespoke Categories</span>
+            </div>
+            <div class="services-hud-pill">
+              <span class="hud-pill-val">0.1 mm</span>
+              <span class="hud-pill-lbl">German CNC Precision</span>
+            </div>
+            <div class="services-hud-pill">
+              <span class="hud-pill-val">10 Yrs</span>
+              <span class="hud-pill-lbl">Structural Warranty</span>
+            </div>
+            <div class="services-hud-pill">
+              <span class="hud-pill-val">72 Hr</span>
+              <span class="hud-pill-lbl">Moisture Shield Tested</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sticky Category Quick Jump Bar -->
+      <div class="services-nav-bar">
+        <div class="container">
+          <div class="services-nav-scroll">
+            <a href="#kitchens" class="srv-jump-btn active">01 Kitchens</a>
+            <a href="#wardrobes" class="srv-jump-btn">02 Wardrobes</a>
+            <a href="#tv-units" class="srv-jump-btn">03 TV Units</a>
+            <a href="#vanities" class="srv-jump-btn">04 Vanities</a>
+            <a href="#office" class="srv-jump-btn">05 Office</a>
+            <a href="#crockery" class="srv-jump-btn">06 Crockery &amp; Bar</a>
+            <a href="#custom-suites" class="srv-jump-btn">07 Custom Suites</a>
+            <a href="#storage" class="srv-jump-btn">08 Smart Storage</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. HIGH-FIDELITY ARCHITECTURAL SERVICE SUITES -->
+    <main>
+
+      <!-- 01 · MODULAR KITCHENS -->
+      <section class="service-suite-row" id="kitchens">
+        <div class="container">
+          <div class="service-suite-grid">
+            <div class="service-suite-text-col reveal-left">
+              <div class="service-index-badge">01 • Flagship Architecture</div>
+              <h2 class="service-suite-title">Modular<br>Kitchens</h2>
+              <p class="service-suite-desc">
+                Engineered around the Golden Work Triangle, our kitchens merge heavy-duty BWP Marine Ply carcasses with European Blum Aventos lift-ups, Gola handleless profiles, and anti-fingerprint acrylic finishes.
+              </p>
+
+              <!-- Typology Chips -->
+              <div class="service-typology-wrap">
+                <span class="typology-chip">Island Layout</span>
+                <span class="typology-chip">L-Shape</span>
+                <span class="typology-chip">Parallel Galley</span>
+                <span class="typology-chip">U-Shaped</span>
+                <span class="typology-chip">Breakfast Bar</span>
+              </div>
+
+              <!-- Key Features -->
+              <div class="service-feature-grid">
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Blum Tandembox Soft-Close Drawers</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Waterproof Sink Cabinet with Aluminum Base</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Integrated Fluted Glass Lift-Up Wall Units</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Concealed LED Task &amp; Profile Lighting</span>
+                </div>
+              </div>
+
+              <!-- Tech Spec Bar -->
+              <div class="service-spec-bar">
+                <div class="service-spec-col">
+                  <span class="spec-label">Core Board</span>
+                  <span class="spec-value">710-Grade BWP Marine Ply</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Surface Finishes</span>
+                  <span class="spec-value">Matte Acrylic / PU Gloss / Quartz</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Hardware Warranty</span>
+                  <span class="spec-value">10-Year Blum / Hafele Certified</span>
+                </div>
+              </div>
+
+              <!-- Actions -->
+              <div class="service-action-row">
+                <a href="contact.html?service=kitchen" class="btn btn-primary btn-arrow">
+                  Design Your Kitchen <span class="arrow-icon" aria-hidden="true">→</span>
+                </a>
+                <a href="projects.html" class="btn btn-outline-dark">
+                  View Kitchen Projects
+                </a>
+              </div>
+            </div>
+
+            <!-- Media Column with 3-Angle Switcher -->
+            <div class="service-suite-media-col reveal-right" data-suite="kitchen">
+              <div class="service-main-image-wrap">
+                <img class="service-main-image" src="assets/images/specializations/spec_modular_kitchen.jpg" alt="Luxury Modular Kitchen with Quartz Island and Japanese Indigo Cabinets" loading="lazy">
+                <div class="service-image-hud-tag">Flagship Japanese Indigo Island Suite</div>
+              </div>
+              <div class="service-thumbs-row">
+                <div class="service-thumb-card active" data-img="assets/images/specializations/spec_modular_kitchen.jpg" data-tag="Flagship Japanese Indigo Island Suite">
+                  <img src="assets/images/specializations/spec_modular_kitchen.jpg" alt="Kitchen View 1" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/gallery/kitchen_01.jpg" data-tag="L-Shape Acrylic &amp; Gola Profile">
+                  <img src="assets/images/gallery/kitchen_01.jpg" alt="Kitchen View 2" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/gallery/kitchen_02.jpg" data-tag="Parallel Galley with Integrated Pantry">
+                  <img src="assets/images/gallery/kitchen_02.jpg" alt="Kitchen View 3" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 · MODULAR WARDROBES -->
+      <section class="service-suite-row" id="wardrobes">
+        <div class="container">
+          <div class="service-suite-grid reversed">
+            <div class="service-suite-text-col reveal-right">
+              <div class="service-index-badge">02 • Bedroom Architecture</div>
+              <h2 class="service-suite-title">Modular<br>Wardrobes</h2>
+              <p class="service-suite-desc">
+                From full-room walk-in dressing suites to sleek floor-to-ceiling sliding wardrobes with bronze tinted glass, our wardrobes organize effortlessly with dedicated accessory trays, sensor illumination, and European soft-closing mechanics.
+              </p>
+
+              <!-- Typology Chips -->
+              <div class="service-typology-wrap">
+                <span class="typology-chip">Walk-in Dressing</span>
+                <span class="typology-chip">Floor-to-Ceiling Sliding</span>
+                <span class="typology-chip">Hinged Shutter</span>
+                <span class="typology-chip">Tinted Glass &amp; Aluminum</span>
+              </div>
+
+              <!-- Key Features -->
+              <div class="service-feature-grid">
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>German Heavy-Duty Top-Hung Sliding Rollers</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Custom Velvet-Lined Jewelry &amp; Watch Trays</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Integrated PIR Motion-Sensor Wardrobe Rods</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Pull-Out Trouser Racks &amp; Shoe Drawers</span>
+                </div>
+              </div>
+
+              <!-- Tech Spec Bar -->
+              <div class="service-spec-bar">
+                <div class="service-spec-col">
+                  <span class="spec-label">Substrate</span>
+                  <span class="spec-value">Action TESA HDMR &amp; Marine Ply</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Shutter Options</span>
+                  <span class="spec-value">PU Lacquer / Smoked Glass / Fluted</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Max Height</span>
+                  <span class="spec-value">Seamless 9.5 Ft Single Span</span>
+                </div>
+              </div>
+
+              <!-- Actions -->
+              <div class="service-action-row">
+                <a href="contact.html?service=wardrobe" class="btn btn-primary btn-arrow">
+                  Design Your Wardrobe <span class="arrow-icon" aria-hidden="true">→</span>
+                </a>
+                <a href="projects.html" class="btn btn-outline-dark">
+                  View Wardrobe Projects
+                </a>
+              </div>
+            </div>
+
+            <!-- Media Column with 3-Angle Switcher -->
+            <div class="service-suite-media-col reveal-left" data-suite="wardrobe">
+              <div class="service-main-image-wrap">
+                <img class="service-main-image" src="assets/images/specializations/spec_modular_wardrobe.jpg" alt="Floor to ceiling luxury wardrobe with tinted glass and fluted wood panels" loading="lazy">
+                <div class="service-image-hud-tag">Haute Walk-in Suite with Bronze Glass</div>
+              </div>
+              <div class="service-thumbs-row">
+                <div class="service-thumb-card active" data-img="assets/images/specializations/spec_modular_wardrobe.jpg" data-tag="Haute Walk-in Suite with Bronze Glass">
+                  <img src="assets/images/specializations/spec_modular_wardrobe.jpg" alt="Wardrobe View 1" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/gallery/wardrobe_01.jpg" data-tag="Fluted Champagne Veneer Sliding Unit">
+                  <img src="assets/images/gallery/wardrobe_01.jpg" alt="Wardrobe View 2" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/gallery/wardrobe_02.jpg" data-tag="Internal Organizer &amp; Velvet Trays">
+                  <img src="assets/images/gallery/wardrobe_02.jpg" alt="Wardrobe View 3" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 · TV & ENTERTAINMENT ARCHITECTURE -->
+      <section class="service-suite-row" id="tv-units">
+        <div class="container">
+          <div class="service-suite-grid">
+            <div class="service-suite-text-col reveal-left">
+              <div class="service-index-badge">03 • Living &amp; Lounge</div>
+              <h2 class="service-suite-title">TV Units &amp;<br>Media Walls</h2>
+              <p class="service-suite-desc">
+                Architectural media consoles featuring floating low-height credenzas, acoustic fluted wall cladding, concealed cable channels, and backlit marble-finish panels engineered to become the focal centerpiece of your living room.
+              </p>
+
+              <!-- Typology Chips -->
+              <div class="service-typology-wrap">
+                <span class="typology-chip">Floating Credenzas</span>
+                <span class="typology-chip">Full-Wall Cladding</span>
+                <span class="typology-chip">Fluted Paneling</span>
+                <span class="typology-chip">Backlit Stone Facade</span>
+              </div>
+
+              <!-- Key Features -->
+              <div class="service-feature-grid">
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Zero-Wire Concealed Conduit Infrastructure</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Acoustically Transparent Speaker Grille Panels</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Heavy-Load Floating Wall-Anchoring Cleats</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Warm 3000K Perimeter Halo Illumination</span>
+                </div>
+              </div>
+
+              <!-- Tech Spec Bar -->
+              <div class="service-spec-bar">
+                <div class="service-spec-col">
+                  <span class="spec-label">Cladding Material</span>
+                  <span class="spec-value">Charcoal Louvers &amp; PU Paneling</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Console Finish</span>
+                  <span class="spec-value">Smoked Walnut Veneer / Italian Acrylic</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Load Rating</span>
+                  <span class="spec-value">Up to 120 kg Wall-Mounted</span>
+                </div>
+              </div>
+
+              <!-- Actions -->
+              <div class="service-action-row">
+                <a href="contact.html?service=tv" class="btn btn-primary btn-arrow">
+                  Design Your Media Wall <span class="arrow-icon" aria-hidden="true">→</span>
+                </a>
+                <a href="projects.html" class="btn btn-outline-dark">
+                  View Media Units
+                </a>
+              </div>
+            </div>
+
+            <!-- Media Column with 3-Angle Switcher -->
+            <div class="service-suite-media-col reveal-right" data-suite="tv">
+              <div class="service-main-image-wrap">
+                <img class="service-main-image" src="assets/images/specializations/spec_tv_unit.jpg" alt="Architectural TV media wall with floating credenza and ambient fluted panels" loading="lazy">
+                <div class="service-image-hud-tag">Architectural Fluted Media Canvas</div>
+              </div>
+              <div class="service-thumbs-row">
+                <div class="service-thumb-card active" data-img="assets/images/specializations/spec_tv_unit.jpg" data-tag="Architectural Fluted Media Canvas">
+                  <img src="assets/images/specializations/spec_tv_unit.jpg" alt="TV Unit View 1" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/gallery/living_01.jpg" data-tag="Floating Minimalist Credenza">
+                  <img src="assets/images/gallery/living_01.jpg" alt="TV Unit View 2" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/gallery/living_02.jpg" data-tag="Backlit Stone &amp; Metal Trim Accents">
+                  <img src="assets/images/gallery/living_02.jpg" alt="TV Unit View 3" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 · VANITY UNITS -->
+      <section class="service-suite-row" id="vanities">
+        <div class="container">
+          <div class="service-suite-grid reversed">
+            <div class="service-suite-text-col reveal-right">
+              <div class="service-index-badge">04 • Bath &amp; Powder Suite</div>
+              <h2 class="service-suite-title">Bespoke<br>Vanity Units</h2>
+              <p class="service-suite-desc">
+                High-moisture resistant vanity cabinetry designed for luxury powder rooms and master ensuites. Crafted using solid PVC/BWP Marine substrates, quartz countertops, push-to-open drawers, and integrated anti-fog mirror LED lighting.
+              </p>
+
+              <!-- Typology Chips -->
+              <div class="service-typology-wrap">
+                <span class="typology-chip">Floating Basin Units</span>
+                <span class="typology-chip">Double Vanity Ensuites</span>
+                <span class="typology-chip">Integrated LED Mirrors</span>
+                <span class="typology-chip">Linen Tall Cabinets</span>
+              </div>
+
+              <!-- Key Features -->
+              <div class="service-feature-grid">
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>100% Waterproof PVC Core &amp; Polyurethane Sealing</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Stainless Steel 304 Rust-Proof Drawer Runners</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Anti-Bacterial Quartz Countertop Integration</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Smart Touch-Sensor Defogger Mirrors</span>
+                </div>
+              </div>
+
+              <!-- Tech Spec Bar -->
+              <div class="service-spec-bar">
+                <div class="service-spec-col">
+                  <span class="spec-label">Water Resistance</span>
+                  <span class="spec-value">100% Waterproof Rated</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Finish Standard</span>
+                  <span class="spec-value">Marine Polyurethane &amp; Acrylic</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Warranty</span>
+                  <span class="spec-value">10-Year Water Damage Guarantee</span>
+                </div>
+              </div>
+
+              <!-- Actions -->
+              <div class="service-action-row">
+                <a href="contact.html?service=vanity" class="btn btn-primary btn-arrow">
+                  Design Your Vanity <span class="arrow-icon" aria-hidden="true">→</span>
+                </a>
+                <a href="projects.html" class="btn btn-outline-dark">
+                  View Vanity Projects
+                </a>
+              </div>
+            </div>
+
+            <!-- Media Column with 3-Angle Switcher -->
+            <div class="service-suite-media-col reveal-left" data-suite="vanity">
+              <div class="service-main-image-wrap">
+                <img class="service-main-image" src="assets/images/specializations/spec_vanity_unit.jpg" alt="Floating luxury vanity unit with fluted Japanese indigo finish and ambient LED mirror" loading="lazy">
+                <div class="service-image-hud-tag">Japanese Indigo &amp; Fluted Glass Vanity</div>
+              </div>
+              <div class="service-thumbs-row">
+                <div class="service-thumb-card active" data-img="assets/images/specializations/spec_vanity_unit.jpg" data-tag="Japanese Indigo &amp; Fluted Glass Vanity">
+                  <img src="assets/images/specializations/spec_vanity_unit.jpg" alt="Vanity View 1" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/gallery/vanity_01.jpg" data-tag="Minimalist Stone Countertop Console">
+                  <img src="assets/images/gallery/vanity_01.jpg" alt="Vanity View 2" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/gallery/vanity_02.jpg" data-tag="Powder Room LED Fluted Mirror">
+                  <img src="assets/images/gallery/vanity_02.jpg" alt="Vanity View 3" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 · EXECUTIVE OFFICE FURNITURE -->
+      <section class="service-suite-row" id="office">
+        <div class="container">
+          <div class="service-suite-grid">
+            <div class="service-suite-text-col reveal-left">
+              <div class="service-index-badge">05 • Commercial &amp; Workspace</div>
+              <h2 class="service-suite-title">Executive Office<br>&amp; Workstations</h2>
+              <p class="service-suite-desc">
+                High-performance office architecture designed for corporate leaders, modern startups, and luxury home studies. We engineer customized executive desks, acoustic meeting tables, filing credenzas, and integrated power modules.
+              </p>
+
+              <!-- Typology Chips -->
+              <div class="service-typology-wrap">
+                <span class="typology-chip">Executive Desks</span>
+                <span class="typology-chip">Linear Workstations</span>
+                <span class="typology-chip">Conference Tables</span>
+                <span class="typology-chip">Acoustic Credenzas</span>
+              </div>
+
+              <!-- Key Features -->
+              <div class="service-feature-grid">
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Embedded Wireless Fast Charging &amp; Pop-Up Power Hubs</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Concealed Multi-Channel Cable Management Trays</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Heavy-Duty Lockable Credenzas with RFID Access</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Anti-Glare, Scratch-Resistant European Worktops</span>
+                </div>
+              </div>
+
+              <!-- Tech Spec Bar -->
+              <div class="service-spec-bar">
+                <div class="service-spec-col">
+                  <span class="spec-label">Structural Frame</span>
+                  <span class="spec-value">Powder-Coated Aluminum &amp; HDMR</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Top Surface</span>
+                  <span class="spec-value">Anti-Scratch HPL / Smoked Oak Veneer</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Ergonomic Standard</span>
+                  <span class="spec-value">BIFMA Compliant Geometry</span>
+                </div>
+              </div>
+
+              <!-- Actions -->
+              <div class="service-action-row">
+                <a href="contact.html?service=office" class="btn btn-primary btn-arrow">
+                  Design Your Office <span class="arrow-icon" aria-hidden="true">→</span>
+                </a>
+                <a href="projects.html" class="btn btn-outline-dark">
+                  View Commercial Work
+                </a>
+              </div>
+            </div>
+
+            <!-- Media Column with 3-Angle Switcher -->
+            <div class="service-suite-media-col reveal-right" data-suite="office">
+              <div class="service-main-image-wrap">
+                <img class="service-main-image" src="assets/images/specializations/spec_office_furniture.jpg" alt="Executive office desk and acoustic storage wall with smoked oak finishes" loading="lazy">
+                <div class="service-image-hud-tag">Executive Suite in Smoked Oak &amp; Indigo</div>
+              </div>
+              <div class="service-thumbs-row">
+                <div class="service-thumb-card active" data-img="assets/images/specializations/spec_office_furniture.jpg" data-tag="Executive Suite in Smoked Oak &amp; Indigo">
+                  <img src="assets/images/specializations/spec_office_furniture.jpg" alt="Office View 1" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/gallery/office_01.jpg" data-tag="Modular Team Workstations &amp; Privacy Glass">
+                  <img src="assets/images/gallery/office_01.jpg" alt="Office View 2" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/gallery/office_02.jpg" data-tag="Conference Room Credenza &amp; Table">
+                  <img src="assets/images/gallery/office_02.jpg" alt="Office View 3" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 · CROCKERY & BAR ARCHITECTURE -->
+      <section class="service-suite-row" id="crockery">
+        <div class="container">
+          <div class="service-suite-grid reversed">
+            <div class="service-suite-text-col reveal-right">
+              <div class="service-index-badge">06 • Dining &amp; Hospitality</div>
+              <h2 class="service-suite-title">Crockery Units<br>&amp; Luxury Bars</h2>
+              <p class="service-suite-desc">
+                Elevate your dining and entertaining spaces with bespoke crockery units and private home bars. Featuring fluted bronze glass shutters, motorized touch-sensor display lighting, pull-out wine racks, and concealed beverage coolers.
+              </p>
+
+              <!-- Typology Chips -->
+              <div class="service-typology-wrap">
+                <span class="typology-chip">Dining Crockery Displays</span>
+                <span class="typology-chip">Private Home Bars</span>
+                <span class="typology-chip">Fluted Glass Showcases</span>
+                <span class="typology-chip">Stemware Racks</span>
+              </div>
+
+              <!-- Key Features -->
+              <div class="service-feature-grid">
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Bronze Toughened Fluted Glass Shutters</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Warm 2700K Vertical Embedded LED Channels</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Solid Wood Anti-Vibration Wine Bottle Cradles</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Concealed Blum Tip-On Push Catchers</span>
+                </div>
+              </div>
+
+              <!-- Tech Spec Bar -->
+              <div class="service-spec-bar">
+                <div class="service-spec-col">
+                  <span class="spec-label">Frame Profile</span>
+                  <span class="spec-value">Anodized Slim Aluminum Frame</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Interior Core</span>
+                  <span class="spec-value">Dark Teak / High-Density HDMR</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Glass Rating</span>
+                  <span class="spec-value">8mm Toughened Architectural Glass</span>
+                </div>
+              </div>
+
+              <!-- Actions -->
+              <div class="service-action-row">
+                <a href="contact.html?service=crockery" class="btn btn-primary btn-arrow">
+                  Design Crockery &amp; Bar <span class="arrow-icon" aria-hidden="true">→</span>
+                </a>
+                <a href="projects.html" class="btn btn-outline-dark">
+                  View Dining Projects
+                </a>
+              </div>
+            </div>
+
+            <!-- Media Column with 3-Angle Switcher -->
+            <div class="service-suite-media-col reveal-left" data-suite="crockery">
+              <div class="service-main-image-wrap">
+                <img class="service-main-image" src="assets/images/specializations/spec_crockery_unit.jpg" alt="Luxury dining crockery showcase unit with bronze fluted glass and warm vertical illumination" loading="lazy">
+                <div class="service-image-hud-tag">Haute Crockery Unit with Backlit Glass</div>
+              </div>
+              <div class="service-thumbs-row">
+                <div class="service-thumb-card active" data-img="assets/images/specializations/spec_crockery_unit.jpg" data-tag="Haute Crockery Unit with Backlit Glass">
+                  <img src="assets/images/specializations/spec_crockery_unit.jpg" alt="Crockery View 1" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/angles/dining_angle1.jpg" data-tag="Dining Display &amp; Storage Island">
+                  <img src="assets/images/angles/dining_angle1.jpg" alt="Crockery View 2" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/angles/dining_angle2.jpg" data-tag="Beverage Bar with Integrated LED">
+                  <img src="assets/images/angles/dining_angle2.jpg" alt="Crockery View 3" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 · CUSTOM BEDROOM & MODULAR SUITES -->
+      <section class="service-suite-row" id="custom-suites">
+        <div class="container">
+          <div class="service-suite-grid">
+            <div class="service-suite-text-col reveal-left">
+              <div class="service-index-badge">07 • Full-Home Turnkey</div>
+              <h2 class="service-suite-title">Custom Interior<br>Suites</h2>
+              <p class="service-suite-desc">
+                Complete architectural joinery suites designed as harmonious living environments. From upholstered platform bed headboards with floating nightstands to complete residential interior woodwork manufactured to your architect's precise CAD specifications.
+              </p>
+
+              <!-- Typology Chips -->
+              <div class="service-typology-wrap">
+                <span class="typology-chip">Master Bedroom Suites</span>
+                <span class="typology-chip">Floating Bed Frames</span>
+                <span class="typology-chip">Fluted Bed Back Cladding</span>
+                <span class="typology-chip">Pooja Mandir Units</span>
+              </div>
+
+              <!-- Key Features -->
+              <div class="service-feature-grid">
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Seamless Architectural Cladding from Wall to Ceiling</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Integrated Hydraulic Storage Bed Lift Systems</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Acoustically Treated Fabric &amp; Wood Accent Panels</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Custom CNC Carved Corian &amp; Teak Mandir Work</span>
+                </div>
+              </div>
+
+              <!-- Tech Spec Bar -->
+              <div class="service-spec-bar">
+                <div class="service-spec-col">
+                  <span class="spec-label">Engineering</span>
+                  <span class="spec-value">Complete 3D CAD to CNC Pipeline</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Wood Varieties</span>
+                  <span class="spec-value">Smoked Teak / Walnut / Maple / PU</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Turnaround</span>
+                  <span class="spec-value">Turnkey in 21–28 Days</span>
+                </div>
+              </div>
+
+              <!-- Actions -->
+              <div class="service-action-row">
+                <a href="contact.html?service=custom" class="btn btn-primary btn-arrow">
+                  Design Your Master Suite <span class="arrow-icon" aria-hidden="true">→</span>
+                </a>
+                <a href="projects.html" class="btn btn-outline-dark">
+                  View Full Home Projects
+                </a>
+              </div>
+            </div>
+
+            <!-- Media Column with 3-Angle Switcher -->
+            <div class="service-suite-media-col reveal-right" data-suite="custom">
+              <div class="service-main-image-wrap">
+                <img class="service-main-image" src="assets/images/specializations/spec_custom_interiors.jpg" alt="Master bedroom suite with fluted panelling floating platform bed and integrated lighting" loading="lazy">
+                <div class="service-image-hud-tag">Master Bedroom Architecture Suite</div>
+              </div>
+              <div class="service-thumbs-row">
+                <div class="service-thumb-card active" data-img="assets/images/specializations/spec_custom_interiors.jpg" data-tag="Master Bedroom Architecture Suite">
+                  <img src="assets/images/specializations/spec_custom_interiors.jpg" alt="Custom Suite View 1" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/angles/master_angle1.jpg" data-tag="Smoked Walnut Headboard Detail">
+                  <img src="assets/images/angles/master_angle1.jpg" alt="Custom Suite View 2" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/angles/guest_angle1.jpg" data-tag="Guest Suite Modular Paneling">
+                  <img src="assets/images/angles/guest_angle1.jpg" alt="Custom Suite View 3" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 · SMART STORAGE & FOYER ARCHITECTURE -->
+      <section class="service-suite-row" id="storage">
+        <div class="container">
+          <div class="service-suite-grid reversed">
+            <div class="service-suite-text-col reveal-right">
+              <div class="service-index-badge">08 • Utility &amp; Foyer</div>
+              <h2 class="service-suite-title">Smart Storage<br>&amp; Entry Consoles</h2>
+              <p class="service-suite-desc">
+                Maximize every square inch with intelligent foyer consoles, hidden shoe storage with ventilation vents, modular laundry organizing towers, and under-stair pull-out storage systems.
+              </p>
+
+              <!-- Typology Chips -->
+              <div class="service-typology-wrap">
+                <span class="typology-chip">Foyer Entry Consoles</span>
+                <span class="typology-chip">Ventilated Shoe Cabinets</span>
+                <span class="typology-chip">Under-Stair Storage</span>
+                <span class="typology-chip">Utility &amp; Laundry Units</span>
+              </div>
+
+              <!-- Key Features -->
+              <div class="service-feature-grid">
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Concealed Louvered Air Circulation Vents</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>High-Capacity Heavy Load Pull-Out Telescopic Trays</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Full-Length Dress Mirrors with Integrated Coat Hooks</span>
+                </div>
+                <div class="srv-feature-item">
+                  <div class="srv-feature-icon">✓</div>
+                  <span>Moisture-Resistant Marine Base Lining</span>
+                </div>
+              </div>
+
+              <!-- Tech Spec Bar -->
+              <div class="service-spec-bar">
+                <div class="service-spec-col">
+                  <span class="spec-label">Ventilation</span>
+                  <span class="spec-value">Passive Louver &amp; Deodorizing Ready</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Capacity</span>
+                  <span class="spec-value">Up to 60+ Footwear Storage Pairs</span>
+                </div>
+                <div class="service-spec-col">
+                  <span class="spec-label">Fitment</span>
+                  <span class="spec-value">Custom Wall-to-Wall Niche Fit</span>
+                </div>
+              </div>
+
+              <!-- Actions -->
+              <div class="service-action-row">
+                <a href="contact.html?service=storage" class="btn btn-primary btn-arrow">
+                  Design Storage Solution <span class="arrow-icon" aria-hidden="true">→</span>
+                </a>
+                <a href="projects.html" class="btn btn-outline-dark">
+                  View Storage Projects
+                </a>
+              </div>
+            </div>
+
+            <!-- Media Column with 3-Angle Switcher -->
+            <div class="service-suite-media-col reveal-left" data-suite="storage">
+              <div class="service-main-image-wrap">
+                <img class="service-main-image" src="assets/images/specializations/spec_storage_solution.jpg" alt="Smart entryway foyer console with ventilated shoe unit and warm accent lighting" loading="lazy">
+                <div class="service-image-hud-tag">Foyer Console &amp; Storage Architecture</div>
+              </div>
+              <div class="service-thumbs-row">
+                <div class="service-thumb-card active" data-img="assets/images/specializations/spec_storage_solution.jpg" data-tag="Foyer Console &amp; Storage Architecture">
+                  <img src="assets/images/specializations/spec_storage_solution.jpg" alt="Storage View 1" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/gallery/custom_01.jpg" data-tag="Under-Stair Pull-Out Tower">
+                  <img src="assets/images/gallery/custom_01.jpg" alt="Storage View 2" loading="lazy">
+                </div>
+                <div class="service-thumb-card" data-img="assets/images/gallery/custom_02.jpg" data-tag="Linen &amp; Utility Organizer">
+                  <img src="assets/images/gallery/custom_02.jpg" alt="Storage View 3" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 3. INTERACTIVE MATERIAL & HARDWARE MATRIX -->
+    <section class="matrix-section" aria-label="Material and Engineering Matrix">
+      <div class="container">
+        <div class="matrix-header reveal">
+          <p class="text-label" style="color:var(--flax);">Tactile Substrates &amp; Hardware</p>
+          <div class="divider divider--center mt-sm" style="background:var(--gamboge);"></div>
+          <h2 class="section-title text-4xl" style="color:#ffffff;">
+            Engineering Precision.<br>
+            <em style="color:var(--flax); font-style:italic;">Substrate To Surface.</em>
+          </h2>
+          <p style="color:rgba(255, 255, 255, 0.7); font-size:1.05rem; margin-top:14px;">
+            Explore our curated material ecosystem. We pair certified waterproof core substrates with European architectural finishes and lifetime-tested mechanics.
+          </p>
+        </div>
+
+        <!-- Matrix Tabs -->
+        <div class="matrix-tabs reveal">
+          <button class="matrix-tab-btn active" data-matrix="substrates">1. Core Substrates</button>
+          <button class="matrix-tab-btn" data-matrix="finishes">2. Surface Finishes</button>
+          <button class="matrix-tab-btn" data-matrix="hardware">3. Hardware &amp; Mechanics</button>
+        </div>
+
+        <!-- Tab 1: Core Substrates -->
+        <div class="matrix-pane active" id="pane-substrates">
+          <div class="matrix-card">
+            <div>
+              <span class="matrix-card-tag">Grade 710 • Marine</span>
+              <h3 class="matrix-card-title">BWP Marine Plywood</h3>
+              <p class="matrix-card-desc">72-hour boiling waterproof plywood bonded with unextended phenolic resin. Ideal for sink units, bathrooms, and wet areas.</p>
+            </div>
+            <div class="matrix-spec-list">
+              <div class="matrix-spec-row"><span>Moisture Resistance:</span><span>100% Waterproof</span></div>
+              <div class="matrix-spec-row"><span>Termite Protection:</span><span>Boron Treated</span></div>
+              <div class="matrix-spec-row"><span>Warranty:</span><span>10-Year Replacement</span></div>
+            </div>
+          </div>
+
+          <div class="matrix-card">
+            <div>
+              <span class="matrix-card-tag">High-Density • Precision</span>
+              <h3 class="matrix-card-title">Action TESA HDMR</h3>
+              <p class="matrix-card-desc">High-Density Moisture-Resistant board with 850+ kg/m³ density. Delivers razor-sharp 0.1mm CNC routing and flawless edge-banding.</p>
+            </div>
+            <div class="matrix-spec-list">
+              <div class="matrix-spec-row"><span>Core Density:</span><span>850+ kg/m³</span></div>
+              <div class="matrix-spec-row"><span>Screw Holding:</span><span>Superior Strength</span></div>
+              <div class="matrix-spec-row"><span>Warranty:</span><span>10-Year Guarantee</span></div>
+            </div>
+          </div>
+
+          <div class="matrix-card">
+            <div>
+              <span class="matrix-card-tag">Zero-Warp • Architectural</span>
+              <h3 class="matrix-card-title">Aluminum Framing</h3>
+              <p class="matrix-card-desc">Anodized architectural aluminum profiles for 9.5-foot wardrobe glass doors and structural cabinet skeletons that never warp.</p>
+            </div>
+            <div class="matrix-spec-list">
+              <div class="matrix-spec-row"><span>Weight / Strength:</span><span>Ultra-Light Aluminum</span></div>
+              <div class="matrix-spec-row"><span>Max Span:</span><span>Up to 10 Ft Seamless</span></div>
+              <div class="matrix-spec-row"><span>Warranty:</span><span>Lifetime Integrity</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Surface Finishes -->
+        <div class="matrix-pane" id="pane-finishes">
+          <div class="matrix-card">
+            <div>
+              <span class="matrix-card-tag">Haute Luxury • Hand-Finished</span>
+              <h3 class="matrix-card-title">Venetian PU Lacquer</h3>
+              <p class="matrix-card-desc">Multi-coat polyurethane finish applied in our pressurized dust-free booth. Available in deep matte, satin, or 100% mirror gloss.</p>
+            </div>
+            <div class="matrix-spec-list">
+              <div class="matrix-spec-row"><span>Scratch Hardness:</span><span>4H Surface Rating</span></div>
+              <div class="matrix-spec-row"><span>Color Palette:</span><span>Custom RAL / Pantone</span></div>
+              <div class="matrix-spec-row"><span>UV Resistance:</span><span>Non-Yellowing Formula</span></div>
+            </div>
+          </div>
+
+          <div class="matrix-card">
+            <div>
+              <span class="matrix-card-tag">European • Anti-Fingerprint</span>
+              <h3 class="matrix-card-title">Super-Matte Acrylics</h3>
+              <p class="matrix-card-desc">Imported 2mm thermal-fused acrylic sheets with anti-microbial and anti-fingerprint nanocoating for high-traffic kitchens.</p>
+            </div>
+            <div class="matrix-spec-list">
+              <div class="matrix-spec-row"><span>Touch Quality:</span><span>Velvety Soft-Touch</span></div>
+              <div class="matrix-spec-row"><span>Impact Shield:</span><span>2mm Thermal Layer</span></div>
+              <div class="matrix-spec-row"><span>Maintenance:</span><span>Zero-Streak Wipe</span></div>
+            </div>
+          </div>
+
+          <div class="matrix-card">
+            <div>
+              <span class="matrix-card-tag">Natural • Organic</span>
+              <h3 class="matrix-card-title">Smoked Natural Veneers</h3>
+              <p class="matrix-card-desc">Hand-matched European Oak, American Walnut, and Teak veneers sealed with matte water-based polyurethane to preserve authentic grain.</p>
+            </div>
+            <div class="matrix-spec-list">
+              <div class="matrix-spec-row"><span>Grain Matching:</span><span>Book-Matched / Slip</span></div>
+              <div class="matrix-spec-row"><span>Texture:</span><span>Open-Pore Natural</span></div>
+              <div class="matrix-spec-row"><span>Top Coat:</span><span>Eco Polyurethane</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Hardware & Mechanics -->
+        <div class="matrix-pane" id="pane-hardware">
+          <div class="matrix-card">
+            <div>
+              <span class="matrix-card-tag">Austrian Precision</span>
+              <h3 class="matrix-card-title">Blum Motion Systems</h3>
+              <p class="matrix-card-desc">Tandembox soft-close drawer runners, Clip Top Blumotion 110° hinges, and Aventos HF bi-fold lift systems tested for 200,000 cycles.</p>
+            </div>
+            <div class="matrix-spec-list">
+              <div class="matrix-spec-row"><span>Cycle Test:</span><span>200,000 Open/Close</span></div>
+              <div class="matrix-spec-row"><span>Load Capacity:</span><span>30kg to 65kg per drawer</span></div>
+              <div class="matrix-spec-row"><span>Origin:</span><span>100% Made in Austria</span></div>
+            </div>
+          </div>
+
+          <div class="matrix-card">
+            <div>
+              <span class="matrix-card-tag">German Engineering</span>
+              <h3 class="matrix-card-title">Hafele Slido &amp; Matrix</h3>
+              <p class="matrix-card-desc">Heavy-duty overhead sliding wardrobe systems with synchronized soft-close damping and Matrix Box premium slim drawer systems.</p>
+            </div>
+            <div class="matrix-spec-list">
+              <div class="matrix-spec-row"><span>Door Load:</span><span>Up to 100kg per Shutter</span></div>
+              <div class="matrix-spec-row"><span>Damping:</span><span>Bi-Directional Soft-Stop</span></div>
+              <div class="matrix-spec-row"><span>Origin:</span><span>German Engineering</span></div>
+            </div>
+          </div>
+
+          <div class="matrix-card">
+            <div>
+              <span class="matrix-card-tag">Architectural • Minimal</span>
+              <h3 class="matrix-card-title">Gola Handleless Channels</h3>
+              <p class="matrix-card-desc">Continuous J-profile and C-profile aluminum channels anodized in Japanese Indigo, Champagne Gold, and Matte Black for a pure handleless look.</p>
+            </div>
+            <div class="matrix-spec-list">
+              <div class="matrix-spec-row"><span>Profile Finish:</span><span>Anodized Matte</span></div>
+              <div class="matrix-spec-row"><span>Ergonomics:</span><span>Continuous Grip Span</span></div>
+              <div class="matrix-spec-row"><span>Aesthetics:</span><span>Zero Surface Protrusion</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- 5. INDUSTRIAL QUALITY & CRAFTSMANSHIP STANDARDS -->
+    <section class="standards-section" aria-label="Industrial Quality Standards">
+      <div class="container">
+        <div class="section-header section-header--center text-center reveal">
+          <p class="text-label" style="color:var(--iceberg);">Industrial Benchmark</p>
+          <div class="divider divider--center mt-sm" style="background:var(--gamboge);"></div>
+          <h2 class="section-title text-4xl" style="color:#ffffff;">
+            Built in Jaipur.<br>
+            <em style="color:var(--flax); font-style:italic;">Engineered for Decades.</em>
+          </h2>
+        </div>
+
+        <div class="standards-grid reveal">
+          <div class="standard-pillar-card">
+            <div class="pillar-icon-badge">01</div>
+            <h3 class="pillar-title">German Homag CNC Cutting</h3>
+            <p class="pillar-desc">Computer-controlled robotic saws and multi-axis boring machines operate at 0.1mm tolerance, ensuring joint fitment without site alterations.</p>
+          </div>
+
+          <div class="standard-pillar-card">
+            <div class="pillar-icon-badge">02</div>
+            <h3 class="pillar-title">Zero-Joint PUR Edge Banding</h3>
+            <p class="pillar-desc">Polyurethane hot-melt edge sealing creates an invisible, moisture-proof barrier that resists heat, humidity, and delamination permanently.</p>
+          </div>
+
+          <div class="standard-pillar-card">
+            <div class="pillar-icon-badge">03</div>
+            <h3 class="pillar-title">200,000 Cycle Hardware Test</h3>
+            <p class="pillar-desc">We exclusively deploy Blum, Hafele, and Hettich mechanisms tested for 20+ years of smooth, silent daily opening and closing.</p>
+          </div>
+
+          <div class="standard-pillar-card">
+            <div class="pillar-icon-badge">04</div>
+            <h3 class="pillar-title">Laser Level Master Fitting</h3>
+            <p class="pillar-desc">Our certified factory technicians install using digital laser leveling instruments to ensure structural alignment across floors and walls.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. THE 6-STEP JOURNEY (CONSULTATION TO HANDOVER) -->
+    <section class="section bg-white" aria-label="Our Consultation to Handover Process">
+      <div class="container">
+        <div class="section-header section-header--center text-center reveal">
+          <p class="text-label text-label--dark">Proven Execution</p>
+          <div class="divider divider--center mt-sm"></div>
+          <h2 class="section-title text-4xl" style="color:var(--indigo);">
+            Consultation to<br>Handover.
+          </h2>
+          <p class="text-body text-muted mt-sm" style="max-width:620px; margin:0 auto;">
+            Our structured 6-phase journey ensures absolute transparency, timeline adherence, and turnkey peace of mind.
+          </p>
+        </div>
+
+        <!-- Framer-Style Steps Flow -->
+        <div class="steps-flow mt-xl">
+          <!-- Dynamic SVG Track overlay for snake curve -->
+          <svg class="steps-flow__svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="stepsFlowGradientServices" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#E19E11" />
+                <stop offset="50%" stop-color="#E5D595" />
+                <stop offset="100%" stop-color="#1E424D" />
+              </linearGradient>
+            </defs>
+            <path class="steps-flow__svg-track" d="" />
+            <path class="steps-flow__svg-fill" d="" style="stroke: url(#stepsFlowGradientServices);" />
+          </svg>
+
+          <!-- Mobile Vertical Flow Line -->
+          <div class="steps-flow__mobile-line">
+            <div class="steps-flow__mobile-fill"></div>
+          </div>
+
+          <!-- Glowing Start & End Dots -->
+          <div class="steps-flow__dot steps-flow__dot--start" aria-hidden="true"></div>
+          <div class="steps-flow__dot steps-flow__dot--end" aria-hidden="true"></div>
+
+          <!-- STEP 01 -->
+          <div class="steps-flow__row" data-step="1">
+            <div class="steps-flow__node-point hide-mobile" aria-hidden="true"></div>
+            <div class="steps-flow__text-col">
+              <div class="steps-flow__num-header">
+                <div class="steps-flow__num-box">
+                  <span class="steps-flow__num-static">0</span>
+                  <span class="steps-flow__num-roller">
+                    <span class="steps-flow__num-track" data-target="1">
+                      <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </span>
+                  </span>
+                </div>
+                <span class="steps-flow__badge">Phase 01 • Discovery</span>
+              </div>
+              <h3 class="steps-flow__title">Site Survey &amp; Needs Assessment</h3>
+              <p class="steps-flow__desc">We start with a thorough spatial survey at your Jaipur residence. We analyze natural lighting, plumbing lines, electrical infrastructure, and lifestyle routines to design your custom modular layout.</p>
+            </div>
+            <div class="steps-flow__media-col">
+              <div class="steps-flow__card">
+                <img src="assets/images/process/step_01_consultation.jpg" alt="Initial site assessment and spatial survey before renovation" loading="lazy">
+                <div class="steps-flow__card-tag">Phase 01 • On-Site Survey</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 02 (Reversed) -->
+          <div class="steps-flow__row steps-flow__row--reversed" data-step="2">
+            <div class="steps-flow__node-point hide-mobile" aria-hidden="true"></div>
+            <div class="steps-flow__text-col">
+              <div class="steps-flow__num-header">
+                <div class="steps-flow__num-box">
+                  <span class="steps-flow__num-static">0</span>
+                  <span class="steps-flow__num-roller">
+                    <span class="steps-flow__num-track" data-target="2">
+                      <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </span>
+                  </span>
+                </div>
+                <span class="steps-flow__badge">Phase 02 • Ergonomic Blueprint</span>
+              </div>
+              <h3 class="steps-flow__title">Spatial 2D Blueprint &amp; Layout</h3>
+              <p class="steps-flow__desc">Our architects draft optimized 2D layout plans, internal storage configurations, work triangle alignments, and material selections balancing acrylic, PU, and Blum mechanics.</p>
+            </div>
+            <div class="steps-flow__media-col">
+              <div class="steps-flow__card">
+                <img src="assets/images/process/step_02_design.jpg" alt="Architect drafting detailed blueprints and modular layout plans" loading="lazy">
+                <div class="steps-flow__card-tag">Phase 02 • Ergonomic Drafting</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 03 -->
+          <div class="steps-flow__row" data-step="3">
+            <div class="steps-flow__node-point hide-mobile" aria-hidden="true"></div>
+            <div class="steps-flow__text-col">
+              <div class="steps-flow__num-header">
+                <div class="steps-flow__num-box">
+                  <span class="steps-flow__num-static">0</span>
+                  <span class="steps-flow__num-roller">
+                    <span class="steps-flow__num-track" data-target="3">
+                      <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </span>
+                  </span>
+                </div>
+                <span class="steps-flow__badge">Phase 03 • Photorealistic 3D</span>
+              </div>
+              <h3 class="steps-flow__title">Photorealistic 3D Visualization</h3>
+              <p class="steps-flow__desc">Inspect your bespoke space in cinematic 3D realism before fabrication begins. Explore color temperatures, material reflections, handleless profiles, and lighting balance with confidence.</p>
+            </div>
+            <div class="steps-flow__media-col">
+              <div class="steps-flow__card">
+                <img src="assets/images/process/step_03_3d_render.jpg" alt="Photorealistic 3D architectural render and lighting simulation model" loading="lazy">
+                <div class="steps-flow__card-tag">Phase 03 • Virtual 3D Model</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 04 (Reversed) -->
+          <div class="steps-flow__row steps-flow__row--reversed" data-step="4">
+            <div class="steps-flow__node-point hide-mobile" aria-hidden="true"></div>
+            <div class="steps-flow__text-col">
+              <div class="steps-flow__num-header">
+                <div class="steps-flow__num-box">
+                  <span class="steps-flow__num-static">0</span>
+                  <span class="steps-flow__num-roller">
+                    <span class="steps-flow__num-track" data-target="4">
+                      <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </span>
+                  </span>
+                </div>
+                <span class="steps-flow__badge">Phase 04 • German CNC</span>
+              </div>
+              <h3 class="steps-flow__title">Precision Factory Manufacturing</h3>
+              <p class="steps-flow__desc">Your modular components are crafted at our Jaipur manufacturing plant using computer-guided CNC saws, PUR zero-joint edge banders, and precision multi-point drillers.</p>
+            </div>
+            <div class="steps-flow__media-col">
+              <div class="steps-flow__card">
+                <img src="assets/images/process/step_04_manufacturing.jpg" alt="Computer controlled German CNC modular manufacturing and precision joinery" loading="lazy">
+                <div class="steps-flow__card-tag">Phase 04 • Automated Factory CNC</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 05 -->
+          <div class="steps-flow__row" data-step="5">
+            <div class="steps-flow__node-point hide-mobile" aria-hidden="true"></div>
+            <div class="steps-flow__text-col">
+              <div class="steps-flow__num-header">
+                <div class="steps-flow__num-box">
+                  <span class="steps-flow__num-static">0</span>
+                  <span class="steps-flow__num-roller">
+                    <span class="steps-flow__num-track" data-target="5">
+                      <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </span>
+                  </span>
+                </div>
+                <span class="steps-flow__badge">Phase 05 • Master Assembly</span>
+              </div>
+              <h3 class="steps-flow__title">Dust-Free On-Site Installation</h3>
+              <p class="steps-flow__desc">Our certified in-house installation team executes rapid, clean fitting with laser-leveled wall anchors, hardware calibration, and gapless structural alignment.</p>
+            </div>
+            <div class="steps-flow__media-col">
+              <div class="steps-flow__card">
+                <img src="assets/images/process/step_05_installation.jpg" alt="Master craftsman assembling and calibrating modular hardware components" loading="lazy">
+                <div class="steps-flow__card-tag">Phase 05 • Master Fitting</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 06 (Reversed) -->
+          <div class="steps-flow__row steps-flow__row--reversed" data-step="6">
+            <div class="steps-flow__node-point hide-mobile" aria-hidden="true"></div>
+            <div class="steps-flow__text-col">
+              <div class="steps-flow__num-header">
+                <div class="steps-flow__num-box">
+                  <span class="steps-flow__num-static">0</span>
+                  <span class="steps-flow__num-roller">
+                    <span class="steps-flow__num-track" data-target="6">
+                      <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </span>
+                  </span>
+                </div>
+                <span class="steps-flow__badge">Phase 06 • Quality Handover</span>
+              </div>
+              <h3 class="steps-flow__title">Quality Audit &amp; Turnkey Handover</h3>
+              <p class="steps-flow__desc">After a 40-point quality checklist, post-install deep cleaning, and soft-close calibration, we deliver your 10-year warranty certificate and an immaculate space ready to enjoy.</p>
+            </div>
+            <div class="steps-flow__media-col">
+              <div class="steps-flow__card">
+                <img src="assets/images/process/step_06_handover.jpg" alt="Completed luxury living space delivered and ready" loading="lazy">
+                <div class="steps-flow__card-tag">Phase 06 • Turnkey Handover</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FINAL TURNKEY CONSULTATION CTA -->
+    <section class="services-final-cta" aria-label="Book a consultation">
+      <div class="container">
+        <div class="services-final-box reveal">
+          <div>
+            <p class="text-label text-label--dark">Ready to Build?</p>
+            <div class="divider mt-sm"></div>
+            <h2 class="section-title text-4xl mt-sm" style="color:var(--indigo);">
+              Schedule Your Free<br>
+              <em style="color:var(--gamboge); font-style:italic;">3D Design Session.</em>
+            </h2>
+            <p class="mt-md" style="color:rgba(30,66,77,0.8); font-size:1.05rem; line-height:1.75;">
+              Visit our Jaipur factory showroom or request an on-site architectural measurement survey. Get a photorealistic 3D render and transparent estimate within 48 hours.
+            </p>
+            <div class="mt-lg" style="display:flex; flex-wrap:wrap; gap:1rem;">
+              <a href="contact.html" class="btn btn-primary btn-lg btn-arrow">
+                Book a Consultation <span class="arrow-icon" aria-hidden="true">→</span>
+              </a>
+              <a href="tel:+917891432251" class="btn btn-outline-dark btn-lg">
+                Call +91 7891432251
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <div style="background:var(--offwhite); border:1px solid var(--gray-100); border-radius:18px; padding:28px 24px;">
+              <div style="font-family:var(--font-display); font-size:1.3rem; font-weight:700; color:var(--indigo); margin-bottom:8px;">
+                Factory Showroom Experience
+              </div>
+              <p style="font-size:0.875rem; line-height:1.6; color:var(--gray-700); margin-bottom:16px;">
+                Experience live modular kitchen displays, touch European matte acrylic samples, test Blum lift-ups, and review customized wardrobe internal organizers.
+              </p>
+              <div style="display:flex; flex-direction:column; gap:8px; font-size:0.82rem; font-weight:600; color:var(--indigo);">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="color:var(--gamboge);">📍</span> Manyawas, Mansarovar Extension, Jaipur, RJ 302020
+                </div>
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="color:var(--gamboge);">⏰</span> Mon – Sat: 10:00 AM – 8:00 PM
+                </div>
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="color:var(--gamboge);">☕</span> Free Consultation &amp; Material Sampling
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" aria-label="Site footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <div class="footer__logo"><span>GARG MODULAR</span><span>FURNITURE</span></div>
+            <p class="footer__desc">Jaipur's premier manufacturer of custom modular kitchens, wardrobes, and architectural interiors with German CNC precision.</p>
+            <div class="footer__social" aria-label="Social media">
+              <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            </div>
+          </div>
+          <div>
+            <p class="footer__heading">Navigation</p>
+            <ul class="footer__links" role="list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer__heading">Bespoke Services</p>
+            <ul class="footer__links" role="list">
+              <li><a href="#kitchens">Modular Kitchens</a></li>
+              <li><a href="#wardrobes">Modular Wardrobes</a></li>
+              <li><a href="#tv-units">TV Entertainment Walls</a></li>
+              <li><a href="#vanities">Bespoke Vanity Units</a></li>
+              <li><a href="#office">Executive Office Desks</a></li>
+              <li><a href="#crockery">Crockery &amp; Bar Units</a></li>
+              <li><a href="#custom-suites">Master Bedroom Suites</a></li>
+              <li><a href="#storage">Smart Storage Systems</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer__heading">Showroom &amp; Factory</p>
+            <div class="footer__contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.55a16 16 0 0 0 6.29 6.29l1.32-1.35a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div><a href="tel:+917891432251">+91 7891432251</a><br><a href="tel:+917014882040">+91 7014882040</a></div>
+            </div>
+            <div class="footer__contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:gargmodularfurniture@gmail.com">gargmodularfurniture@gmail.com</a>
+            </div>
+            <div class="footer__contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Manyawas, Jaipur, Rajasthan 302020</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Garg Modular Furniture. All rights reserved.</span>
+          <span>Bespoke Modular Architecture · Jaipur, Rajasthan</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- WhatsApp Floating Trigger -->
+  <a href="https://wa.me/917891432251" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.413A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.182a8.182 8.182 0 0 1-4.163-1.136l-.298-.177-3.087.876.894-3.003-.194-.31A8.182 8.182 0 1 1 12 20.182z"/></svg>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+
+  <!-- Interactive Scripts for Services Page -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Interactive 3-Angle Thumbnail Switchers for Service Suites
+      document.querySelectorAll('.service-suite-media-col').forEach(mediaCol => {
+        const mainImg = mediaCol.querySelector('.service-main-image');
+        const hudTag = mediaCol.querySelector('.service-image-hud-tag');
+        const thumbs = mediaCol.querySelectorAll('.service-thumb-card');
+
+        thumbs.forEach(thumb => {
+          thumb.addEventListener('click', () => {
+            const newSrc = thumb.getAttribute('data-img');
+            const newTag = thumb.getAttribute('data-tag');
+            if (!newSrc || thumb.classList.contains('active')) return;
+
+            thumbs.forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+
+            if (mainImg) {
+              mainImg.style.opacity = '0.3';
+              mainImg.style.transform = 'scale(0.97)';
+              setTimeout(() => {
+                mainImg.src = newSrc;
+                if (hudTag && newTag) hudTag.textContent = newTag;
+                mainImg.style.opacity = '1';
+                mainImg.style.transform = 'scale(1)';
+              }, 180);
+            }
+          });
+        });
+      });
+
+      // 2. Interactive Material Matrix Tabs
+      const matrixTabs = document.querySelectorAll('.matrix-tab-btn');
+      const matrixPanes = document.querySelectorAll('.matrix-pane');
+
+      matrixTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const targetKey = tab.getAttribute('data-matrix');
+          matrixTabs.forEach(t => t.classList.remove('active'));
+          matrixPanes.forEach(p => p.classList.remove('active'));
+
+          tab.classList.add('active');
+          const targetPane = document.getElementById(`pane-${targetKey}`);
+          if (targetPane) targetPane.classList.add('active');
+        });
+      });
+
+      // 3. Sticky Nav Highlight on Scroll
+      const srvSections = document.querySelectorAll('.service-suite-row');
+      const navButtons = document.querySelectorAll('.srv-jump-btn');
+
+      window.addEventListener('scroll', () => {
+        let currentActive = '';
+        srvSections.forEach(section => {
+          const sectionTop = section.offsetTop - 180;
+          const sectionHeight = section.offsetHeight;
+          if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            currentActive = section.getAttribute('id');
+          }
+        });
+
+        if (currentActive) {
+          navButtons.forEach(btn => {
+            const href = btn.getAttribute('href').replace('#', '');
+            if (href === currentActive) {
+              btn.classList.add('active');
+            } else {
+              btn.classList.remove('active');
+            }
+          });
+        }
+      }, { passive: true });
+    });
+  </script>
+</body>
+</html>
