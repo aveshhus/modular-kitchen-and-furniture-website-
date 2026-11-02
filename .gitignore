@@ -10,6 +10,13 @@ scratch_*.py
 create_visualizer.py
 list_images.py
 copy_images.ps1
+inspect_*.py
+extract_*.py
+parse_*.py
+*.json
+
+# Nested agent repos
+.agents/skills/ui-ux-pro-max/
 
 # Archive & Raw Unused Video Files (GitHub 100MB limit)
 *.zip

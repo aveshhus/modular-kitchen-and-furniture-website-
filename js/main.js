@@ -281,3 +281,345 @@
 
 })();
 
+
+
+/* =====================================================
+   SLEEK REFERENCE COMPONENTS CONTROLLER
+   ===================================================== */
+(function() {
+  'use strict';
+
+  // 1. HERO QUICK CONSULTATION FORM
+  function initHeroQuickForm() {
+    const form = document.getElementById('hero-quick-form');
+    const successView = document.getElementById('hero-form-success');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = form.querySelector('[name="name"]');
+      const phone = form.querySelector('[name="phone"]');
+
+      if (!name || !name.value.trim()) {
+        if (name) name.focus();
+        return;
+      }
+      if (!phone || !phone.value.trim() || phone.value.trim().length < 8) {
+        if (phone) phone.focus();
+        return;
+      }
+
+      // Show in-card success
+      const wrapper = form.closest('.hero-sleek-form-wrapper');
+      const header = wrapper ? wrapper.querySelector('.hero-sleek-form-header') : null;
+      if (header) header.style.display = 'none';
+      form.style.display = 'none';
+      if (successView) {
+        successView.style.display = 'block';
+        successView.classList.remove('dsp-none');
+        successView.classList.add('is-visible');
+      }
+    });
+  }
+
+  // 1B. MID-PAGE CONSULTATION FORM
+  function initMidConsultationForm() {
+    const form = document.getElementById('mid-quick-form');
+    const successView = document.getElementById('mid-form-success');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = form.querySelector('[name="name"]');
+      const phone = form.querySelector('[name="phone"]');
+
+      if (!name || !name.value.trim()) {
+        if (name) name.focus();
+        return;
+      }
+      if (!phone || !phone.value.trim() || phone.value.trim().length < 8) {
+        if (phone) phone.focus();
+        return;
+      }
+
+      // Hide header and form, show in-card success
+      const wrapper = form.closest('.mid-consultation-card');
+      const header = wrapper ? wrapper.querySelector('.mid-consultation-header') : null;
+      if (header) header.style.display = 'none';
+      form.style.display = 'none';
+      if (successView) {
+        successView.style.display = 'block';
+        successView.classList.remove('dsp-none');
+        successView.classList.add('is-visible');
+      }
+    });
+  }
+
+  // 2. KITCHEN LAYOUT EXPLORER (ASIAN PAINTS SLEEK 50/50 EDITORIAL SYSTEM)
+  function initLayoutExplorer() {
+    const section = document.querySelector('.layout-explorer-section');
+    if (!section) return;
+
+    const tabs = section.querySelectorAll('.exp-kitchen-tab');
+    const dots = section.querySelectorAll('.sleek-kitchen-dot');
+    const slides = section.querySelectorAll('.sleek-kitchen-slide');
+
+    function switchLayout(targetId) {
+      if (!targetId) return;
+
+      // Update tabs
+      tabs.forEach(tab => {
+        const isMatch = tab.getAttribute('data-layout-target') === targetId;
+        tab.classList.toggle('is-active', isMatch);
+        tab.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+      });
+
+      // Update dots
+      dots.forEach(dot => {
+        const isMatch = dot.getAttribute('data-layout-target') === targetId;
+        dot.classList.toggle('is-active', isMatch);
+      });
+
+      // Update slides with smooth transition
+      slides.forEach(slide => {
+        if (slide.id === targetId) {
+          slide.classList.add('is-active');
+          slide.style.opacity = '0';
+          setTimeout(() => {
+            slide.style.opacity = '1';
+          }, 20);
+        } else {
+          slide.classList.remove('is-active');
+        }
+      });
+
+      if (window.ScrollTrigger) {
+        ScrollTrigger.refresh();
+      }
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-layout-target');
+        switchLayout(targetId);
+      });
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-layout-target');
+        switchLayout(targetId);
+      });
+    });
+  }
+
+  // 3. EVERYDAY RHYTHM (EXACT ASIAN PAINTS SLEEK SYSTEM: COMPONENTS & ZONES)
+  function initEverydayRhythm() {
+    const section = document.querySelector('.rhythm-interactive-section');
+    if (!section) return;
+
+    // A. Main Underline Tabs (Components vs Zones)
+    const modeTabs = section.querySelectorAll('.iwpk-tab');
+    const compView = section.querySelector('#iwpk-components-view');
+    const zonesView = section.querySelector('#iwpk-zones-view');
+    const zoneOverlay = section.querySelector('#iwpk-zone-overlay');
+    const pins = section.querySelectorAll('.iwpk-pin');
+    const hud = section.querySelector('#iwpk-pin-hud');
+
+    modeTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const mode = this.getAttribute('data-rhythm-mode');
+        modeTabs.forEach(t => {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        this.classList.add('is-active');
+        this.setAttribute('aria-selected', 'true');
+
+        if (mode === 'components') {
+          if (compView) compView.style.display = 'grid';
+          if (zonesView) zonesView.classList.add('is-hidden');
+          if (zoneOverlay) zoneOverlay.classList.add('is-hidden');
+          pins.forEach(p => p.style.display = 'flex');
+          if (hud) hud.style.display = 'flex';
+        } else {
+          if (compView) compView.style.display = 'none';
+          if (zonesView) zonesView.classList.remove('is-hidden');
+          if (zoneOverlay) zoneOverlay.classList.remove('is-hidden');
+          pins.forEach(p => p.style.display = 'none');
+          if (hud) hud.style.display = 'none';
+
+          // Activate first zone by default
+          const firstZone = section.querySelector('.iwpk-teaser-container[data-zone-target="cooking"]');
+          if (firstZone) firstZone.click();
+        }
+
+        if (window.ScrollTrigger) {
+          ScrollTrigger.refresh();
+        }
+      });
+    });
+
+    // B. Hotspot Pins Synchronization (Components Mode)
+    const teaserCards = section.querySelectorAll('.iwpk-cards-teaser');
+    const hudBadge = section.querySelector('.iwpk-hud-badge');
+    const hudTitle = section.querySelector('.iwpk-hud-title');
+    const cardsContainer = section.querySelector('.iwpk-cards-container');
+
+    const pinTitles = {
+      'pin-1': '01. Blum Aventos Lift-Up Oak Cabinet',
+      'pin-2': '02. Blum Tandembox 65kg Soft-Close Drawers',
+      'pin-3': '03. German Gola Anodized Handleless Profile',
+      'pin-4': '04. Flush Induction Cooktop & Ceiling Extraction',
+      'pin-5': '05. 90-Degree Corner Swivel Carousel Storage Unit',
+      'pin-6': '06. Undermount Composite Sink & Brass Faucet',
+      'pin-7': '07. 100% Waterproof IS 710 Marine Ply Sink Unit',
+      'pin-8': '08. Integrated 4000K Sensor LED Profile Lighting'
+    };
+
+    function activatePin(pinId, scrollContainer) {
+      pins.forEach(p => p.classList.remove('is-active'));
+      teaserCards.forEach(c => c.classList.remove('is-active'));
+
+      const activePin = section.querySelector(`.iwpk-pin[data-pin-id="${pinId}"]`);
+      const activeCard = section.querySelector(`.iwpk-cards-teaser[data-card-id="${pinId}"]`);
+
+      if (activePin) {
+        activePin.classList.add('is-active');
+        const num = pinId.replace('pin-', '');
+        if (hudBadge) hudBadge.textContent = num;
+        if (hudTitle && pinTitles[pinId]) hudTitle.textContent = pinTitles[pinId];
+      }
+
+      if (activeCard) {
+        activeCard.classList.add('is-active');
+        if (scrollContainer && cardsContainer) {
+          const cardTop = activeCard.offsetTop - cardsContainer.offsetTop;
+          cardsContainer.scrollTo({
+            top: cardTop - 12,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+
+    pins.forEach(pin => {
+      pin.addEventListener('click', function() {
+        const pinId = this.getAttribute('data-pin-id');
+        activatePin(pinId, true);
+      });
+    });
+
+    teaserCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const cardId = this.getAttribute('data-card-id');
+        activatePin(cardId, false);
+      });
+    });
+
+    // C. Zone Cards Synchronization (Zones Mode)
+    const zoneCards = section.querySelectorAll('.iwpk-teaser-container');
+    const zoneHighlights = section.querySelectorAll('.iwpk-zone-highlight');
+
+    zoneCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const zoneTarget = this.getAttribute('data-zone-target');
+        zoneCards.forEach(c => c.classList.remove('is-active'));
+        zoneHighlights.forEach(h => h.classList.remove('is-active'));
+
+        this.classList.add('is-active');
+        const activeHighlight = section.querySelector(`.iwpk-zone-highlight[data-zone="${zoneTarget}"]`);
+        if (activeHighlight) {
+          activeHighlight.classList.add('is-active');
+        }
+      });
+    });
+  }
+
+
+  // 4. FINISHES & MATERIALS TAB CONTROLLER
+  function initFinishesMaterials() {
+    const section = document.querySelector('.finishes-materials-section');
+    if (!section) return;
+
+    const tabs = section.querySelectorAll('.editorial-tab[data-tab-target]');
+    const panels = section.querySelectorAll('.editorial-tab-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-tab-target');
+        tabs.forEach(t => {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        panels.forEach(p => {
+          p.classList.remove('is-active');
+          p.style.display = 'none';
+        });
+
+        this.classList.add('is-active');
+        this.setAttribute('aria-selected', 'true');
+        const activePanel = document.getElementById(targetId);
+        if (activePanel) {
+          activePanel.classList.add('is-active');
+          activePanel.style.display = 'block';
+        }
+
+        if (window.ScrollTrigger) {
+          ScrollTrigger.refresh();
+        }
+      });
+    });
+  }
+
+  // 5. UNITS & ACCESSORIES FILTER CONTROLLER
+  function initUnitsFilter() {
+    const section = document.querySelector('.units-accessories-section');
+    if (!section) return;
+
+    const filterBtns = section.querySelectorAll('.editorial-tab[data-filter]');
+    const unitCards = section.querySelectorAll('.unit-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const filterVal = this.getAttribute('data-filter');
+        filterBtns.forEach(b => b.classList.remove('is-active'));
+        this.classList.add('is-active');
+
+        unitCards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          if (filterVal === 'all' || cardCat === filterVal) {
+            card.style.display = 'flex';
+            card.style.opacity = '1';
+          } else {
+            card.style.display = 'none';
+            card.style.opacity = '0';
+          }
+        });
+
+        if (window.ScrollTrigger) {
+          ScrollTrigger.refresh();
+        }
+      });
+    });
+  }
+
+  // Initialize all controllers
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      initHeroQuickForm();
+    initMidConsultationForm();
+      initLayoutExplorer();
+      initEverydayRhythm();
+      initFinishesMaterials();
+      initUnitsFilter();
+    });
+  } else {
+    initHeroQuickForm();
+    initMidConsultationForm();
+    initLayoutExplorer();
+    initEverydayRhythm();
+      initFinishesMaterials();
+      initUnitsFilter();
+  }
+})();

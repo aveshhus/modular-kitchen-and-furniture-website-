@@ -26,7 +26,8 @@
 
 /* Scrolled state: solid */
 .nav--scrolled {
-  background-color: var(--indigo-90);
+  background-color: rgba(31, 33, 36, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 2px 24px rgba(0, 0, 0, 0.18);
@@ -34,7 +35,8 @@
 
 /* On non-hero pages (About, Services etc.) always solid */
 .nav--solid {
-  background-color: var(--indigo);
+  background-color: #111111;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
 }
 
@@ -146,25 +148,26 @@
   display: none;
   padding: 0.625rem 1.375rem;
   font-family: var(--font-body);
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--indigo);
-  background-color: var(--iceberg);
-  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  background-color: var(--brand-accent, #111111);
+  border-radius: var(--radius-sm, 4px);
   text-decoration: none;
   transition: all var(--duration-base) var(--ease-out);
-  border: 1.5px solid var(--iceberg);
+  border: 1.5px solid var(--brand-accent, #111111);
   min-height: 42px;
   align-items: center;
 }
 
 .nav__cta:hover {
-  background-color: var(--white);
-  border-color: var(--white);
+  background-color: var(--brand-accent-hover, #333333);
+  border-color: var(--brand-accent-hover, #333333);
+  color: #FFFFFF;
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(119, 181, 211, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 @media (min-width: 1024px) {
@@ -280,25 +283,27 @@
 }
 
 .mobile-menu__cta {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
-  background-color: var(--iceberg);
-  color: var(--indigo);
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
   font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  border-radius: var(--radius-sm);
+  background-color: var(--brand-accent, #111111);
+  color: #FFFFFF;
+  border-radius: var(--radius-sm, 4px);
   text-decoration: none;
-  min-height: 52px;
-  transition: all var(--duration-base) var(--ease-out);
+  transition: all var(--duration-fast) ease;
+  min-height: 48px;
 }
 
 .mobile-menu__cta:hover {
-  background-color: var(--white);
+  background-color: var(--brand-accent-hover, #333333);
+  color: #FFFFFF;
 }
 
 .mobile-menu__contact {
@@ -314,3 +319,28 @@
 }
 
 .mobile-menu__contact a:hover { color: var(--iceberg); }
+
+
+/* Pure Monochrome High-Contrast CTA */
+.nav--transparent .nav__cta {
+  background-color: #FFFFFF;
+  color: #111111;
+  border-color: #FFFFFF;
+}
+.nav--transparent .nav__cta:hover {
+  background-color: #E5E5E5;
+  color: #000000;
+  border-color: #E5E5E5;
+  transform: translateY(-1px);
+}
+.nav--scrolled .nav__cta {
+  background-color: #111111;
+  color: #FFFFFF;
+  border-color: #111111;
+}
+.nav--scrolled .nav__cta:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+  border-color: #333333;
+  transform: translateY(-1px);
+}
